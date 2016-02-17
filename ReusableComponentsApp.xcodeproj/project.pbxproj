@@ -15,6 +15,7 @@
 		88877AB01C74BDFF00D00246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88877AAE1C74BDFF00D00246 /* LaunchScreen.storyboard */; };
 		88877ABB1C74BDFF00D00246 /* ReusableComponentsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877ABA1C74BDFF00D00246 /* ReusableComponentsAppTests.m */; };
 		88877AC61C74BDFF00D00246 /* ReusableComponentsAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AC51C74BDFF00D00246 /* ReusableComponentsAppUITests.m */; };
+		88877AD71C74BFBA00D00246 /* GLOOPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AD61C74BFBA00D00246 /* GLOOPSViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		88877AC11C74BDFF00D00246 /* ReusableComponentsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReusableComponentsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88877AC51C74BDFF00D00246 /* ReusableComponentsAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReusableComponentsAppUITests.m; sourceTree = "<group>"; };
 		88877AC71C74BDFF00D00246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88877AD51C74BFBA00D00246 /* GLOOPSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLOOPSViewController.h; sourceTree = "<group>"; };
+		88877AD61C74BFBA00D00246 /* GLOOPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLOOPSViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 				88877AA41C74BDFF00D00246 /* AppDelegate.m */,
 				88877AA61C74BDFF00D00246 /* ViewController.h */,
 				88877AA71C74BDFF00D00246 /* ViewController.m */,
+				88877AD31C74BF7400D00246 /* View Controllers For UI Components */,
 				88877AA91C74BDFF00D00246 /* Main.storyboard */,
 				88877AAC1C74BDFF00D00246 /* Assets.xcassets */,
 				88877AAE1C74BDFF00D00246 /* LaunchScreen.storyboard */,
@@ -138,6 +142,23 @@
 				88877AC71C74BDFF00D00246 /* Info.plist */,
 			);
 			path = ReusableComponentsAppUITests;
+			sourceTree = "<group>";
+		};
+		88877AD31C74BF7400D00246 /* View Controllers For UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				88877AD41C74BF9200D00246 /* Automatic Keyboard View Controller */,
+			);
+			name = "View Controllers For UI Components";
+			sourceTree = "<group>";
+		};
+		88877AD41C74BF9200D00246 /* Automatic Keyboard View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88877AD51C74BFBA00D00246 /* GLOOPSViewController.h */,
+				88877AD61C74BFBA00D00246 /* GLOOPSViewController.m */,
+			);
+			name = "Automatic Keyboard View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88877AD71C74BFBA00D00246 /* GLOOPSViewController.m in Sources */,
 				88877AA81C74BDFF00D00246 /* ViewController.m in Sources */,
 				88877AA51C74BDFF00D00246 /* AppDelegate.m in Sources */,
 				88877AA21C74BDFF00D00246 /* main.m in Sources */,
@@ -498,6 +520,7 @@
 				88877ACC1C74BDFF00D00246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88877ACD1C74BDFF00D00246 /* Build configuration list for PBXNativeTarget "ReusableComponentsAppTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +529,7 @@
 				88877ACF1C74BDFF00D00246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88877AD01C74BDFF00D00246 /* Build configuration list for PBXNativeTarget "ReusableComponentsAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +538,7 @@
 				88877AD21C74BDFF00D00246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
