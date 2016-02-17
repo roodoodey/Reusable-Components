@@ -70,7 +70,6 @@
 #pragma mark - Keyboard Events
 
 - (void)keyboardWillShow:(NSNotification *)theNotification {
-    NSLog(@"keyboard will show notificaiton: %@", theNotification);
     
     _keyboardNotif = theNotification;
     _preservedContentOffset = self.scrollView.contentOffset;
