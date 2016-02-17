@@ -19,7 +19,7 @@
 
 @implementation GLOOPSViewController
 
-@synthesize gloopsScrollView;
+@synthesize scrollView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,9 +33,9 @@
     
     
     // Do any additional setup after loading the view.
-    gloopsScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
-    gloopsScrollView.delegate = self;
-    [self.view addSubview:gloopsScrollView];
+    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    scrollView.delegate = self;
+    [self.view addSubview:scrollView];
     
     if (self.navigationController) {
         [self.navigationController setNavigationBarHidden:YES];
@@ -73,7 +73,7 @@
     NSLog(@"keyboard will show notificaiton: %@", theNotification);
     
     _keyboardNotif = theNotification;
-    _preservedContentOffset = self.gloopsScrollView.contentOffset;
+    _preservedContentOffset = self.scrollView.contentOffset;
     
     float keyboardPositionInView = [[[theNotification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
     float keyboardAnim = [[[theNotification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
@@ -82,7 +82,7 @@
     
     if (absolutePosition > 0) {
         [UIView animateWithDuration:keyboardAnim animations:^{
-            self.gloopsScrollView.contentOffset = CGPointMake(self.gloopsScrollView.contentOffset.x, absolutePosition);
+            self.scrollView.contentOffset = CGPointMake(self.scrollView.contentOffset.x, absolutePosition);
         } completion:^(BOOL finished) {
             
         }];
@@ -98,7 +98,7 @@
     
     if (self.preserveContentOffset == YES) {
         [UIView animateWithDuration:keyboadAnim animations:^{
-            self.gloopsScrollView.contentOffset = _preservedContentOffset;
+            self.scrollView.contentOffset = _preservedContentOffset;
         } completion:^(BOOL finished) {
             
         }];
@@ -121,25 +121,7 @@
 
 -(void)textFieldWillEndEditing:(NSNotification *)theNotification {
     _viewToAdjustTo = CGRectZero;
-    
 }
 
-#pragma mark - 
-#pragma mark Scroll View Delegate
-
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

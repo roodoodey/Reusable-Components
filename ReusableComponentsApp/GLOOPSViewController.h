@@ -10,7 +10,7 @@
 
 @interface GLOOPSViewController : UIViewController <UIScrollViewDelegate>
 
-@property (nonatomic, strong) UIScrollView *gloopsScrollView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 /** extra y offset when the keyboard is shown */
 @property (nonatomic, readwrite) float keyboardYOffset;
