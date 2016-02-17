@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GLOOPSViewController : UIViewController <UIScrollViewDelegate>
+@interface MAXViewController : UIViewController <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 

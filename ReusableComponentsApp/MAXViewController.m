@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Mathieu Skulason. All rights reserved.
 //
 
-#import "GLOOPSViewController.h"
+#import "MAXViewController.h"
 
-@interface GLOOPSViewController () {
+@interface MAXViewController () {
     CGRect _viewToAdjustTo;
     CGPoint _preservedContentOffset;
     NSNotification *_keyboardNotif;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation GLOOPSViewController
+@implementation MAXViewController
 
 @synthesize scrollView;
 
