@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		886391461CBD984A00B6331A /* MAXFadeBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 886391451CBD984A00B6331A /* MAXFadeBlockButton.m */; };
 		88877AA21C74BDFF00D00246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA11C74BDFF00D00246 /* main.m */; };
 		88877AA51C74BDFF00D00246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA41C74BDFF00D00246 /* AppDelegate.m */; };
 		88877AA81C74BDFF00D00246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA71C74BDFF00D00246 /* ViewController.m */; };
@@ -16,6 +17,34 @@
 		88877ABB1C74BDFF00D00246 /* ReusableComponentsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877ABA1C74BDFF00D00246 /* ReusableComponentsAppTests.m */; };
 		88877AC61C74BDFF00D00246 /* ReusableComponentsAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AC51C74BDFF00D00246 /* ReusableComponentsAppUITests.m */; };
 		88877AD71C74BFBA00D00246 /* MAXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AD61C74BFBA00D00246 /* MAXViewController.m */; };
+		88877ADA1C761AAB00D00246 /* MAXBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AD91C761AAB00D00246 /* MAXBlockButton.m */; };
+		88A7333B1CB18FB00076E23E /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A7333A1CB18FB00076E23E /* DrawerViewController.m */; };
+		88A7333E1CB190140076E23E /* MAXDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A7333D1CB190140076E23E /* MAXDrawerView.m */; };
+		88BE771B1C8318EF002693C0 /* UIFont+MAXSystemFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE771A1C8318EF002693C0 /* UIFont+MAXSystemFonts.m */; };
+		88BE771D1C831A5F002693C0 /* MAXSystemFontsCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE771C1C831A5F002693C0 /* MAXSystemFontsCategoryTests.m */; };
+		88BE77231C836C58002693C0 /* UIFont+MAXRobotoExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE77221C836C58002693C0 /* UIFont+MAXRobotoExtension.m */; };
+		88BE77311C836C8A002693C0 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77241C836C8A002693C0 /* LICENSE.txt */; };
+		88BE77321C836C8B002693C0 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77251C836C8A002693C0 /* Roboto-Black.ttf */; };
+		88BE77331C836C8B002693C0 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77261C836C8A002693C0 /* Roboto-BlackItalic.ttf */; };
+		88BE77341C836C8B002693C0 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77271C836C8A002693C0 /* Roboto-Bold.ttf */; };
+		88BE77351C836C8B002693C0 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77281C836C8A002693C0 /* Roboto-BoldItalic.ttf */; };
+		88BE77361C836C8B002693C0 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77291C836C8A002693C0 /* Roboto-Italic.ttf */; };
+		88BE77371C836C8B002693C0 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772A1C836C8A002693C0 /* Roboto-Light.ttf */; };
+		88BE77381C836C8B002693C0 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772B1C836C8A002693C0 /* Roboto-LightItalic.ttf */; };
+		88BE77391C836C8B002693C0 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772C1C836C8A002693C0 /* Roboto-Medium.ttf */; };
+		88BE773A1C836C8B002693C0 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772D1C836C8A002693C0 /* Roboto-MediumItalic.ttf */; };
+		88BE773B1C836C8B002693C0 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772E1C836C8A002693C0 /* Roboto-Regular.ttf */; };
+		88BE773C1C836C8B002693C0 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772F1C836C8A002693C0 /* Roboto-Thin.ttf */; };
+		88BE773D1C836C8B002693C0 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77301C836C8A002693C0 /* Roboto-ThinItalic.ttf */; };
+		88BEFA261C83722D00ADE78C /* MAXRobotoFontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BEFA251C83722D00ADE78C /* MAXRobotoFontTests.m */; };
+		88C835511C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */; };
+		88C835521C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */; };
+		88DB6F6C1C8B3A4200DFEBAD /* MAXBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6F6B1C8B3A4200DFEBAD /* MAXBlockView.m */; };
+		88E2ED2C1C7F151000A57E0C /* MAXPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E2ED2A1C7F151000A57E0C /* MAXPagingScrollView.m */; };
+		88E2ED321C7F9CD700A57E0C /* UIView+MAXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E2ED311C7F9CD700A57E0C /* UIView+MAXExtension.m */; };
+		88E2ED361C7FA71400A57E0C /* MAXPagingScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E2ED351C7FA71400A57E0C /* MAXPagingScrollViewController.m */; };
+		88E2ED391C7FB94200A57E0C /* GLOOPSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E2ED381C7FB94200A57E0C /* GLOOPSTextField.m */; };
+		88FFCCF91CB98B2F004E4EBE /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FFCCF81CB98B2F004E4EBE /* UIColor+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		886391441CBD984A00B6331A /* MAXFadeBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXFadeBlockButton.h; sourceTree = "<group>"; };
+		886391451CBD984A00B6331A /* MAXFadeBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXFadeBlockButton.m; sourceTree = "<group>"; };
 		88877A9D1C74BDFF00D00246 /* ReusableComponentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableComponentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88877AA11C74BDFF00D00246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88877AA31C74BDFF00D00246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +85,45 @@
 		88877AC71C74BDFF00D00246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88877AD51C74BFBA00D00246 /* MAXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXViewController.h; sourceTree = "<group>"; };
 		88877AD61C74BFBA00D00246 /* MAXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXViewController.m; sourceTree = "<group>"; };
+		88877AD81C761AAB00D00246 /* MAXBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockButton.h; sourceTree = "<group>"; };
+		88877AD91C761AAB00D00246 /* MAXBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockButton.m; sourceTree = "<group>"; };
+		88A733391CB18FB00076E23E /* DrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewController.h; sourceTree = "<group>"; };
+		88A7333A1CB18FB00076E23E /* DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerViewController.m; sourceTree = "<group>"; };
+		88A7333C1CB190140076E23E /* MAXDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXDrawerView.h; sourceTree = "<group>"; };
+		88A7333D1CB190140076E23E /* MAXDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXDrawerView.m; sourceTree = "<group>"; };
+		88BE77191C8318EF002693C0 /* UIFont+MAXSystemFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MAXSystemFonts.h"; sourceTree = "<group>"; };
+		88BE771A1C8318EF002693C0 /* UIFont+MAXSystemFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MAXSystemFonts.m"; sourceTree = "<group>"; };
+		88BE771C1C831A5F002693C0 /* MAXSystemFontsCategoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXSystemFontsCategoryTests.m; sourceTree = "<group>"; };
+		88BE77211C836C58002693C0 /* UIFont+MAXRobotoExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MAXRobotoExtension.h"; sourceTree = "<group>"; };
+		88BE77221C836C58002693C0 /* UIFont+MAXRobotoExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MAXRobotoExtension.m"; sourceTree = "<group>"; };
+		88BE77241C836C8A002693C0 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		88BE77251C836C8A002693C0 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		88BE77261C836C8A002693C0 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		88BE77271C836C8A002693C0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		88BE77281C836C8A002693C0 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		88BE77291C836C8A002693C0 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		88BE772A1C836C8A002693C0 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		88BE772B1C836C8A002693C0 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		88BE772C1C836C8A002693C0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		88BE772D1C836C8A002693C0 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		88BE772E1C836C8A002693C0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		88BE772F1C836C8A002693C0 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		88BE77301C836C8A002693C0 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		88BEFA251C83722D00ADE78C /* MAXRobotoFontTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXRobotoFontTests.m; sourceTree = "<group>"; };
+		88C8354F1C8B9C6B00E5D8C5 /* MAXSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXSingleton.h; sourceTree = "<group>"; };
+		88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXSingleton.m; sourceTree = "<group>"; };
+		88DB6F6A1C8B3A4200DFEBAD /* MAXBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockView.h; sourceTree = "<group>"; };
+		88DB6F6B1C8B3A4200DFEBAD /* MAXBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockView.m; sourceTree = "<group>"; };
+		88E2ED2A1C7F151000A57E0C /* MAXPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXPagingScrollView.m; sourceTree = "<group>"; };
+		88E2ED2B1C7F151000A57E0C /* MAXPagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXPagingScrollView.h; sourceTree = "<group>"; };
+		88E2ED301C7F9CD700A57E0C /* UIView+MAXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MAXExtension.h"; sourceTree = "<group>"; };
+		88E2ED311C7F9CD700A57E0C /* UIView+MAXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MAXExtension.m"; sourceTree = "<group>"; };
+		88E2ED341C7FA71400A57E0C /* MAXPagingScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXPagingScrollViewController.h; sourceTree = "<group>"; };
+		88E2ED351C7FA71400A57E0C /* MAXPagingScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXPagingScrollViewController.m; sourceTree = "<group>"; };
+		88E2ED371C7FB94200A57E0C /* GLOOPSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLOOPSTextField.h; sourceTree = "<group>"; };
+		88E2ED381C7FB94200A57E0C /* GLOOPSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLOOPSTextField.m; sourceTree = "<group>"; };
+		88FFCCF71CB98B2F004E4EBE /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		88FFCCF81CB98B2F004E4EBE /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +151,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		886391421CBD981400B6331A /* Block Button */ = {
+			isa = PBXGroup;
+			children = (
+				88877AD81C761AAB00D00246 /* MAXBlockButton.h */,
+				88877AD91C761AAB00D00246 /* MAXBlockButton.m */,
+			);
+			name = "Block Button";
+			sourceTree = "<group>";
+		};
+		886391431CBD981D00B6331A /* Fade Button */ = {
+			isa = PBXGroup;
+			children = (
+				886391441CBD984A00B6331A /* MAXFadeBlockButton.h */,
+				886391451CBD984A00B6331A /* MAXFadeBlockButton.m */,
+			);
+			name = "Fade Button";
+			sourceTree = "<group>";
+		};
+		886391471CBD985300B6331A /* Selected Content Button */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Selected Content Button";
+			sourceTree = "<group>";
+		};
 		88877A941C74BDFF00D00246 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +204,10 @@
 				88877AA61C74BDFF00D00246 /* ViewController.h */,
 				88877AA71C74BDFF00D00246 /* ViewController.m */,
 				88877AD31C74BF7400D00246 /* View Controllers For UI Components */,
+				88C8354E1C8B9BB600E5D8C5 /* Object components */,
+				88E2ED2D1C7F9A6300A57E0C /* UI Components */,
+				88E2ED281C7EF9CA00A57E0C /* Extensions */,
+				88E2ED291C7EF9D500A57E0C /* Categories */,
 				88877AA91C74BDFF00D00246 /* Main.storyboard */,
 				88877AAC1C74BDFF00D00246 /* Assets.xcassets */,
 				88877AAE1C74BDFF00D00246 /* LaunchScreen.storyboard */,
@@ -130,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				88877ABA1C74BDFF00D00246 /* ReusableComponentsAppTests.m */,
+				88BE771C1C831A5F002693C0 /* MAXSystemFontsCategoryTests.m */,
+				88BEFA251C83722D00ADE78C /* MAXRobotoFontTests.m */,
 				88877ABC1C74BDFF00D00246 /* Info.plist */,
 			);
 			path = ReusableComponentsAppTests;
@@ -147,7 +248,9 @@
 		88877AD31C74BF7400D00246 /* View Controllers For UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				88877AD41C74BF9200D00246 /* Automatic Keyboard View Controller */,
+				88A733381CB18F800076E23E /* Drawer View Controller */,
+				88E2ED331C7FA6F500A57E0C /* Paging Scroll View View Controller */,
+				88E2ED2E1C7F9C4000A57E0C /* Scroll View With Blocks view controller */,
 			);
 			name = "View Controllers For UI Components";
 			sourceTree = "<group>";
@@ -159,6 +262,158 @@
 				88877AD61C74BFBA00D00246 /* MAXViewController.m */,
 			);
 			name = "Automatic Keyboard View Controller";
+			sourceTree = "<group>";
+		};
+		88A733371CB18CB70076E23E /* Drawer View */ = {
+			isa = PBXGroup;
+			children = (
+				88A7333C1CB190140076E23E /* MAXDrawerView.h */,
+				88A7333D1CB190140076E23E /* MAXDrawerView.m */,
+			);
+			name = "Drawer View";
+			sourceTree = "<group>";
+		};
+		88A733381CB18F800076E23E /* Drawer View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88A733391CB18FB00076E23E /* DrawerViewController.h */,
+				88A7333A1CB18FB00076E23E /* DrawerViewController.m */,
+			);
+			name = "Drawer View Controller";
+			sourceTree = "<group>";
+		};
+		88BE77171C83189A002693C0 /* Custom Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				88BE77241C836C8A002693C0 /* LICENSE.txt */,
+				88BE77251C836C8A002693C0 /* Roboto-Black.ttf */,
+				88BE77261C836C8A002693C0 /* Roboto-BlackItalic.ttf */,
+				88BE77271C836C8A002693C0 /* Roboto-Bold.ttf */,
+				88BE77281C836C8A002693C0 /* Roboto-BoldItalic.ttf */,
+				88BE77291C836C8A002693C0 /* Roboto-Italic.ttf */,
+				88BE772A1C836C8A002693C0 /* Roboto-Light.ttf */,
+				88BE772B1C836C8A002693C0 /* Roboto-LightItalic.ttf */,
+				88BE772C1C836C8A002693C0 /* Roboto-Medium.ttf */,
+				88BE772D1C836C8A002693C0 /* Roboto-MediumItalic.ttf */,
+				88BE772E1C836C8A002693C0 /* Roboto-Regular.ttf */,
+				88BE772F1C836C8A002693C0 /* Roboto-Thin.ttf */,
+				88BE77301C836C8A002693C0 /* Roboto-ThinItalic.ttf */,
+				88BE77211C836C58002693C0 /* UIFont+MAXRobotoExtension.h */,
+				88BE77221C836C58002693C0 /* UIFont+MAXRobotoExtension.m */,
+			);
+			name = "Custom Fonts";
+			sourceTree = "<group>";
+		};
+		88BE77181C8318A5002693C0 /* System Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				88BE77191C8318EF002693C0 /* UIFont+MAXSystemFonts.h */,
+				88BE771A1C8318EF002693C0 /* UIFont+MAXSystemFonts.m */,
+			);
+			name = "System Fonts";
+			sourceTree = "<group>";
+		};
+		88C8354E1C8B9BB600E5D8C5 /* Object components */ = {
+			isa = PBXGroup;
+			children = (
+				88C8354F1C8B9C6B00E5D8C5 /* MAXSingleton.h */,
+				88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */,
+			);
+			name = "Object components";
+			sourceTree = "<group>";
+		};
+		88DB6F691C8B3A1E00DFEBAD /* Block View */ = {
+			isa = PBXGroup;
+			children = (
+				88DB6F6A1C8B3A4200DFEBAD /* MAXBlockView.h */,
+				88DB6F6B1C8B3A4200DFEBAD /* MAXBlockView.m */,
+			);
+			name = "Block View";
+			sourceTree = "<group>";
+		};
+		88E2ECE61C7BB7EF00A57E0C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				886391421CBD981400B6331A /* Block Button */,
+				886391431CBD981D00B6331A /* Fade Button */,
+				886391471CBD985300B6331A /* Selected Content Button */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		88E2ECE71C7BB8A300A57E0C /* Scroll View With Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				88E2ED2B1C7F151000A57E0C /* MAXPagingScrollView.h */,
+				88E2ED2A1C7F151000A57E0C /* MAXPagingScrollView.m */,
+			);
+			name = "Scroll View With Blocks";
+			sourceTree = "<group>";
+		};
+		88E2ED271C7EF9AE00A57E0C /* Text Fields */ = {
+			isa = PBXGroup;
+			children = (
+				88E2ED371C7FB94200A57E0C /* GLOOPSTextField.h */,
+				88E2ED381C7FB94200A57E0C /* GLOOPSTextField.m */,
+			);
+			name = "Text Fields";
+			sourceTree = "<group>";
+		};
+		88E2ED281C7EF9CA00A57E0C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88BE77181C8318A5002693C0 /* System Fonts */,
+				88BE77171C83189A002693C0 /* Custom Fonts */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		88E2ED291C7EF9D500A57E0C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				88FFCCF71CB98B2F004E4EBE /* UIColor+Extension.h */,
+				88FFCCF81CB98B2F004E4EBE /* UIColor+Extension.m */,
+				88E2ED301C7F9CD700A57E0C /* UIView+MAXExtension.h */,
+				88E2ED311C7F9CD700A57E0C /* UIView+MAXExtension.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		88E2ED2D1C7F9A6300A57E0C /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				88A733371CB18CB70076E23E /* Drawer View */,
+				88DB6F691C8B3A1E00DFEBAD /* Block View */,
+				88E2ED2F1C7F9CB700A57E0C /* Page Control */,
+				88E2ED271C7EF9AE00A57E0C /* Text Fields */,
+				88E2ECE71C7BB8A300A57E0C /* Scroll View With Blocks */,
+				88E2ECE61C7BB7EF00A57E0C /* Buttons */,
+				88877AD41C74BF9200D00246 /* Automatic Keyboard View Controller */,
+			);
+			name = "UI Components";
+			sourceTree = "<group>";
+		};
+		88E2ED2E1C7F9C4000A57E0C /* Scroll View With Blocks view controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Scroll View With Blocks view controller";
+			sourceTree = "<group>";
+		};
+		88E2ED2F1C7F9CB700A57E0C /* Page Control */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Page Control";
+			sourceTree = "<group>";
+		};
+		88E2ED331C7FA6F500A57E0C /* Paging Scroll View View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88E2ED341C7FA71400A57E0C /* MAXPagingScrollViewController.h */,
+				88E2ED351C7FA71400A57E0C /* MAXPagingScrollViewController.m */,
+			);
+			name = "Paging Scroll View View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +519,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BE77341C836C8B002693C0 /* Roboto-Bold.ttf in Resources */,
+				88BE77381C836C8B002693C0 /* Roboto-LightItalic.ttf in Resources */,
+				88BE773A1C836C8B002693C0 /* Roboto-MediumItalic.ttf in Resources */,
+				88BE77361C836C8B002693C0 /* Roboto-Italic.ttf in Resources */,
+				88BE77371C836C8B002693C0 /* Roboto-Light.ttf in Resources */,
+				88BE77311C836C8A002693C0 /* LICENSE.txt in Resources */,
+				88BE77351C836C8B002693C0 /* Roboto-BoldItalic.ttf in Resources */,
+				88BE77331C836C8B002693C0 /* Roboto-BlackItalic.ttf in Resources */,
+				88BE773C1C836C8B002693C0 /* Roboto-Thin.ttf in Resources */,
+				88BE773B1C836C8B002693C0 /* Roboto-Regular.ttf in Resources */,
 				88877AB01C74BDFF00D00246 /* LaunchScreen.storyboard in Resources */,
+				88BE77391C836C8B002693C0 /* Roboto-Medium.ttf in Resources */,
+				88BE773D1C836C8B002693C0 /* Roboto-ThinItalic.ttf in Resources */,
+				88BE77321C836C8B002693C0 /* Roboto-Black.ttf in Resources */,
 				88877AAD1C74BDFF00D00246 /* Assets.xcassets in Resources */,
 				88877AAB1C74BDFF00D00246 /* Main.storyboard in Resources */,
 			);
@@ -291,10 +559,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886391461CBD984A00B6331A /* MAXFadeBlockButton.m in Sources */,
+				88BE77231C836C58002693C0 /* UIFont+MAXRobotoExtension.m in Sources */,
+				88E2ED391C7FB94200A57E0C /* GLOOPSTextField.m in Sources */,
+				88E2ED2C1C7F151000A57E0C /* MAXPagingScrollView.m in Sources */,
+				88FFCCF91CB98B2F004E4EBE /* UIColor+Extension.m in Sources */,
 				88877AD71C74BFBA00D00246 /* MAXViewController.m in Sources */,
 				88877AA81C74BDFF00D00246 /* ViewController.m in Sources */,
+				88DB6F6C1C8B3A4200DFEBAD /* MAXBlockView.m in Sources */,
+				88E2ED321C7F9CD700A57E0C /* UIView+MAXExtension.m in Sources */,
+				88C835511C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */,
+				88E2ED361C7FA71400A57E0C /* MAXPagingScrollViewController.m in Sources */,
+				88877ADA1C761AAB00D00246 /* MAXBlockButton.m in Sources */,
 				88877AA51C74BDFF00D00246 /* AppDelegate.m in Sources */,
+				88A7333B1CB18FB00076E23E /* DrawerViewController.m in Sources */,
 				88877AA21C74BDFF00D00246 /* main.m in Sources */,
+				88A7333E1CB190140076E23E /* MAXDrawerView.m in Sources */,
+				88BE771B1C8318EF002693C0 /* UIFont+MAXSystemFonts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +583,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BEFA261C83722D00ADE78C /* MAXRobotoFontTests.m in Sources */,
+				88BE771D1C831A5F002693C0 /* MAXSystemFontsCategoryTests.m in Sources */,
+				88C835521C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */,
 				88877ABB1C74BDFF00D00246 /* ReusableComponentsAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

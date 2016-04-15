@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "UIFont+MAXRobotoExtension.h"
+#import "UIFont+MAXSystemFonts.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [UIFont c_printAllFonts];
+    
     return YES;
 }
 
