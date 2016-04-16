@@ -79,7 +79,7 @@
     self.contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(theFrame), CGRectGetHeight(theFrame))];
     [self addSubview:self.contentView];
     
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveWithGestureRecognizer:)];
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(p_moveWithGestureRecognizer:)];
     [self addGestureRecognizer:panGesture];
     
 }
@@ -203,7 +203,7 @@
 
 #pragma mark - Private helpers and overridden methods
 
--(void)moveWithGestureRecognizer:(UIPanGestureRecognizer *)theGestureRecognizer {
+-(void)p_moveWithGestureRecognizer:(UIPanGestureRecognizer *)theGestureRecognizer {
     
     if (theGestureRecognizer.state == UIGestureRecognizerStateBegan) {
         _gestureLastPoint = [theGestureRecognizer locationInView:self.superview];

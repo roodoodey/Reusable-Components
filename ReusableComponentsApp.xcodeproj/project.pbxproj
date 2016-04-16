@@ -40,6 +40,7 @@
 		88C835511C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */; };
 		88C835521C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */; };
 		88DB6F6C1C8B3A4200DFEBAD /* MAXBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6F6B1C8B3A4200DFEBAD /* MAXBlockView.m */; };
+		88DDDDB41CC26765005FB623 /* MAXSelectedContentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DDDDB31CC26765005FB623 /* MAXSelectedContentButton.m */; };
 		88E2ED2C1C7F151000A57E0C /* MAXPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E2ED2A1C7F151000A57E0C /* MAXPagingScrollView.m */; };
 		88E2ED321C7F9CD700A57E0C /* UIView+MAXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E2ED311C7F9CD700A57E0C /* UIView+MAXExtension.m */; };
 		88E2ED361C7FA71400A57E0C /* MAXPagingScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E2ED351C7FA71400A57E0C /* MAXPagingScrollViewController.m */; };
@@ -114,6 +115,8 @@
 		88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXSingleton.m; sourceTree = "<group>"; };
 		88DB6F6A1C8B3A4200DFEBAD /* MAXBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockView.h; sourceTree = "<group>"; };
 		88DB6F6B1C8B3A4200DFEBAD /* MAXBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockView.m; sourceTree = "<group>"; };
+		88DDDDB21CC26765005FB623 /* MAXSelectedContentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXSelectedContentButton.h; sourceTree = "<group>"; };
+		88DDDDB31CC26765005FB623 /* MAXSelectedContentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXSelectedContentButton.m; sourceTree = "<group>"; };
 		88E2ED2A1C7F151000A57E0C /* MAXPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXPagingScrollView.m; sourceTree = "<group>"; };
 		88E2ED2B1C7F151000A57E0C /* MAXPagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXPagingScrollView.h; sourceTree = "<group>"; };
 		88E2ED301C7F9CD700A57E0C /* UIView+MAXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MAXExtension.h"; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 		886391471CBD985300B6331A /* Selected Content Button */ = {
 			isa = PBXGroup;
 			children = (
+				88DDDDB21CC26765005FB623 /* MAXSelectedContentButton.h */,
+				88DDDDB31CC26765005FB623 /* MAXSelectedContentButton.m */,
 			);
 			name = "Selected Content Button";
 			sourceTree = "<group>";
@@ -576,6 +581,7 @@
 				88877AA21C74BDFF00D00246 /* main.m in Sources */,
 				88A7333E1CB190140076E23E /* MAXDrawerView.m in Sources */,
 				88BE771B1C8318EF002693C0 /* UIFont+MAXSystemFonts.m in Sources */,
+				88DDDDB41CC26765005FB623 /* MAXSelectedContentButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
