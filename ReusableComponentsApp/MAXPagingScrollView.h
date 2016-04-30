@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class MAXPagingScrollView;
+@class MAXPageControl;
 
 @protocol MAXScrollViewDelegateAndDataSource <NSObject>
 
@@ -27,6 +28,8 @@ typedef void (^ViewInjectionBlockWithIndex)(UIView *theView, NSInteger thePage);
 
 @property (nonatomic, strong) id <MAXScrollViewDelegateAndDataSource> maxDelegate;
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic) NSInteger numPages;
+@property (nonatomic) MAXPageControl *pageControl;
 
 /** @discussion This method is used to change the page of the scroll view. The page numbers are zero indexed and nothing happens if you try and move to a page that does not exist.
  

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		886391461CBD984A00B6331A /* MAXFadeBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 886391451CBD984A00B6331A /* MAXFadeBlockButton.m */; };
+		887639271CD4DA6500C8196D /* MAXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 887639261CD4DA6500C8196D /* MAXPageControl.m */; };
 		88877AA21C74BDFF00D00246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA11C74BDFF00D00246 /* main.m */; };
 		88877AA51C74BDFF00D00246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA41C74BDFF00D00246 /* AppDelegate.m */; };
 		88877AA81C74BDFF00D00246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA71C74BDFF00D00246 /* ViewController.m */; };
@@ -68,6 +69,8 @@
 /* Begin PBXFileReference section */
 		886391441CBD984A00B6331A /* MAXFadeBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXFadeBlockButton.h; sourceTree = "<group>"; };
 		886391451CBD984A00B6331A /* MAXFadeBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXFadeBlockButton.m; sourceTree = "<group>"; };
+		887639251CD4DA6500C8196D /* MAXPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXPageControl.h; sourceTree = "<group>"; };
+		887639261CD4DA6500C8196D /* MAXPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXPageControl.m; sourceTree = "<group>"; };
 		88877A9D1C74BDFF00D00246 /* ReusableComponentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableComponentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88877AA11C74BDFF00D00246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88877AA31C74BDFF00D00246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -179,6 +182,15 @@
 				88DDDDB31CC26765005FB623 /* MAXSelectedContentButton.m */,
 			);
 			name = "Selected Content Button";
+			sourceTree = "<group>";
+		};
+		887639211CD4D8F400C8196D /* MAXPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				887639251CD4DA6500C8196D /* MAXPageControl.h */,
+				887639261CD4DA6500C8196D /* MAXPageControl.m */,
+			);
+			name = MAXPageControl;
 			sourceTree = "<group>";
 		};
 		88877A941C74BDFF00D00246 = {
@@ -346,13 +358,14 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
-		88E2ECE71C7BB8A300A57E0C /* Scroll View With Blocks */ = {
+		88E2ECE71C7BB8A300A57E0C /* Paging Scroll View With Blocks */ = {
 			isa = PBXGroup;
 			children = (
+				887639211CD4D8F400C8196D /* MAXPageControl */,
 				88E2ED2B1C7F151000A57E0C /* MAXPagingScrollView.h */,
 				88E2ED2A1C7F151000A57E0C /* MAXPagingScrollView.m */,
 			);
-			name = "Scroll View With Blocks";
+			name = "Paging Scroll View With Blocks";
 			sourceTree = "<group>";
 		};
 		88E2ED271C7EF9AE00A57E0C /* Text Fields */ = {
@@ -391,7 +404,7 @@
 				88DB6F691C8B3A1E00DFEBAD /* Block View */,
 				88E2ED2F1C7F9CB700A57E0C /* Page Control */,
 				88E2ED271C7EF9AE00A57E0C /* Text Fields */,
-				88E2ECE71C7BB8A300A57E0C /* Scroll View With Blocks */,
+				88E2ECE71C7BB8A300A57E0C /* Paging Scroll View With Blocks */,
 				88E2ECE61C7BB7EF00A57E0C /* Buttons */,
 				88877AD41C74BF9200D00246 /* Automatic Keyboard View Controller */,
 			);
@@ -573,6 +586,7 @@
 				88877AA81C74BDFF00D00246 /* ViewController.m in Sources */,
 				88DB6F6C1C8B3A4200DFEBAD /* MAXBlockView.m in Sources */,
 				88E2ED321C7F9CD700A57E0C /* UIView+MAXExtension.m in Sources */,
+				887639271CD4DA6500C8196D /* MAXPageControl.m in Sources */,
 				88C835511C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */,
 				88E2ED361C7FA71400A57E0C /* MAXPagingScrollViewController.m in Sources */,
 				88877ADA1C761AAB00D00246 /* MAXBlockButton.m in Sources */,

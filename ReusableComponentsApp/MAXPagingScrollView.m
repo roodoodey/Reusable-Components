@@ -7,9 +7,9 @@
 //
 
 #import "MAXPagingScrollView.h"
+#import "MAXPageControl.h"
 
 @interface MAXPagingScrollView () <UIScrollViewDelegate> {
-    NSInteger _numPages;
     NSMutableArray *_pageViews;
     NSInteger _currentPage;
     NumItemsBlock _numItemsBlock;
@@ -33,8 +33,10 @@
         _scrollView.delegate = self;
         [self addSubview:_scrollView];
         
-        _currentPage = 0;
+        _pageControl = [[MAXPageControl alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame) - 22, CGRectGetWidth(frame), 22)];
+        [self addSubview:_pageControl];
         
+        _currentPage = 0;
         
         _numPages = 0;
         _pageViews = [NSMutableArray array];
@@ -55,6 +57,7 @@
     if (_numItemsBlock != nil && _viewInjectionBlock != nil) {
         
         _numPages = _numItemsBlock();
+        _pageControl.numberOfPages = _numPages;
 
         [self p_reloadPageViewsWithNumPages:_numPages];
         [self p_injectViewsWithNumPages:_numPages];
@@ -140,6 +143,7 @@
     if (_currentPage != page) {
         
         _currentPage = page;
+        _pageControl.currentPage = page;
         
         if (_newPageBlock != nil) {
             _newPageBlock(page);
