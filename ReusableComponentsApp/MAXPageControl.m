@@ -92,6 +92,11 @@ const float p_defaultIndicatorSpace = 8;
 
 #pragma mark - Setters
 
+-(void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    [self p_layoutIndicatorsWithAlignment:_pageControlAlignment indicator:_pageIndicators];
+}
+
 -(void)setNumberOfPages:(NSInteger)numberOfPages {
     _numberOfPages = numberOfPages;
     [self p_populateIndicators:_pageIndicators numberOfIndicators:_numberOfPages];

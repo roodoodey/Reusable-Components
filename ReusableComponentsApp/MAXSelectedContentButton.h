@@ -27,6 +27,11 @@
 -(void)addSelectedContent:(UIView *)theSelectedContent;
 
 /**
+ @abstract Adds the specified UIView to the button with a custom animation that will use the contentFadeInTime so that the animation time will match. The animation will occur when the state changes from not selected to selected.
+ */
+-(void)addSelectedContent:(UIView *)theSelectedContent animateToBlock:(void (^)(void))animateToBlock animateBackBlock:(void (^)(void))animateBackBlock;
+
+/**
  @description Remove the specified uiview from the button.
  */
 -(void)removeSelectedContent:(UIView *)theSelectedContent;

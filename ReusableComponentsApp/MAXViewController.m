@@ -9,6 +9,7 @@
 #import "MAXViewController.h"
 
 @interface MAXViewController () {
+    
     CGRect _viewToAdjustTo;
     CGPoint _preservedContentOffset;
     NSNotification *_keyboardNotif;

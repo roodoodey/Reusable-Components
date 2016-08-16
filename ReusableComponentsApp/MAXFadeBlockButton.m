@@ -66,7 +66,17 @@
         }];
     }];
     
+    [self buttonTouchDragExitWithCompletion:^{
+        [UIView animateWithDuration:self.fadeAnimationTime animations:^{
+            _wSelf.alpha = 1.0;
+        }];
+    }];
     
+    [self buttonTouchCancelWithCompletion:^{
+        [UIView animateWithDuration:self.fadeAnimationTime animations:^{
+            _wSelf.alpha = 1.0;
+        }];
+    }];
     
 }
 

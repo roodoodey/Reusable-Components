@@ -30,7 +30,7 @@
     
     [pageScrollView MAXScrollViewNumPagesWithBlock:^{
         
-        return 3;
+        return (NSInteger)3;
         
     }];
     

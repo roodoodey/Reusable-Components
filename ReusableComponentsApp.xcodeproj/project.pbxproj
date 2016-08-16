@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E24929F1CE250B60036C7C6 /* MAXBlockTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E24929E1CE250B60036C7C6 /* MAXBlockTextField.m */; };
 		886391461CBD984A00B6331A /* MAXFadeBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 886391451CBD984A00B6331A /* MAXFadeBlockButton.m */; };
 		887639271CD4DA6500C8196D /* MAXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 887639261CD4DA6500C8196D /* MAXPageControl.m */; };
 		88877AA21C74BDFF00D00246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA11C74BDFF00D00246 /* main.m */; };
@@ -19,6 +20,10 @@
 		88877AC61C74BDFF00D00246 /* ReusableComponentsAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AC51C74BDFF00D00246 /* ReusableComponentsAppUITests.m */; };
 		88877AD71C74BFBA00D00246 /* MAXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AD61C74BFBA00D00246 /* MAXViewController.m */; };
 		88877ADA1C761AAB00D00246 /* MAXBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AD91C761AAB00D00246 /* MAXBlockButton.m */; };
+		889383711D16FD5100DFB5A5 /* MAXChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 889383701D16FD5100DFB5A5 /* MAXChartView.m */; };
+		889383751D1704EC00DFB5A5 /* MAXChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889383741D1704EC00DFB5A5 /* MAXChartViewController.m */; };
+		889383791D170D2400DFB5A5 /* MAXChartColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 889383781D170D2400DFB5A5 /* MAXChartColumn.m */; };
+		8893837D1D1776F400DFB5A5 /* MAXChartIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893837C1D1776F400DFB5A5 /* MAXChartIndexPath.m */; };
 		88A7333B1CB18FB00076E23E /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A7333A1CB18FB00076E23E /* DrawerViewController.m */; };
 		88A7333E1CB190140076E23E /* MAXDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A7333D1CB190140076E23E /* MAXDrawerView.m */; };
 		88BE771B1C8318EF002693C0 /* UIFont+MAXSystemFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE771A1C8318EF002693C0 /* UIFont+MAXSystemFonts.m */; };
@@ -40,6 +45,7 @@
 		88BEFA261C83722D00ADE78C /* MAXRobotoFontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BEFA251C83722D00ADE78C /* MAXRobotoFontTests.m */; };
 		88C835511C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */; };
 		88C835521C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */; };
+		88CF9A671CD7E1DB00AA8AE7 /* MAXBlockSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF9A661CD7E1DB00AA8AE7 /* MAXBlockSwitch.m */; };
 		88DB6F6C1C8B3A4200DFEBAD /* MAXBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6F6B1C8B3A4200DFEBAD /* MAXBlockView.m */; };
 		88DDDDB41CC26765005FB623 /* MAXSelectedContentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DDDDB31CC26765005FB623 /* MAXSelectedContentButton.m */; };
 		88E2ED2C1C7F151000A57E0C /* MAXPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E2ED2A1C7F151000A57E0C /* MAXPagingScrollView.m */; };
@@ -67,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E24929D1CE250B60036C7C6 /* MAXBlockTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockTextField.h; sourceTree = "<group>"; };
+		4E24929E1CE250B60036C7C6 /* MAXBlockTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockTextField.m; sourceTree = "<group>"; };
 		886391441CBD984A00B6331A /* MAXFadeBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXFadeBlockButton.h; sourceTree = "<group>"; };
 		886391451CBD984A00B6331A /* MAXFadeBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXFadeBlockButton.m; sourceTree = "<group>"; };
 		887639251CD4DA6500C8196D /* MAXPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXPageControl.h; sourceTree = "<group>"; };
@@ -91,6 +99,14 @@
 		88877AD61C74BFBA00D00246 /* MAXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXViewController.m; sourceTree = "<group>"; };
 		88877AD81C761AAB00D00246 /* MAXBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockButton.h; sourceTree = "<group>"; };
 		88877AD91C761AAB00D00246 /* MAXBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockButton.m; sourceTree = "<group>"; };
+		8893836F1D16FD5100DFB5A5 /* MAXChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXChartView.h; sourceTree = "<group>"; };
+		889383701D16FD5100DFB5A5 /* MAXChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXChartView.m; sourceTree = "<group>"; };
+		889383731D1704EC00DFB5A5 /* MAXChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXChartViewController.h; sourceTree = "<group>"; };
+		889383741D1704EC00DFB5A5 /* MAXChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXChartViewController.m; sourceTree = "<group>"; };
+		889383771D170D2400DFB5A5 /* MAXChartColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXChartColumn.h; sourceTree = "<group>"; };
+		889383781D170D2400DFB5A5 /* MAXChartColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXChartColumn.m; sourceTree = "<group>"; };
+		8893837B1D1776F400DFB5A5 /* MAXChartIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXChartIndexPath.h; sourceTree = "<group>"; };
+		8893837C1D1776F400DFB5A5 /* MAXChartIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXChartIndexPath.m; sourceTree = "<group>"; };
 		88A733391CB18FB00076E23E /* DrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewController.h; sourceTree = "<group>"; };
 		88A7333A1CB18FB00076E23E /* DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerViewController.m; sourceTree = "<group>"; };
 		88A7333C1CB190140076E23E /* MAXDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXDrawerView.h; sourceTree = "<group>"; };
@@ -116,6 +132,8 @@
 		88BEFA251C83722D00ADE78C /* MAXRobotoFontTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXRobotoFontTests.m; sourceTree = "<group>"; };
 		88C8354F1C8B9C6B00E5D8C5 /* MAXSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXSingleton.h; sourceTree = "<group>"; };
 		88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXSingleton.m; sourceTree = "<group>"; };
+		88CF9A651CD7E1DB00AA8AE7 /* MAXBlockSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockSwitch.h; sourceTree = "<group>"; };
+		88CF9A661CD7E1DB00AA8AE7 /* MAXBlockSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockSwitch.m; sourceTree = "<group>"; };
 		88DB6F6A1C8B3A4200DFEBAD /* MAXBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockView.h; sourceTree = "<group>"; };
 		88DB6F6B1C8B3A4200DFEBAD /* MAXBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockView.m; sourceTree = "<group>"; };
 		88DDDDB21CC26765005FB623 /* MAXSelectedContentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXSelectedContentButton.h; sourceTree = "<group>"; };
@@ -157,6 +175,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E24929B1CE250890036C7C6 /* Icon and Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				88E2ED371C7FB94200A57E0C /* GLOOPSTextField.h */,
+				88E2ED381C7FB94200A57E0C /* GLOOPSTextField.m */,
+			);
+			name = "Icon and Text Field";
+			sourceTree = "<group>";
+		};
+		4E24929C1CE250990036C7C6 /* Blocks Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				4E24929D1CE250B60036C7C6 /* MAXBlockTextField.h */,
+				4E24929E1CE250B60036C7C6 /* MAXBlockTextField.m */,
+			);
+			name = "Blocks Text Field";
+			sourceTree = "<group>";
+		};
+		4E5397021D6349E000707E94 /* Vertical Chart View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Vertical Chart View";
+			sourceTree = "<group>";
+		};
+		4E5397031D6349E800707E94 /* Horizontal Chart View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Horizontal Chart View";
+			sourceTree = "<group>";
+		};
 		886391421CBD981400B6331A /* Block Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +241,19 @@
 				887639261CD4DA6500C8196D /* MAXPageControl.m */,
 			);
 			name = MAXPageControl;
+			sourceTree = "<group>";
+		};
+		887D56551D16FC24006B1AF2 /* Charts View */ = {
+			isa = PBXGroup;
+			children = (
+				4E5397031D6349E800707E94 /* Horizontal Chart View */,
+				4E5397021D6349E000707E94 /* Vertical Chart View */,
+				8893837A1D1776D400DFB5A5 /* Helper Classes */,
+				889383761D170CFB00DFB5A5 /* Chart View Column */,
+				8893836F1D16FD5100DFB5A5 /* MAXChartView.h */,
+				889383701D16FD5100DFB5A5 /* MAXChartView.m */,
+			);
+			name = "Charts View";
 			sourceTree = "<group>";
 		};
 		88877A941C74BDFF00D00246 = {
@@ -265,9 +328,9 @@
 		88877AD31C74BF7400D00246 /* View Controllers For UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				889383721D17043F00DFB5A5 /* Chart view controller */,
 				88A733381CB18F800076E23E /* Drawer View Controller */,
 				88E2ED331C7FA6F500A57E0C /* Paging Scroll View View Controller */,
-				88E2ED2E1C7F9C4000A57E0C /* Scroll View With Blocks view controller */,
 			);
 			name = "View Controllers For UI Components";
 			sourceTree = "<group>";
@@ -279,6 +342,33 @@
 				88877AD61C74BFBA00D00246 /* MAXViewController.m */,
 			);
 			name = "Automatic Keyboard View Controller";
+			sourceTree = "<group>";
+		};
+		889383721D17043F00DFB5A5 /* Chart view controller */ = {
+			isa = PBXGroup;
+			children = (
+				889383731D1704EC00DFB5A5 /* MAXChartViewController.h */,
+				889383741D1704EC00DFB5A5 /* MAXChartViewController.m */,
+			);
+			name = "Chart view controller";
+			sourceTree = "<group>";
+		};
+		889383761D170CFB00DFB5A5 /* Chart View Column */ = {
+			isa = PBXGroup;
+			children = (
+				889383771D170D2400DFB5A5 /* MAXChartColumn.h */,
+				889383781D170D2400DFB5A5 /* MAXChartColumn.m */,
+			);
+			name = "Chart View Column";
+			sourceTree = "<group>";
+		};
+		8893837A1D1776D400DFB5A5 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8893837B1D1776F400DFB5A5 /* MAXChartIndexPath.h */,
+				8893837C1D1776F400DFB5A5 /* MAXChartIndexPath.m */,
+			);
+			name = "Helper Classes";
 			sourceTree = "<group>";
 		};
 		88A733371CB18CB70076E23E /* Drawer View */ = {
@@ -339,6 +429,15 @@
 			name = "Object components";
 			sourceTree = "<group>";
 		};
+		88CF9A611CD7E19600AA8AE7 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				88CF9A651CD7E1DB00AA8AE7 /* MAXBlockSwitch.h */,
+				88CF9A661CD7E1DB00AA8AE7 /* MAXBlockSwitch.m */,
+			);
+			name = Switch;
+			sourceTree = "<group>";
+		};
 		88DB6F691C8B3A1E00DFEBAD /* Block View */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,8 +470,8 @@
 		88E2ED271C7EF9AE00A57E0C /* Text Fields */ = {
 			isa = PBXGroup;
 			children = (
-				88E2ED371C7FB94200A57E0C /* GLOOPSTextField.h */,
-				88E2ED381C7FB94200A57E0C /* GLOOPSTextField.m */,
+				4E24929C1CE250990036C7C6 /* Blocks Text Field */,
+				4E24929B1CE250890036C7C6 /* Icon and Text Field */,
 			);
 			name = "Text Fields";
 			sourceTree = "<group>";
@@ -400,29 +499,16 @@
 		88E2ED2D1C7F9A6300A57E0C /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				887D56551D16FC24006B1AF2 /* Charts View */,
+				88CF9A611CD7E19600AA8AE7 /* Switch */,
 				88A733371CB18CB70076E23E /* Drawer View */,
 				88DB6F691C8B3A1E00DFEBAD /* Block View */,
-				88E2ED2F1C7F9CB700A57E0C /* Page Control */,
 				88E2ED271C7EF9AE00A57E0C /* Text Fields */,
 				88E2ECE71C7BB8A300A57E0C /* Paging Scroll View With Blocks */,
 				88E2ECE61C7BB7EF00A57E0C /* Buttons */,
 				88877AD41C74BF9200D00246 /* Automatic Keyboard View Controller */,
 			);
 			name = "UI Components";
-			sourceTree = "<group>";
-		};
-		88E2ED2E1C7F9C4000A57E0C /* Scroll View With Blocks view controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Scroll View With Blocks view controller";
-			sourceTree = "<group>";
-		};
-		88E2ED2F1C7F9CB700A57E0C /* Page Control */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Page Control";
 			sourceTree = "<group>";
 		};
 		88E2ED331C7FA6F500A57E0C /* Paging Scroll View View Controller */ = {
@@ -578,23 +664,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				886391461CBD984A00B6331A /* MAXFadeBlockButton.m in Sources */,
+				889383751D1704EC00DFB5A5 /* MAXChartViewController.m in Sources */,
 				88BE77231C836C58002693C0 /* UIFont+MAXRobotoExtension.m in Sources */,
 				88E2ED391C7FB94200A57E0C /* GLOOPSTextField.m in Sources */,
 				88E2ED2C1C7F151000A57E0C /* MAXPagingScrollView.m in Sources */,
+				889383711D16FD5100DFB5A5 /* MAXChartView.m in Sources */,
 				88FFCCF91CB98B2F004E4EBE /* UIColor+Extension.m in Sources */,
 				88877AD71C74BFBA00D00246 /* MAXViewController.m in Sources */,
 				88877AA81C74BDFF00D00246 /* ViewController.m in Sources */,
+				889383791D170D2400DFB5A5 /* MAXChartColumn.m in Sources */,
 				88DB6F6C1C8B3A4200DFEBAD /* MAXBlockView.m in Sources */,
 				88E2ED321C7F9CD700A57E0C /* UIView+MAXExtension.m in Sources */,
 				887639271CD4DA6500C8196D /* MAXPageControl.m in Sources */,
 				88C835511C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */,
 				88E2ED361C7FA71400A57E0C /* MAXPagingScrollViewController.m in Sources */,
 				88877ADA1C761AAB00D00246 /* MAXBlockButton.m in Sources */,
+				8893837D1D1776F400DFB5A5 /* MAXChartIndexPath.m in Sources */,
 				88877AA51C74BDFF00D00246 /* AppDelegate.m in Sources */,
 				88A7333B1CB18FB00076E23E /* DrawerViewController.m in Sources */,
+				4E24929F1CE250B60036C7C6 /* MAXBlockTextField.m in Sources */,
 				88877AA21C74BDFF00D00246 /* main.m in Sources */,
 				88A7333E1CB190140076E23E /* MAXDrawerView.m in Sources */,
 				88BE771B1C8318EF002693C0 /* UIFont+MAXSystemFonts.m in Sources */,
+				88CF9A671CD7E1DB00AA8AE7 /* MAXBlockSwitch.m in Sources */,
 				88DDDDB41CC26765005FB623 /* MAXSelectedContentButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
