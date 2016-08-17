@@ -12,6 +12,7 @@
 #import "DrawerViewController.h"
 #import "MAXChartViewController.h"
 #import "ButtonsViewController.h"
+#import "LineChartViewController.h"
 
 /** This is a view controller that leads to you to see all other ui components through a basic table view */
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource> {
@@ -60,19 +61,22 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-        [self presentViewController:[[MAXViewController alloc] init] animated:YES completion:nil];
+        [self presentViewController:[[MAXViewController alloc] init] animated: YES completion: nil];
     }
     else if(indexPath.row == 1) {
-        [self presentViewController:[[MAXPagingScrollViewController alloc] init] animated:YES completion:nil];
+        [self presentViewController:[[MAXPagingScrollViewController alloc] init] animated: YES completion: nil];
     }
     else if(indexPath.row == 2) {
-        [self presentViewController:[[DrawerViewController alloc] init] animated:YES completion:nil];
+        [self presentViewController:[[DrawerViewController alloc] init] animated: YES completion: nil];
     }
     else if(indexPath.row == 3) {
         [self presentViewController: [[MAXChartViewController alloc] init] animated: YES completion: nil];
     }
     else if(indexPath.row == 4) {
         [self presentViewController: [[ButtonsViewController alloc] init] animated: YES completion: nil];
+    }
+    else if(indexPath.row == 5) {
+        [self presentViewController: [[LineChartViewController alloc] init] animated: YES completion: nil];
     }
     
     
@@ -94,6 +98,9 @@
     }
     else if(theIndexPath.row == 4) {
         return @"Button subclasses";
+    }
+    else if(theIndexPath.row == 5) {
+        return @"Line Chart View Controller";
     }
     
     return @"Not Recognized";
