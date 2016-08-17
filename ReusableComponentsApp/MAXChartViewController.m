@@ -73,5 +73,17 @@
     
 }
 
+-(void)MAXChartView:(MAXChartView *)theChartView sectionSpaceDecorationView:(UIView *)theSectionSpaceDecorationView section:(NSInteger)theSection {
+    
+    theSectionSpaceDecorationView.backgroundColor = [UIColor blueColor];
+    
+}
+
+-(void)MAXChartView:(MAXChartView *)theChartView columnSpaceDecorationView:(UIView *)theColumnSpaceDecorationView indexPath:(MAXChartIndexPath *)theIndexPath {
+    
+    theColumnSpaceDecorationView.backgroundColor = [UIColor greenColor];
+    
+}
+
 
 @end

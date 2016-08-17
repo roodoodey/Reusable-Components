@@ -17,13 +17,14 @@
     
     NSMutableArray <MAXChartColumn *> *_reusableBarViews;
     
-    NSMutableArray <UIView *> *columnDecorationViews;
-    NSMutableArray <UIView *> *sectionSpaceDecorationViews;
-    NSMutableArray <UIView *> *columnSpaceDecorationViews;
+    NSMutableArray <UIView *> *_columnDecorationViews;
+    NSMutableArray <UIView *> *_sectionSpaceDecorationViews;
     
     NSArray <NSArray <NSNumber *> *> *_chartData;
     
 }
+
+@property (nonatomic, strong) NSMutableArray <UIView *> *columnSpaceDecorationViews;
 
 @end
 
@@ -34,6 +35,8 @@
     if (self = [super initWithFrame: frame]) {
         
         _reusableBarViews = [NSMutableArray array];
+        _sectionSpaceDecorationViews = [NSMutableArray array];
+        _columnSpaceDecorationViews = [NSMutableArray array];
         
     }
     
@@ -50,14 +53,15 @@
     _chartData = [self p_normalizeChartData: _chartData];
     
     // creation of decoration views
-    [self p_setupSectionSpaceDecorationViews: sectionSpaceDecorationViews chartData: _chartData];
+    [self p_setupSectionSpaceDecorationViews: _sectionSpaceDecorationViews chartData: _chartData];
+    [self p_setupColumnSpaceDecorationViews: _columnSpaceDecorationViews chartData: _chartData];
     
     // creation and column view setup
     [self p_updateReusableViews: _reusableBarViews];
     [self p_hideUnusedReusableViews: _reusableBarViews];
     
     
-    [self p_positionViews:_reusableBarViews sectionSpaceDecorationViews: sectionSpaceDecorationViews chartData: _chartData];
+    [self p_positionViews:_reusableBarViews sectionSpaceDecorationViews: _sectionSpaceDecorationViews columnSpaceDecorationViews: _columnSpaceDecorationViews chartData: _chartData];
     
 }
 
@@ -167,13 +171,14 @@
 
 -(void)p_setupSectionSpaceDecorationViews:(NSMutableArray <UIView *> *)theSectionSpaceDecorationViews chartData:(NSArray <NSArray <NSNumber *> *> *)theChartData {
     
+    
     if ([self.delegate respondsToSelector:@selector(MAXChartView:sectionSpaceDecorationView:section:)] == YES) {
         
         for (UIView *view in theSectionSpaceDecorationViews) {
             [view removeFromSuperview];
         }
         
-        theSectionSpaceDecorationViews = [NSMutableArray array];
+        [theSectionSpaceDecorationViews removeAllObjects];
         
         for (int section = 0; section < theChartData.count + 1; section++) {
             
@@ -185,6 +190,7 @@
         }
         
     }
+    
     
 }
 
@@ -204,7 +210,7 @@
             
         }
         
-        theColumnSpaceDecorationViews = [NSMutableArray array];
+        [theColumnSpaceDecorationViews removeAllObjects];
         
         for (int columns = 0; columns < numColumnSpaces; columns++) {
             
@@ -294,7 +300,7 @@
 
 #pragma mark - Positioning
 
--(void)p_positionViews:(NSArray <MAXChartColumn *> *)theReusableViews sectionSpaceDecorationViews:(NSMutableArray <UIView *> *)theSectionSpaceDecorationViews chartData:(NSArray <NSArray <NSNumber *> *> *)theChartData {
+-(void)p_positionViews:(NSArray <MAXChartColumn *> *)theReusableViews sectionSpaceDecorationViews:(NSMutableArray <UIView *> *)theSectionSpaceDecorationViews columnSpaceDecorationViews:(NSMutableArray <UIView *> *)theColumnSpaceDecorationViews chartData:(NSArray <NSArray <NSNumber *> *> *)theChartData {
     
     CGFloat cumulatedPosition = 0;
     NSUInteger numColumn = 0;
@@ -306,10 +312,10 @@
         NSArray *sectionData = [theChartData objectAtIndex: section];
         
         // add space right away before the section
-        CGFloat sectionSize = [self.delegate MAXChartView: self spaceForSection: section];
+        CGFloat sectionSpaceSize = [self.delegate MAXChartView: self spaceForSection: section];
+        [self p_positionSectionSpaceDecorationViews: theSectionSpaceDecorationViews cumulatedPos: cumulatedPosition sectionSpaceSize: sectionSpaceSize section: section];
         
-        
-        cumulatedPosition += sectionSize;
+        cumulatedPosition += sectionSpaceSize;
         
         for (int column = 0; column < sectionData.count; column++) {
             
@@ -321,7 +327,11 @@
             
             // add space between columns
             if (column != sectionData.count - 1) {
-                cumulatedPosition += [self.delegate MAXChartView: self spaceForColumnAtIndexPath: indexPath];
+                
+                CGFloat columnSpaceSize = [self.delegate MAXChartView: self spaceForColumnAtIndexPath: indexPath];
+                [self p_positionColumnSpaceDecorationViews: theColumnSpaceDecorationViews cumulatedPos: cumulatedPosition rowSpaceSize: columnSpaceSize columnIndex: numColumn - section atIndexPath: indexPath];
+                cumulatedPosition += columnSpaceSize;
+                
             }
             
             // holds track of the column in the reusable views
@@ -329,9 +339,12 @@
         }
         
         // add space after the last section
-        if (section != theChartData.count - 1) {
+        if (section == theChartData.count - 1) {
             
-            cumulatedPosition += [self.delegate MAXChartView: self spaceForSection: section + 1];
+            CGFloat sectionSize = [self.delegate MAXChartView: self spaceForSection: section + 1];
+            [self p_positionSectionSpaceDecorationViews: theSectionSpaceDecorationViews cumulatedPos: cumulatedPosition sectionSpaceSize: sectionSize section: section + 1];
+            
+            cumulatedPosition += sectionSize;
             
         }
         
@@ -339,7 +352,32 @@
     
 }
 
--(void)p_positionSectionDecorationView:(UIView *)theSectionDecorationView cumulatedPos:(CGFloat)theCumulatedPos forSection:(NSInteger)theSection {
+-(void)p_positionSectionSpaceDecorationViews:(NSArray <UIView *> *)theSectionDecorationViews cumulatedPos:(CGFloat)theCumulatedPos sectionSpaceSize:(CGFloat)theSectionSize section:(NSInteger)theSection {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXChartView:sectionSpaceDecorationView:section:)] == YES) {
+        
+        UIView *sectionDecorationView = [theSectionDecorationViews objectAtIndex: theSection];
+        
+        sectionDecorationView.frame = [self p_repositionFrameForChartDirect: CGRectMake(theCumulatedPos, [self p_upperView], theSectionSize, [self p_chartHeight])];
+        
+        [self.delegate MAXChartView: self sectionSpaceDecorationView: sectionDecorationView section: theSection];
+        
+    }
+    
+}
+
+
+-(void)p_positionColumnSpaceDecorationViews:(NSArray <UIView *> *)theColumnDecorationViews cumulatedPos:(CGFloat)theCumulatedPos rowSpaceSize:(CGFloat)rowSpaceSize columnIndex:(NSInteger)theColumnIndex atIndexPath:(MAXChartIndexPath *)theIndexPath {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXChartView:columnSpaceDecorationView:indexPath:)] == YES) {
+        
+        UIView *columnDecorationView = [theColumnDecorationViews objectAtIndex: theColumnIndex];
+        
+        columnDecorationView.frame = [self p_repositionFrameForChartDirect: CGRectMake(theCumulatedPos, [self p_upperView],  rowSpaceSize, [self p_chartHeight])];
+        
+        [self.delegate MAXChartView: self columnSpaceDecorationView: columnDecorationView indexPath: theIndexPath]
+        ;
+    }
     
 }
 
