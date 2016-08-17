@@ -12,12 +12,14 @@
 
 @protocol MAXLineChartViewDataSource < NSObject >
 
+@required
+
 /**
  @description The number of lines to draw in the chart view.
  
  @param theChartView Chart view that is requesting the number of lines for it.
  */
--(NSUInteger)MAXLineChartNumberOfLinesForChart:(MAXLineChartView *)theChartView;
+-(NSUInteger)MAXNumberOfLinesForChart:(MAXLineChartView *)theChartView;
 
 /**
  @description The number of values for the line on the x scale of the line chart.
@@ -41,6 +43,12 @@
 
 @protocol MAXLineChartDelegate < NSObject >
 
+@optional
+
+-(double)MAXhighestYValueForChart:(MAXLineChartView *)theLineChart;
+
+-(double)MAXHighestXValueForChart:(MAXLineChartView *)theLineChart;
+
 @end
 
 @interface MAXLineChartView : UIView
@@ -48,5 +56,7 @@
 @property (nonatomic, weak) id <MAXLineChartViewDataSource> datasource;
 
 @property (nonatomic, weak) id <MAXLineChartDelegate> delegate;
+
+-(void)reloadData;
 
 @end

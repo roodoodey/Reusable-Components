@@ -7,7 +7,41 @@
 //
 
 #import "LineChartViewController.h"
+#import "MAXLineChartView.h"
+
+@interface LineChartViewController () <MAXLineChartViewDataSource, MAXLineChartDelegate>
+
+@end
 
 @implementation LineChartViewController
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    MAXLineChartView *lineChartView = [[MAXLineChartView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame))];
+    
+    lineChartView.datasource = self;
+    lineChartView.delegate = self;
+    [lineChartView reloadData];
+    
+    [self.view addSubview: lineChartView];
+    
+}
+
+-(NSUInteger)MAXNumberOfLinesForChart:(MAXLineChartView *)theChartView {
+    
+    return 1;
+}
+
+-(NSUInteger)MAXLineChart:(MAXLineChartView *)theChartView numberOfXValuesForLine:(NSUInteger)theLine {
+    
+    return 20;
+}
+
+-(double)MAXLineChart:(MAXLineChartView *)theChartView YValueAtX:(NSUInteger)theX line:(NSUInteger)theLine {
+    
+    
+    return arc4random_uniform(100);
+}
 
 @end
