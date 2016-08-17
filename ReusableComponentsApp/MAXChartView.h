@@ -13,6 +13,18 @@ NS_ASSUME_NONNULL_BEGIN
 @class MAXChartView;
 @class MAXChartColumn;
 @class MAXChartIndexPath;
+@class MAXSelectedContentButton;
+
+
+typedef NS_ENUM(NSInteger, MAXChartDirection) {
+    
+    kMAXChartDirectionVerticalUp,
+    kMAXChartDirectionVerticalDown,
+    kMAXChartDirectionHorizontalLeft,
+    kMAXChartDirectionHorizontalRight
+    
+};
+
 
 @protocol MAXChartViewDataSource <NSObject>
 
@@ -71,9 +83,9 @@ NS_ASSUME_NONNULL_BEGIN
 -(CGFloat)MAXChartView:(MAXChartView *)theChartView spaceForColumnAtIndexPath:(MAXChartIndexPath *)theIndexPath;
 
 /**
- @description
+ @description The space between sections.
  */
--(double)MAXChartView:(MAXChartView *)theChartView spaceForSectionAtIndexPath:(MAXChartIndexPath *)theIndexPath;
+-(CGFloat)MAXChartView:(MAXChartView *)theChartView spaceForSection:(NSUInteger)theSection;
 
 /**
  @description Used to predefine the highest possible value that will be displayed to normalize the data. If this value is not higher that the highest value of any of the columns it will be cut.
@@ -84,6 +96,32 @@ NS_ASSUME_NONNULL_BEGIN
  @description Used to define the lowest value, if not defined it will be zero. Currently no used.
  */
 -(double)MAXLowestValueForChartView:(MAXChartView *)theChartView;
+
+/**
+ @description Customize columns and animate.
+ */
+
+-(void)MAXChartView:(MAXChartView *)theChartView customizeColumnView:(MAXSelectedContentButton *)theColumnView columnBackgroundView:(MAXSelectedContentButton *)theColumnBackgorundView atIndexPath:(MAXChartIndexPath *)theIndexPath;
+
+/**
+ @description The decoration view for each column, the decoration spans from where it stops to the top of the view.
+ */
+-(void)MAXChartView:(MAXChartView *)theChartView columnDecorationView:(MAXSelectedContentButton *)columnDecorationView atIndexPath:(MAXChartIndexPath *)theIndexPath;
+
+/**
+ @description If you want to customize the space before, between and after sections register to this delegate. If you do not register to it the decoration views will not be generated.
+ */
+-(void)MAXChartView:(MAXChartView *)theChartView sectionSpaceDecorationView:(UIView *)theSectionSpaceDecorationView section:(NSInteger)theSection;
+
+/**
+ @description 
+ */
+-(void)MAXChartView:(MAXChartView *)theChartView columnSpaceDecorationView:(UIView *)theColumnSpaceDecorationView indexPath:(MAXChartIndexPath *)theIndexPath;
+
+/**
+ @description If you do not want to use the completion blocks of the buttons
+ */
+
 
 @end
 
@@ -112,9 +150,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) double sectionSpace;
 
 /**
+ @description Direction of the chart which determines its position.
+ */
+@property (nonatomic) MAXChartDirection chartDirection;
+
+/**
  @description Reloads the data for the chart view.
  */
 -(void)reloadData;
+
+
 
 @end
 

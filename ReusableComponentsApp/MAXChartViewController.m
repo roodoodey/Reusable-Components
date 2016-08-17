@@ -8,6 +8,7 @@
 
 #import "MAXChartViewController.h"
 #import "MAXChartView.h"
+#import "MAXSelectedContentButton.h"
 
 @interface MAXChartViewController () <MAXChartViewDelegate, MAXChartViewDataSource> {
     
@@ -20,10 +21,15 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     MAXChartView *chartView = [[MAXChartView alloc] initWithFrame: CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame))];
+    chartView.chartDirection = kMAXChartDirectionHorizontalLeft;
     
     chartView.delegate = self;
     chartView.datasource = self;
+    
+    [chartView reloadData];
     
     [self.view addSubview: chartView];
     
@@ -31,6 +37,41 @@
 
 #pragma mark - Max Chart View Delegate
 
+-(NSUInteger)MAXChartView:(MAXChartView *)theChartView numberOfColumnsInSection:(NSUInteger)theSection {
+    
+    return 10;
+}
+
+-(CGFloat)MAXChartView:(MAXChartView *)theChartView widthForColumnAtIndexPath:(MAXChartIndexPath *)theIndexPath {
+    
+    return 10;
+}
+
+-(CGFloat)MAXChartView:(MAXChartView *)theChartView spaceForSection:(NSUInteger)theSection {
+    
+    return 10;
+}
+
+-(CGFloat)MAXChartView:(MAXChartView *)theChartView spaceForColumnAtIndexPath:(MAXChartIndexPath *)theIndexPath {
+    
+    return 4;
+}
+
+-(double)MAXChartView:(MAXChartView *)theChartView valueAtIndexPath:(MAXChartIndexPath *)theIndexPath {
+    
+    return arc4random_uniform(100);
+}
+
+-(void)MAXChartView:(MAXChartView *)theChartView customizeColumnView:(MAXSelectedContentButton *)theColumnView columnBackgroundView:(MAXSelectedContentButton *)theColumnBackgorundView atIndexPath:(MAXChartIndexPath *)theIndexPath {
+    
+    theColumnView.backgroundColor = [UIColor redColor];
+    
+    [theColumnView buttonTouchDownWithCompletion: ^{
+       
+        
+    }];
+    
+}
 
 
 @end

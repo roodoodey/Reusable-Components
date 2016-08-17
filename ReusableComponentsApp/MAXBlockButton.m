@@ -145,21 +145,21 @@ typedef void (^CompletionBlock)(void);
 -(void)buttonTouchDownWithCompletion:(void (^)(void))block {
     [block copy];
     
-    [_touchDownBlocks addObject:block];
+    [_touchDownBlocks addObject: [block copy] ];
     
 }
 
 -(void)buttonTouchDownRepeatWithCompletion:(void (^)(void))block {
     [block copy];
     
-    [_touchDownRepeatBlocks addObject:block];
+    [_touchDownRepeatBlocks addObject: [block copy] ];
     
 }
 
 -(void)buttonTouchDragInsideWithCompletion:(void (^)(void))block {
     [block copy];
     
-    [_touchDragInsideBlocks addObject:block];
+    [_touchDragInsideBlocks addObject: [block copy] ];
     
 }
 

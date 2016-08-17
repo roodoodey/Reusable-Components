@@ -10,6 +10,8 @@
 #import "MAXViewController.h"
 #import "MAXPagingScrollViewController.h"
 #import "DrawerViewController.h"
+#import "MAXChartViewController.h"
+#import "ButtonsViewController.h"
 
 /** This is a view controller that leads to you to see all other ui components through a basic table view */
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource> {
@@ -38,7 +40,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 5;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,6 +68,12 @@
     else if(indexPath.row == 2) {
         [self presentViewController:[[DrawerViewController alloc] init] animated:YES completion:nil];
     }
+    else if(indexPath.row == 3) {
+        [self presentViewController: [[MAXChartViewController alloc] init] animated: YES completion: nil];
+    }
+    else if(indexPath.row == 4) {
+        [self presentViewController: [[ButtonsViewController alloc] init] animated: YES completion: nil];
+    }
     
     
 }
@@ -80,6 +88,12 @@
     }
     else if(theIndexPath.row == 2){
         return @"Drawer View ";
+    }
+    else if(theIndexPath.row == 3) {
+        return @"Chart View";
+    }
+    else if(theIndexPath.row == 4) {
+        return @"Button subclasses";
     }
     
     return @"Not Recognized";

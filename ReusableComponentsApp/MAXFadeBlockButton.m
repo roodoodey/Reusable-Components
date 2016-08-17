@@ -45,7 +45,7 @@
     
     _wSelf = self;
     self.fadeAnimationTime = 0.2;
-    self.fadeAlphaValue = 0.7;
+    self.fadeAlphaValue = 0.2;
     
     [self buttonTouchDownWithCompletion:^{
         [UIView animateWithDuration:self.fadeAnimationTime animations:^{
