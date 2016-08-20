@@ -12,6 +12,11 @@
 
 @property (nonatomic, strong) NSArray <NSArray <NSNumber *> *> *chartData;
 
+/**
+ @description
+ */
+@property (nonatomic, strong) NSArray <CAShapeLayer *> *lineLayers;
+
 @end
 
 @implementation MAXLineChartView
@@ -65,14 +70,14 @@
 }
 
 
+#pragma mark - Drawing The Lince Chart
+
 -(void)p_drawLinesWithChartData:(NSArray <NSArray <NSNumber *> *> *)theChartData maxYValue:(double)maxYValue maxXValue:(NSUInteger)maxXValue {
     
     CGFloat horizontalStep = CGRectGetWidth(self.frame) / (maxXValue - 1);
     CGFloat height = CGRectGetHeight(self.frame);
     
-    UIGraphicsBeginImageContext( self.frame.size );
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
+    NSUInteger lineNumber = 0;
     for (NSArray *line in theChartData) {
         
         UIBezierPath *path = [[UIBezierPath alloc] init];
@@ -92,15 +97,50 @@
             
         }
         
-        CAShapeLayer *layer = [[CAShapeLayer alloc] init];
-        layer.path = path.CGPath;
-        layer.strokeColor = [UIColor greenColor].CGColor;
-        layer.fillColor = [UIColor clearColor].CGColor;
+        CAShapeLayer *layer = [self p_createLayerWithPath: path forLine: lineNumber];
         [self.layer addSublayer: layer];
         
-        
+        // increase the line number as we go through the line data
+        lineNumber++;
     }
     
+}
+
+-(CAShapeLayer *)p_createLayerWithPath:(UIBezierPath *)thePath forLine:(NSUInteger)theLine {
+    
+    CAShapeLayer *layer = [[CAShapeLayer alloc] init];
+    layer.path = thePath.CGPath;
+    
+    if ([self.delegate respondsToSelector: @selector(MAXLineChart:widthForLine:)] == YES) {
+        
+        layer.lineWidth = [self.delegate MAXLineChart: self widthForLine: theLine];
+    }
+    else {
+        
+        layer.lineWidth = 2.0;
+    }
+    
+    if ([self.delegate respondsToSelector: @selector(MAXLineChart:strokeColorForLine:)] == YES) {
+        
+        layer.strokeColor = [self.delegate MAXLineChart: self strokeColorForLine: theLine].CGColor;
+    }
+    else {
+        
+        layer.strokeColor = [UIColor redColor].CGColor;
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(MAXLineChart:lineDashPatternForLine:)] == YES) {
+        
+        layer.lineDashPattern = [self.delegate MAXLineChart: self lineDashPatternForLine: theLine];
+    }
+    else {
+        
+        layer.lineDashPattern = nil;
+    }
+    
+    layer.fillColor = [UIColor clearColor].CGColor;
+    
+    return layer;
 }
 
 
@@ -109,9 +149,9 @@
 
 -(NSUInteger)p_highestXValueForChart {
     
-    if ([self.delegate respondsToSelector: @selector(MAXHighestXValueForChart:)] == YES) {
+    if ([self.delegate respondsToSelector: @selector(MAXHighestXValueForLineChart:)] == YES) {
         
-        return [self.delegate MAXHighestXValueForChart: self];
+        return [self.delegate MAXHighestXValueForLineChart: self];
     }
     else {
         
@@ -136,9 +176,9 @@
 -(double)p_highestYValueForChart {
     
     // check if the user wants to provide his own value or if we exrtact it from the data
-    if ([self.delegate respondsToSelector:@selector(MAXhighestYValueForChart:)] == YES) {
+    if ([self.delegate respondsToSelector:@selector(MAXhighestYValueForLineChart:)] == YES) {
         
-        return [self.delegate MAXhighestYValueForChart: self];
+        return [self.delegate MAXhighestYValueForLineChart: self];
     }
     else {
         return [self p_findHighestYValue: _chartData];

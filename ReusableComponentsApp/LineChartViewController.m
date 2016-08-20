@@ -38,10 +38,22 @@
     return 20;
 }
 
+#pragma mark - Color Delegate
+
 -(double)MAXLineChart:(MAXLineChartView *)theChartView YValueAtX:(NSUInteger)theX line:(NSUInteger)theLine {
     
     
     return arc4random_uniform(100);
+}
+
+-(CGFloat)MAXLineChart:(MAXLineChartView *)TheLineChart widthForLine:(NSUInteger)theLine {
+    
+    return 5;
+}
+
+-(UIColor *)MAXLineChart:(MAXLineChartView *)theLineChart strokeColorForLine:(NSUInteger)theLine {
+    
+    return [UIColor purpleColor];
 }
 
 @end

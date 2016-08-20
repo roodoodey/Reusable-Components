@@ -43,11 +43,30 @@
 
 @protocol MAXLineChartDelegate < NSObject >
 
+
 @optional
 
--(double)MAXhighestYValueForChart:(MAXLineChartView *)theLineChart;
+/**
+ @description The color of used to stroke the path of the given line.
+ */
+-(UIColor *)MAXLineChart:(MAXLineChartView *)theLineChart strokeColorForLine:(NSUInteger)theLine;
 
--(double)MAXHighestXValueForChart:(MAXLineChartView *)theLineChart;
+/**
+ @description The line width of the given line.
+ */
+-(CGFloat)MAXLineChart:(MAXLineChartView *)TheLineChart widthForLine:(NSUInteger)theLine;
+
+/**
+ @description The line dash pattern.
+ */
+-(NSArray <NSNumber *> *)MAXLineChart:(MAXLineChartView *)theLineChart lineDashPatternForLine:(NSUInteger)theLine;
+
+/**
+ @description Used to normalize the chart, the highest possible value to use for normalization on all other values. If the y value is not higher than the highest possible values it will move the point to the top of chart.
+ */
+-(double)MAXhighestYValueForLineChart:(MAXLineChartView *)theLineChart;
+
+-(double)MAXHighestXValueForLineChart:(MAXLineChartView *)theLineChart;
 
 @end
 
