@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, MAXLineJoinStyle) {
 typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
     kMAXLineCapStyleButt,
     kMAXLineCapStyleRound,
-    kMAXLineCapStyleBevel,
+    kMAXLineCapStyleSquare,
 };
 
 @protocol MAXLineChartViewDataSource < NSObject >

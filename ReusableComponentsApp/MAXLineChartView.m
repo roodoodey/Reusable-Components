@@ -126,44 +126,119 @@
     
     CAShapeLayer *layer = [[CAShapeLayer alloc] init];
     layer.path = thePath.CGPath;
-    
-    if ([self.delegate respondsToSelector: @selector(MAXLineChart:widthForLine:)] == YES) {
-        
-        layer.lineWidth = [self.delegate MAXLineChart: self widthForLine: theLine];
-    }
-    else {
-        
-        layer.lineWidth = 2.0;
-    }
-    
-    if ([self.delegate respondsToSelector: @selector(MAXLineChart:strokeColorForLine:)] == YES) {
-        
-        layer.strokeColor = [self.delegate MAXLineChart: self strokeColorForLine: theLine].CGColor;
-    }
-    else {
-        
-        layer.strokeColor = [UIColor redColor].CGColor;
-    }
-    
-    if ([self.delegate respondsToSelector:@selector(MAXLineChart:lineDashPatternForLine:)] == YES) {
-        
-        layer.lineDashPattern = [self.delegate MAXLineChart: self lineDashPatternForLine: theLine];
-    }
-    else {
-        
-        layer.lineDashPattern = nil;
-    }
+    layer.strokeColor = [self p_strokeColorForLine: theLine];
+    layer.lineWidth = [self p_widthForLine: theLine];
+    layer.lineCap = [self p_lineCapForLine: theLine];
+    layer.lineDashPattern = [self p_lineDashPatthernForLine: theLine];
     
     layer.fillColor = [UIColor clearColor].CGColor;
-    layer.lineCap = kCALineCapSquare;
     layer.allowsEdgeAntialiasing = true;
     
     return layer;
 }
 
+#pragma mark - Getter helpers
 
-#pragma mark - Helpers
+-(NSString *)p_lineJoinForLine:(NSUInteger)theLine {
+    
+    MAXLineJoinStyle lineJoin = [self p_lineJoinStyleForLine: theLine];
+    
+    if (lineJoin == kMAXLineJoinStyleMiter) {
+        
+        return kCALineJoinMiter;
+    }
+    else if(lineJoin == kMAXLineJoinStyleRound) {
+        
+        return kCALineJoinRound;
+    }
+    else if(lineJoin == kMAXLineJoinStyleBevel) {
+        
+        return kCALineJoinBevel;
+    }
+    
+    return kCALineJoinRound;
+    
+}
 
+-(MAXLineJoinStyle)p_lineJoinStyleForLine:(NSUInteger)theLine {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXLineChart:lineJoinStyleForLine:)] == YES) {
+        return [self.delegate MAXLineChart: self lineJoinStyleForLine: theLine];
+    }
+    else {
+        return kMAXLineJoinStyleRound;
+    }
+    
+}
+
+-(NSString *)p_lineCapForLine:(NSUInteger)theLine {
+    
+    MAXLineCapStyle style = [self p_lineCapStyleForLine: theLine];
+    
+    if (style == kMAXLineCapStyleButt) {
+        
+        return kCALineCapRound;
+    }
+    else if(style == kMAXLineCapStyleRound) {
+        
+        return kCALineCapRound;
+    }
+    else if(style == kMAXLineCapStyleSquare) {
+        
+        return kCALineCapSquare;
+    }
+    
+    return kCALineCapRound;
+}
+
+-(MAXLineCapStyle)p_lineCapStyleForLine:(NSUInteger)theLine {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXLineChart:lineCapStyelForLine:)] == YES) {
+        return [self.delegate MAXLineChart: self lineCapStyelForLine: theLine];
+    }
+    else {
+        return kMAXLineCapStyleRound;
+    }
+    
+}
+
+-(NSArray <NSNumber *> *)p_lineDashPatthernForLine:(NSUInteger)theLine {
+    
+    if ([self.delegate respondsToSelector: @selector(MAXLineChart:lineDashPatternForLine:)] == YES) {
+        return  [self.delegate MAXLineChart: self lineDashPatternForLine: theLine];
+    }
+    else {
+        
+        return nil;
+    }
+    
+}
+
+-(CGFloat)p_widthForLine:(NSUInteger)theLine {
+    
+    if ([self.delegate respondsToSelector: @selector(MAXLineChart:widthForLine:)] == YES) {
+        
+        return [self.delegate MAXLineChart: self widthForLine: theLine];
+    }
+    else {
+        
+        return 2.0;
+    }
+    
+}
+
+-(CGColorRef)p_strokeColorForLine:(NSUInteger)theLine {
+    
+    if ([self.delegate respondsToSelector: @selector(MAXLineChart:strokeColorForLine:)] == YES) {
+        
+        return [self.delegate MAXLineChart: self strokeColorForLine: theLine].CGColor;
+    }
+    else {
+        
+        return [UIColor blackColor].CGColor;
+    }
+    
+}
 
 -(NSUInteger)p_highestXValueForChart {
     
@@ -203,6 +278,8 @@
     }
     
 }
+
+#pragma mark - Helpers
 
 -(double)p_findHighestYValue:(NSArray <NSArray <NSNumber *> *> *)theChartData {
     
