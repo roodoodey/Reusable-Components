@@ -10,6 +10,18 @@
 
 @class MAXLineChartView;
 
+typedef NS_ENUM(NSInteger, MAXLineJoinStyle) {
+    kMAXLineJoinStyleMiter,
+    kMAXLineJoinStyleRound,
+    kMAXLineJoinStyleBevel
+};
+
+typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
+    kMAXLineCapStyleButt,
+    kMAXLineCapStyleRound,
+    kMAXLineCapStyleBevel,
+};
+
 @protocol MAXLineChartViewDataSource < NSObject >
 
 @required
@@ -57,9 +69,30 @@
 -(CGFloat)MAXLineChart:(MAXLineChartView *)TheLineChart widthForLine:(NSUInteger)theLine;
 
 /**
+ @description The line join style for the line being drawn. Defaults to Round.
+ */
+-(MAXLineJoinStyle)MAXLineChart:(MAXLineChartView *)theLineChart lineJoinStyleForLine:(NSUInteger)theLine;
+
+/**
+ @description The line cap style for the line being drawn. Defaults to Round.
+ */
+-(MAXLineCapStyle)MAXLineChart:(MAXLineChartView *)theLineChart lineCapStyelForLine:(NSUInteger)theLine;
+
+/**
+ @description The line dash phase, that offsets the dash pattern.
+ */
+-(CGFloat)MAXLineChart:(MAXLineChartView *)theLineChart dashPhaseForLine:(NSUInteger)theDashPhase;
+
+/**
  @description The line dash pattern.
  */
 -(NSArray <NSNumber *> *)MAXLineChart:(MAXLineChartView *)theLineChart lineDashPatternForLine:(NSUInteger)theLine;
+
+/**
+ @description If you would like to allow antialiasing for the CALayer of the line set this to yes. Defaults NO / false.
+ */
+-(BOOL)MAXLineChartAllowsEdgeAntialiasing:(MAXLineChartView *)theLineChart;
+
 
 /**
  @description Used to normalize the chart, the highest possible value to use for normalization on all other values. If the y value is not higher than the highest possible values it will move the point to the top of chart.

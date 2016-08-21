@@ -8,6 +8,8 @@
 
 #import "LineChartViewController.h"
 #import "MAXLineChartView.h"
+#import "MAXFadeBlockButton.h"
+#import "UIFont+MAXSystemFonts.h"
 
 @interface LineChartViewController () <MAXLineChartViewDataSource, MAXLineChartDelegate>
 
@@ -18,6 +20,8 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     MAXLineChartView *lineChartView = [[MAXLineChartView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame))];
     
     lineChartView.datasource = self;
@@ -25,6 +29,22 @@
     [lineChartView reloadData];
     
     [self.view addSubview: lineChartView];
+    
+    MAXFadeBlockButton *reloadButton = [[MAXFadeBlockButton alloc] initWithFrame: CGRectMake(CGRectGetMidX(self.view.frame) - 60, CGRectGetMaxY(lineChartView.frame) + 20, 120, 50)];
+    reloadButton.layer.backgroundColor = [UIColor redColor].CGColor;
+    reloadButton.layer.cornerRadius = 16.0;
+    reloadButton.titleLabel.font = [UIFont c_helveticaNeueBoldWithSize: 17.0];
+    
+    [reloadButton setTitle: @"Reload" forState: UIControlStateNormal];
+    [reloadButton setTitleColor: [UIColor whiteColor] forState: UIControlStateNormal];
+    
+    [reloadButton buttonTouchUpInsideWithCompletion: ^{
+        
+        [lineChartView reloadData];
+        
+    }];
+    
+    [self.view addSubview: reloadButton];
     
 }
 

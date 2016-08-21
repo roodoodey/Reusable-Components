@@ -15,7 +15,7 @@
 /**
  @description
  */
-@property (nonatomic, strong) NSArray <CAShapeLayer *> *lineLayers;
+@property (nonatomic, strong) NSMutableArray <CAShapeLayer *> *lineShapeLayers;
 
 @end
 
@@ -24,7 +24,11 @@
 -(id)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame: frame]) {
+        
         self.backgroundColor = [UIColor whiteColor];
+        
+        _lineShapeLayers = [NSMutableArray array];
+    
     }
     
     return self;
@@ -37,7 +41,8 @@
 -(void)reloadData {
     
     _chartData = [self p_fetchChartData];
-    [self p_drawLinesWithChartData: _chartData maxYValue: [self p_highestYValueForChart] maxXValue: [self p_highestXValueForChart]];
+    [self p_removeShapeLayers: _lineShapeLayers];
+    [self p_drawLinesWithChartData: _chartData lineShapeLayers: _lineShapeLayers maxYValue: [self p_highestYValueForChart] maxXValue: [self p_highestXValueForChart]];
     
 }
 
@@ -72,7 +77,7 @@
 
 #pragma mark - Drawing The Lince Chart
 
--(void)p_drawLinesWithChartData:(NSArray <NSArray <NSNumber *> *> *)theChartData maxYValue:(double)maxYValue maxXValue:(NSUInteger)maxXValue {
+-(void)p_drawLinesWithChartData:(NSArray <NSArray <NSNumber *> *> *)theChartData lineShapeLayers:(NSMutableArray *)theLineShapeLayers maxYValue:(double)maxYValue maxXValue:(NSUInteger)maxXValue {
     
     CGFloat horizontalStep = CGRectGetWidth(self.frame) / (maxXValue - 1);
     CGFloat height = CGRectGetHeight(self.frame);
@@ -98,11 +103,22 @@
         }
         
         CAShapeLayer *layer = [self p_createLayerWithPath: path forLine: lineNumber];
+        [theLineShapeLayers addObject: layer];
         [self.layer addSublayer: layer];
         
         // increase the line number as we go through the line data
         lineNumber++;
     }
+    
+}
+
+-(void)p_removeShapeLayers:(NSMutableArray *)theShapeLayers {
+    
+    for (CAShapeLayer *shapeLayer in theShapeLayers) {
+        [shapeLayer removeFromSuperlayer];
+    }
+    
+    [theShapeLayers removeAllObjects];
     
 }
 
@@ -139,6 +155,8 @@
     }
     
     layer.fillColor = [UIColor clearColor].CGColor;
+    layer.lineCap = kCALineCapSquare;
+    layer.allowsEdgeAntialiasing = true;
     
     return layer;
 }
