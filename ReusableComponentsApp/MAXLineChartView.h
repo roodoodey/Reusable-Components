@@ -81,7 +81,7 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 /**
  @description The line dash phase, that offsets the dash pattern.
  */
--(CGFloat)MAXLineChart:(MAXLineChartView *)theLineChart dashPhaseForLine:(NSUInteger)theDashPhase;
+-(CGFloat)MAXLineChart:(MAXLineChartView *)theLineChart lineDashPhaseForLine:(NSUInteger)theDashPhase;
 
 /**
  @description The line dash pattern.
@@ -89,16 +89,18 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 -(NSArray <NSNumber *> *)MAXLineChart:(MAXLineChartView *)theLineChart lineDashPatternForLine:(NSUInteger)theLine;
 
 /**
- @description If you would like to allow antialiasing for the CALayer of the line set this to yes. Defaults NO / false.
+ @description If you would like to allow antialiasing for the CALayer of the line set this to yes. Defaults YES / true.
  */
--(BOOL)MAXLineChartAllowsEdgeAntialiasing:(MAXLineChartView *)theLineChart;
-
+-(BOOL)MAXLineChart:(MAXLineChartView *)theLineChart allowsEdgeAntialiasingForLine:(NSUInteger)theLine;
 
 /**
  @description Used to normalize the chart, the highest possible value to use for normalization on all other values. If the y value is not higher than the highest possible values it will move the point to the top of chart.
  */
 -(double)MAXhighestYValueForLineChart:(MAXLineChartView *)theLineChart;
 
+/**
+ @descirption Highest x value for the chart to determine the lengh of the chart.
+ */
 -(double)MAXHighestXValueForLineChart:(MAXLineChartView *)theLineChart;
 
 @end

@@ -129,15 +129,26 @@
     layer.strokeColor = [self p_strokeColorForLine: theLine];
     layer.lineWidth = [self p_widthForLine: theLine];
     layer.lineCap = [self p_lineCapForLine: theLine];
+    layer.lineDashPhase = [self p_lineDashPhaseForLine: theLine];
     layer.lineDashPattern = [self p_lineDashPatthernForLine: theLine];
-    
+    layer.allowsEdgeAntialiasing = [self p_allowsEdgeAntialiasingForLine: theLine];
+
     layer.fillColor = [UIColor clearColor].CGColor;
-    layer.allowsEdgeAntialiasing = true;
     
     return layer;
 }
 
 #pragma mark - Getter helpers
+
+-(BOOL)p_allowsEdgeAntialiasingForLine:(NSUInteger)theLine {
+    
+    if ([self.delegate respondsToSelector: @selector(MAXLineChart:allowsEdgeAntialiasingForLine:)] == YES) {
+        return [self.delegate MAXLineChart: self allowsEdgeAntialiasingForLine: theLine];
+    }
+    
+    return YES;
+    
+}
 
 -(NSString *)p_lineJoinForLine:(NSUInteger)theLine {
     
@@ -200,6 +211,15 @@
         return kMAXLineCapStyleRound;
     }
     
+}
+
+-(CGFloat)p_lineDashPhaseForLine:(NSUInteger)theLine {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXLineChart:lineDashPhaseForLine:)] == YES) {
+        return [self.delegate MAXLineChart: self lineDashPhaseForLine: theLine];
+    }
+    
+    return 0;
 }
 
 -(NSArray <NSNumber *> *)p_lineDashPatthernForLine:(NSUInteger)theLine {
