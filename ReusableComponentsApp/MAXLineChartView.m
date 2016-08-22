@@ -299,7 +299,67 @@
     
 }
 
+
+#pragma mark - Line Chart Border
+
+-(CGFloat)p_leftBorderWidth {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXLineChartLeftBorderWidthForChart:)] == YES) {
+        return [self.delegate MAXLineChartLeftBorderWidthForChart: self];
+    }
+    
+    return 0;
+}
+
+-(CGFloat)p_rightBorderWidth {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXLineChartRightBorderWidthForChart:)] == YES) {
+        
+        return [self.delegate MAXLineChartRightBorderWidthForChart: self];
+    }
+    
+    return 0;
+}
+
+-(CGFloat)p_upperBorderWidth {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXLineChartUpperBorderWidthForChart:)] == YES) {
+        
+        return [self.delegate MAXLineChartUpperBorderWidthForChart: self];
+    }
+    
+    return 0;
+}
+
+-(CGFloat)p_lowerBorderWidth {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXLineChartLowerBorderWidthForChart:)] == YES) {
+        
+        return [self.delegate MAXLineChartLowerBorderWidthForChart: self];
+    }
+    
+    return 0;
+}
+
+#pragma mark - Chart Size Helpers
+
+-(CGFloat)p_chartHeight {
+    
+    double height = CGRectGetWidth(self.frame);
+    
+    return height - [self p_upperBorderWidth] - [self p_lowerBorderWidth];
+}
+
+-(CGFloat)p_chartWidth {
+    
+    double width = CGRectGetWidth(self.frame);
+    
+    return width - [self p_leftBorderWidth] - [self p_rightBorderWidth];
+}
+
+
 #pragma mark - Helpers
+
 
 -(double)p_findHighestYValue:(NSArray <NSArray <NSNumber *> *> *)theChartData {
     

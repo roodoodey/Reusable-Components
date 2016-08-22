@@ -103,6 +103,19 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  */
 -(double)MAXHighestXValueForLineChart:(MAXLineChartView *)theLineChart;
 
+//////////////////////////////////////////////
+//////// Chart Surrounding Lines /////////////
+
+-(CGFloat)MAXLineChartLeftBorderWidthForChart:(MAXLineChartView *)theLineChart;
+
+-(CGFloat)MAXLineChartRightBorderWidthForChart:(MAXLineChartView *)theLineChart;
+
+-(CGFloat)MAXLineChartUpperBorderWidthForChart:(MAXLineChartView *)theLineChart;
+
+-(CGFloat)MAXLineChartLowerBorderWidthForChart:(MAXLineChartView *)theLineChart;
+
+-(UIColor*)MAXLineChart:(MAXLineChartView *)theLineChart borderColorForLine:(NSUInteger)theLine;
+
 @end
 
 @interface MAXLineChartView : UIView
