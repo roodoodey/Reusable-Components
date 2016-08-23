@@ -12,10 +12,15 @@
 
 @property (nonatomic, strong) NSArray <NSArray <NSNumber *> *> *chartData;
 
-/**
- @description
- */
 @property (nonatomic, strong) NSMutableArray <CAShapeLayer *> *lineShapeLayers;
+
+@property (nonatomic, strong) UIView *leftBorderView;
+
+@property (nonatomic, strong) UIView *rightBorderView;
+
+@property (nonatomic, strong) UIView *upperBorderView;
+
+@property (nonatomic, strong) UIView *lowerBorderView;
 
 @end
 
@@ -80,7 +85,7 @@
 -(void)p_drawLinesWithChartData:(NSArray <NSArray <NSNumber *> *> *)theChartData lineShapeLayers:(NSMutableArray *)theLineShapeLayers maxYValue:(double)maxYValue maxXValue:(NSUInteger)maxXValue {
     
     CGFloat horizontalStep = CGRectGetWidth(self.frame) / (maxXValue - 1);
-    CGFloat height = CGRectGetHeight(self.frame);
+    CGFloat height = [self p_chartHeight];
     
     NSUInteger lineNumber = 0;
     for (NSArray *line in theChartData) {
@@ -94,7 +99,7 @@
             double yHeight = y * height;
             
             if (x == 0) {
-                [path moveToPoint:CGPointMake(0, yHeight)];
+                [path moveToPoint:CGPointMake(0, yHeight + [self p_lowerBorderWidth])];
             }
             else {
                 [path addLineToPoint: CGPointMake(x * horizontalStep,  yHeight)];
