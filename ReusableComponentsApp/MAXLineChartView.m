@@ -46,6 +46,8 @@
         _lowerBorderView = [[UIView alloc] init];
         [self addSubview: _lowerBorderView];
     
+        self.layer.masksToBounds = YES;
+        
     }
     
     return self;
@@ -122,7 +124,7 @@
         
         CAShapeLayer *layer = [self p_createLayerWithPath: path forLine: lineNumber];
         [theLineShapeLayers addObject: layer];
-        [self.layer addSublayer: layer];
+        [self.layer insertSublayer: layer below: _leftBorderView.layer];
         
         // increase the line number as we go through the line data
         lineNumber++;
