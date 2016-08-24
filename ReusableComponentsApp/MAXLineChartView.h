@@ -114,7 +114,10 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 
 -(CGFloat)MAXLineChartLowerBorderWidthForChart:(MAXLineChartView *)theLineChart;
 
--(UIColor*)MAXLineChart:(MAXLineChartView *)theLineChart borderColorForLine:(NSUInteger)theLine;
+/**
+ @description The color for the chart border, defaults to black if not specified.
+ */
+-(UIColor*)MAXLineChartColorsForBordersForChart:(MAXLineChartView *)theLineChart;
 
 @end
 

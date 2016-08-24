@@ -33,6 +33,18 @@
         self.backgroundColor = [UIColor whiteColor];
         
         _lineShapeLayers = [NSMutableArray array];
+        
+        _leftBorderView = [[UIView alloc] init];
+        [self addSubview: _leftBorderView];
+        
+        _rightBorderView = [[UIView alloc] init];
+        [self addSubview: _rightBorderView];
+        
+        _upperBorderView = [[UIView alloc] init];
+        [self addSubview: _upperBorderView];
+        
+        _lowerBorderView = [[UIView alloc] init];
+        [self addSubview: _lowerBorderView];
     
     }
     
@@ -48,6 +60,7 @@
     _chartData = [self p_fetchChartData];
     [self p_removeShapeLayers: _lineShapeLayers];
     [self p_drawLinesWithChartData: _chartData lineShapeLayers: _lineShapeLayers maxYValue: [self p_highestYValueForChart] maxXValue: [self p_highestXValueForChart]];
+    [self p_drawChartLineBorders];
     
 }
 
@@ -80,11 +93,11 @@
 }
 
 
-#pragma mark - Drawing The Lince Chart
+#pragma mark - Drawing The Line Chart
 
 -(void)p_drawLinesWithChartData:(NSArray <NSArray <NSNumber *> *> *)theChartData lineShapeLayers:(NSMutableArray *)theLineShapeLayers maxYValue:(double)maxYValue maxXValue:(NSUInteger)maxXValue {
     
-    CGFloat horizontalStep = CGRectGetWidth(self.frame) / (maxXValue - 1);
+    CGFloat horizontalStep = [self p_chartWidth] / (maxXValue - 1);
     CGFloat height = [self p_chartHeight];
     
     NSUInteger lineNumber = 0;
@@ -99,10 +112,10 @@
             double yHeight = y * height;
             
             if (x == 0) {
-                [path moveToPoint:CGPointMake(0, yHeight + [self p_lowerBorderWidth])];
+                [path moveToPoint:CGPointMake([self p_leftBorderWidth], yHeight + [self p_lowerBorderWidth])];
             }
             else {
-                [path addLineToPoint: CGPointMake(x * horizontalStep,  yHeight)];
+                [path addLineToPoint: CGPointMake(x * horizontalStep + [self p_leftBorderWidth],  yHeight + [self p_lowerBorderWidth])];
             }
             
         }
@@ -304,6 +317,55 @@
     
 }
 
+#pragma mark - Line Border Drawing
+
+-(void)p_drawChartLineBorders {
+    
+    CGFloat width = CGRectGetWidth(self.frame);
+    CGFloat height = CGRectGetHeight(self.frame);
+    
+    _leftBorderView.frame = CGRectMake(0, 0, [self p_leftBorderWidth], height);
+    _rightBorderView.frame = CGRectMake(width - [self p_rightBorderWidth], 0, [self p_rightBorderWidth], height);
+    
+    _upperBorderView.frame = CGRectMake(0, 0, width, [self p_upperBorderWidth]);
+    _lowerBorderView.frame = CGRectMake(0, height - [self p_lowerBorderWidth], width, [self p_lowerBorderWidth]);
+    
+    [self p_reloadBorderColor];
+    
+}
+
+-(void)p_reloadBorderColor {
+    
+    if ([self.delegate respondsToSelector:@selector(MAXLineChartColorsForBordersForChart:)] == YES) {
+        
+        UIColor *borderColor = [self.delegate MAXLineChartColorsForBordersForChart: self];
+        
+        [self p_setBordersColor: borderColor];
+        
+    }
+    else {
+        [self p_setBordersColor: [UIColor blackColor]];
+    }
+    
+}
+
+-(void)p_bringBordersToFront {
+    
+    [self bringSubviewToFront: _leftBorderView];
+    [self bringSubviewToFront: _rightBorderView];
+    [self bringSubviewToFront: _upperBorderView];
+    [self bringSubviewToFront: _lowerBorderView];
+    
+}
+
+-(void)p_setBordersColor:(UIColor *)theColor {
+    
+    _leftBorderView.backgroundColor = theColor;
+    _rightBorderView.backgroundColor = theColor;
+    _upperBorderView.backgroundColor = theColor;
+    _lowerBorderView.backgroundColor = theColor;
+    
+}
 
 #pragma mark - Line Chart Border
 

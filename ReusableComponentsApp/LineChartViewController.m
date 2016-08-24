@@ -76,4 +76,14 @@
     return [UIColor purpleColor];
 }
 
+-(CGFloat)MAXLineChartLeftBorderWidthForChart:(MAXLineChartView *)theLineChart {
+    
+    return 5;
+}
+
+-(CGFloat)MAXLineChartLowerBorderWidthForChart:(MAXLineChartView *)theLineChart {
+    
+    return 5;
+}
+
 @end
