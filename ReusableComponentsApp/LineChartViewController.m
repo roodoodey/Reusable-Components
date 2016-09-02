@@ -86,4 +86,28 @@
     return 5;
 }
 
+#pragma mark - Decoration Delegate
+
+-(NSUInteger)MAXLineChartNumberOfDecorationViewsForLowerBorder:(MAXLineChartView *)theLineChart {
+    
+    
+    return 6;
+}
+
+-(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLowerBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber {
+    
+    return 4 * theDecorationViewNumber;
+}
+
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView lowerBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition decorationViewNumber:(NSUInteger)theDecorationViewNumber {
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 4, 4)];
+    view.layer.cornerRadius = 2;
+    view.center = theCenterPosition;
+    
+    view.backgroundColor = [UIColor redColor];
+    
+    return view;
+}
+
 @end

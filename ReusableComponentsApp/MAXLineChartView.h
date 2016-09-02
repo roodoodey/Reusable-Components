@@ -50,6 +50,88 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  */
 -(double)MAXLineChart:(MAXLineChartView *)theChartView YValueAtX:(NSUInteger)theX line:(NSUInteger)theLine;
 
+@optional
+
+
+////////////////////////////////////////////////////////
+///////// Chart Border Axis Decoration Views ///////////
+
+
+/////////// Left Border View
+
+/**
+ @descirption The decoration views to add to the border, only called if you have given the border a size.
+ */
+-(NSUInteger)MAXLineChartNumberOfDecorationViewsForLeftBorder:(MAXLineChartView *)theLineChart;
+
+/**
+ @description This method positions the decoration view on the left border decoration view depending on the value you give. All axis have a max and min value the value given in this method will see about its position. 
+ 
+ @param theChartView The line chart requesting the decoration view value.
+ @param theDecorationViewNumber The number of the decoration view that is requesting its value.
+ 
+ @return The value of the current decoration view to determine its position.
+ */
+-(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLeftBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber;
+
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView leftBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPoint decorationViewNumber:(NSUInteger)theDecorationViewNumber;
+
+///////// Right Border View
+
+/**
+ @descirption The decoration views to add to the border, only called if you have given the border a size otherwise it does not exist.
+ */
+-(NSUInteger)MAXLineChartNumberOfDecorationViewsForRightBorder:(MAXLineChartView *)theLineChart;
+
+/**
+ @description This method positions the decoration view on the right border decoration view depending on the value you give. All axis have a max and min value the value given in this method will see about its position.
+ 
+ @param theChartView The line chart requesting the decoration view value.
+ @param theDecorationViewNumber The number of the decoration view that is requesting its value.
+ 
+ @return The value of the current decoration view to determine its position.
+ */
+-(double)MAXLineChart:(MAXLineChartView *)theChartView valueForRightBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber;
+
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView rightBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPoint decorationViewNumber:(NSUInteger)theDecorationViewNumber;
+
+/////// Upper Border View
+
+/**
+ @descirption The decoration views to add to the border, only called if you have given the border a size.
+ */
+-(NSUInteger)MAXLineChartNumberOfDecorationViewsForUpperBorder:(MAXLineChartView *)theLineChart;
+
+/**
+ @description This method positions the decoration view on the upper border decoration view depending on the value you give. All axis have a max and min value the value given in this method will see about its position.
+ 
+ @param theChartView The line chart requesting the decoration view value.
+ @param theDecorationViewNumber The number of the decoration view that is requesting its value.
+ 
+ @return The value of the current decoration view to determine its position.
+ */
+-(double)MAXLineChart:(MAXLineChartView *)theChartView valueForUpperBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber;
+
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView upperBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition decoartionViewNumber:(NSUInteger)theDecorationViewNumber;
+
+///////// Lower Border View
+
+/**
+ @descirption The decoration views to add to the border, only called if you have given the border a size.
+ */
+-(NSUInteger)MAXLineChartNumberOfDecorationViewsForLowerBorder:(MAXLineChartView *)theLineChart;
+
+/**
+ @description This method positions the decoration view on the lower border decoration view depending on the value you give. All axis have a max and min value the value given in this method will see about its position.
+ 
+ @param theChartView The line chart requesting the decoration view value.
+ @param theDecorationViewNumber The number of the decoration view that is requesting its value.
+ 
+ @return The value of the current decoration view to determine its position.
+ */
+-(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLowerBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber;
+
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView lowerBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition decorationViewNumber:(NSUInteger)theDecorationViewNumber;
 
 @end
 
@@ -57,6 +139,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 
 
 @optional
+
+///////////////////////////////////////////////////
+//////////////// Line Customization ///////////////
 
 /**
  @description The color of used to stroke the path of the given line.
@@ -104,7 +189,7 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 -(double)MAXHighestXValueForLineChart:(MAXLineChartView *)theLineChart;
 
 //////////////////////////////////////////////
-//////// Chart Surrounding Lines /////////////
+/////////// Chart Border Lines ///////////////
 
 -(CGFloat)MAXLineChartLeftBorderWidthForChart:(MAXLineChartView *)theLineChart;
 
@@ -118,6 +203,7 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  @description The color for the chart border, defaults to black if not specified.
  */
 -(UIColor*)MAXLineChartColorsForBordersForChart:(MAXLineChartView *)theLineChart;
+
 
 @end
 

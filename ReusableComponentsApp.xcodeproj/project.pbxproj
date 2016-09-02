@@ -13,6 +13,9 @@
 		4E5397131D64E1BF00707E94 /* LineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5397121D64E1BF00707E94 /* LineChartViewController.m */; };
 		886391461CBD984A00B6331A /* MAXFadeBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 886391451CBD984A00B6331A /* MAXFadeBlockButton.m */; };
 		887639271CD4DA6500C8196D /* MAXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 887639261CD4DA6500C8196D /* MAXPageControl.m */; };
+		887F96051D78D8F600E39C90 /* UIColor+ProximaNovaFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96041D78D8F600E39C90 /* UIColor+ProximaNovaFont.m */; };
+		887F96081D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96071D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m */; };
+		887F960B1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F960A1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m */; };
 		88877AA21C74BDFF00D00246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA11C74BDFF00D00246 /* main.m */; };
 		88877AA51C74BDFF00D00246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA41C74BDFF00D00246 /* AppDelegate.m */; };
 		88877AA81C74BDFF00D00246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA71C74BDFF00D00246 /* ViewController.m */; };
@@ -33,18 +36,6 @@
 		88BE771D1C831A5F002693C0 /* MAXSystemFontsCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE771C1C831A5F002693C0 /* MAXSystemFontsCategoryTests.m */; };
 		88BE77231C836C58002693C0 /* UIFont+MAXRobotoExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE77221C836C58002693C0 /* UIFont+MAXRobotoExtension.m */; };
 		88BE77311C836C8A002693C0 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77241C836C8A002693C0 /* LICENSE.txt */; };
-		88BE77321C836C8B002693C0 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77251C836C8A002693C0 /* Roboto-Black.ttf */; };
-		88BE77331C836C8B002693C0 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77261C836C8A002693C0 /* Roboto-BlackItalic.ttf */; };
-		88BE77341C836C8B002693C0 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77271C836C8A002693C0 /* Roboto-Bold.ttf */; };
-		88BE77351C836C8B002693C0 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77281C836C8A002693C0 /* Roboto-BoldItalic.ttf */; };
-		88BE77361C836C8B002693C0 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77291C836C8A002693C0 /* Roboto-Italic.ttf */; };
-		88BE77371C836C8B002693C0 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772A1C836C8A002693C0 /* Roboto-Light.ttf */; };
-		88BE77381C836C8B002693C0 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772B1C836C8A002693C0 /* Roboto-LightItalic.ttf */; };
-		88BE77391C836C8B002693C0 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772C1C836C8A002693C0 /* Roboto-Medium.ttf */; };
-		88BE773A1C836C8B002693C0 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772D1C836C8A002693C0 /* Roboto-MediumItalic.ttf */; };
-		88BE773B1C836C8B002693C0 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772E1C836C8A002693C0 /* Roboto-Regular.ttf */; };
-		88BE773C1C836C8B002693C0 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE772F1C836C8A002693C0 /* Roboto-Thin.ttf */; };
-		88BE773D1C836C8B002693C0 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88BE77301C836C8A002693C0 /* Roboto-ThinItalic.ttf */; };
 		88BEFA261C83722D00ADE78C /* MAXRobotoFontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BEFA251C83722D00ADE78C /* MAXRobotoFontTests.m */; };
 		88C835511C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */; };
 		88C835521C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */; };
@@ -88,6 +79,45 @@
 		886391451CBD984A00B6331A /* MAXFadeBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXFadeBlockButton.m; sourceTree = "<group>"; };
 		887639251CD4DA6500C8196D /* MAXPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXPageControl.h; sourceTree = "<group>"; };
 		887639261CD4DA6500C8196D /* MAXPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXPageControl.m; sourceTree = "<group>"; };
+		887F95DF1D78CD8400E39C90 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "Fonts/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		887F95E01D78CD8400E39C90 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "Fonts/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		887F95E11D78CD8400E39C90 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Fonts/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		887F95E21D78CD8400E39C90 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BoldItalic.ttf"; path = "Fonts/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		887F95E31D78CD8400E39C90 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Italic.ttf"; path = "Fonts/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		887F95E41D78CD8400E39C90 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Fonts/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		887F95E51D78CD8400E39C90 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-LightItalic.ttf"; path = "Fonts/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		887F95E61D78CD8400E39C90 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "Fonts/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		887F95E71D78CD8400E39C90 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-MediumItalic.ttf"; path = "Fonts/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		887F95E81D78CD8400E39C90 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		887F95E91D78CD8400E39C90 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "Fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		887F95EA1D78CD8400E39C90 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-ThinItalic.ttf"; path = "Fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		887F95ED1D78D87D00E39C90 /* ProximaNovaCond-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-SemiboldIt.otf"; path = "../../Fonts/Proxima Nova Condensed/ProximaNovaCond-SemiboldIt.otf"; sourceTree = "<group>"; };
+		887F95EE1D78D87D00E39C90 /* ProximaNovaCond-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-Semibold.otf"; path = "../../Fonts/Proxima Nova Condensed/ProximaNovaCond-Semibold.otf"; sourceTree = "<group>"; };
+		887F95EF1D78D87D00E39C90 /* ProximaNovaCond-RegularIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-RegularIt.otf"; path = "../../Fonts/Proxima Nova Condensed/ProximaNovaCond-RegularIt.otf"; sourceTree = "<group>"; };
+		887F95F01D78D87D00E39C90 /* ProximaNovaCond-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-Regular.otf"; path = "../../Fonts/Proxima Nova Condensed/ProximaNovaCond-Regular.otf"; sourceTree = "<group>"; };
+		887F95F11D78D87D00E39C90 /* ProximaNovaCond-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-LightIt.otf"; path = "../../Fonts/Proxima Nova Condensed/ProximaNovaCond-LightIt.otf"; sourceTree = "<group>"; };
+		887F95F21D78D87D00E39C90 /* ProximaNovaCond-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-Light.otf"; path = "../../Fonts/Proxima Nova Condensed/ProximaNovaCond-Light.otf"; sourceTree = "<group>"; };
+		887F95F31D78D88700E39C90 /* ProximaNova-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-SemiboldItalic.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		887F95F41D78D88700E39C90 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Semibold.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		887F95F51D78D88700E39C90 /* ProximaNova-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-RegularItalic.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-RegularItalic.otf"; sourceTree = "<group>"; };
+		887F95F61D78D88700E39C90 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		887F95F81D78D88700E39C90 /* ProximaNova-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-LightItalic.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-LightItalic.otf"; sourceTree = "<group>"; };
+		887F95F91D78D88700E39C90 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Light.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		887F95FA1D78D88700E39C90 /* ProximaNova-Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Extrabold.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-Extrabold.otf"; sourceTree = "<group>"; };
+		887F95FB1D78D88700E39C90 /* ProximaNova-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-BoldIt.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-BoldIt.otf"; sourceTree = "<group>"; };
+		887F95FC1D78D88700E39C90 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Bold.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		887F95FD1D78D88700E39C90 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Black.otf"; path = "../../Fonts/Proxima Nova/ProximaNova-Black.otf"; sourceTree = "<group>"; };
+		887F95FE1D78D89100E39C90 /* proximanova-semibold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-semibold-webfont.ttf"; path = "../../Fonts/Proxima Nova Webfont/proximanova-semibold-webfont.ttf"; sourceTree = "<group>"; };
+		887F95FF1D78D89100E39C90 /* proximanova-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-regular-webfont.ttf"; path = "../../Fonts/Proxima Nova Webfont/proximanova-regular-webfont.ttf"; sourceTree = "<group>"; };
+		887F96001D78D89100E39C90 /* proximanova-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-light-webfont.ttf"; path = "../../Fonts/Proxima Nova Webfont/proximanova-light-webfont.ttf"; sourceTree = "<group>"; };
+		887F96011D78D89100E39C90 /* proximanova-extrabld-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-extrabld-webfont.ttf"; path = "../../Fonts/Proxima Nova Webfont/proximanova-extrabld-webfont.ttf"; sourceTree = "<group>"; };
+		887F96021D78D89100E39C90 /* proximanova-black-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-black-webfont.ttf"; path = "../../Fonts/Proxima Nova Webfont/proximanova-black-webfont.ttf"; sourceTree = "<group>"; };
+		887F96031D78D8F600E39C90 /* UIColor+ProximaNovaFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ProximaNovaFont.h"; sourceTree = "<group>"; };
+		887F96041D78D8F600E39C90 /* UIColor+ProximaNovaFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ProximaNovaFont.m"; sourceTree = "<group>"; };
+		887F96061D78D93900E39C90 /* UIColor+ProximaNovaWebFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ProximaNovaWebFont.h"; sourceTree = "<group>"; };
+		887F96071D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ProximaNovaWebFont.m"; sourceTree = "<group>"; };
+		887F96091D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ProximaNovaCondensedFont.h"; sourceTree = "<group>"; };
+		887F960A1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ProximaNovaCondensedFont.m"; sourceTree = "<group>"; };
 		88877A9D1C74BDFF00D00246 /* ReusableComponentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableComponentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88877AA11C74BDFF00D00246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88877AA31C74BDFF00D00246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,18 +156,6 @@
 		88BE77211C836C58002693C0 /* UIFont+MAXRobotoExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MAXRobotoExtension.h"; sourceTree = "<group>"; };
 		88BE77221C836C58002693C0 /* UIFont+MAXRobotoExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MAXRobotoExtension.m"; sourceTree = "<group>"; };
 		88BE77241C836C8A002693C0 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		88BE77251C836C8A002693C0 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
-		88BE77261C836C8A002693C0 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
-		88BE77271C836C8A002693C0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		88BE77281C836C8A002693C0 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
-		88BE77291C836C8A002693C0 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
-		88BE772A1C836C8A002693C0 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		88BE772B1C836C8A002693C0 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
-		88BE772C1C836C8A002693C0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		88BE772D1C836C8A002693C0 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
-		88BE772E1C836C8A002693C0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		88BE772F1C836C8A002693C0 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
-		88BE77301C836C8A002693C0 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		88BEFA251C83722D00ADE78C /* MAXRobotoFontTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXRobotoFontTests.m; sourceTree = "<group>"; };
 		88C8354F1C8B9C6B00E5D8C5 /* MAXSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXSingleton.h; sourceTree = "<group>"; };
 		88C835501C8B9C6B00E5D8C5 /* MAXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXSingleton.m; sourceTree = "<group>"; };
@@ -285,6 +303,76 @@
 			name = "Charts View";
 			sourceTree = "<group>";
 		};
+		887F95DD1D78C7C000E39C90 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				88BE77241C836C8A002693C0 /* LICENSE.txt */,
+				887F95DF1D78CD8400E39C90 /* Roboto-Black.ttf */,
+				887F95E01D78CD8400E39C90 /* Roboto-BlackItalic.ttf */,
+				887F95E11D78CD8400E39C90 /* Roboto-Bold.ttf */,
+				887F95E21D78CD8400E39C90 /* Roboto-BoldItalic.ttf */,
+				887F95E31D78CD8400E39C90 /* Roboto-Italic.ttf */,
+				887F95E41D78CD8400E39C90 /* Roboto-Light.ttf */,
+				887F95E51D78CD8400E39C90 /* Roboto-LightItalic.ttf */,
+				887F95E61D78CD8400E39C90 /* Roboto-Medium.ttf */,
+				887F95E71D78CD8400E39C90 /* Roboto-MediumItalic.ttf */,
+				887F95E81D78CD8400E39C90 /* Roboto-Regular.ttf */,
+				887F95E91D78CD8400E39C90 /* Roboto-Thin.ttf */,
+				887F95EA1D78CD8400E39C90 /* Roboto-ThinItalic.ttf */,
+				88BE77211C836C58002693C0 /* UIFont+MAXRobotoExtension.h */,
+				88BE77221C836C58002693C0 /* UIFont+MAXRobotoExtension.m */,
+			);
+			name = Roboto;
+			sourceTree = "<group>";
+		};
+		887F95DE1D78C7CD00E39C90 /* Proxima Nova Condensed */ = {
+			isa = PBXGroup;
+			children = (
+				887F95ED1D78D87D00E39C90 /* ProximaNovaCond-SemiboldIt.otf */,
+				887F95EE1D78D87D00E39C90 /* ProximaNovaCond-Semibold.otf */,
+				887F95EF1D78D87D00E39C90 /* ProximaNovaCond-RegularIt.otf */,
+				887F95F01D78D87D00E39C90 /* ProximaNovaCond-Regular.otf */,
+				887F95F11D78D87D00E39C90 /* ProximaNovaCond-LightIt.otf */,
+				887F95F21D78D87D00E39C90 /* ProximaNovaCond-Light.otf */,
+				887F96091D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.h */,
+				887F960A1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m */,
+			);
+			name = "Proxima Nova Condensed";
+			sourceTree = "<group>";
+		};
+		887F95EB1D78CE9F00E39C90 /* Proxima Nova */ = {
+			isa = PBXGroup;
+			children = (
+				887F95F31D78D88700E39C90 /* ProximaNova-SemiboldItalic.otf */,
+				887F95F41D78D88700E39C90 /* ProximaNova-Semibold.otf */,
+				887F95F51D78D88700E39C90 /* ProximaNova-RegularItalic.otf */,
+				887F95F61D78D88700E39C90 /* ProximaNova-Regular.otf */,
+				887F95F81D78D88700E39C90 /* ProximaNova-LightItalic.otf */,
+				887F95F91D78D88700E39C90 /* ProximaNova-Light.otf */,
+				887F95FA1D78D88700E39C90 /* ProximaNova-Extrabold.otf */,
+				887F95FB1D78D88700E39C90 /* ProximaNova-BoldIt.otf */,
+				887F95FC1D78D88700E39C90 /* ProximaNova-Bold.otf */,
+				887F95FD1D78D88700E39C90 /* ProximaNova-Black.otf */,
+				887F96031D78D8F600E39C90 /* UIColor+ProximaNovaFont.h */,
+				887F96041D78D8F600E39C90 /* UIColor+ProximaNovaFont.m */,
+			);
+			name = "Proxima Nova";
+			sourceTree = "<group>";
+		};
+		887F95EC1D78CEA800E39C90 /* Proxima Nova Webfont */ = {
+			isa = PBXGroup;
+			children = (
+				887F95FE1D78D89100E39C90 /* proximanova-semibold-webfont.ttf */,
+				887F95FF1D78D89100E39C90 /* proximanova-regular-webfont.ttf */,
+				887F96001D78D89100E39C90 /* proximanova-light-webfont.ttf */,
+				887F96011D78D89100E39C90 /* proximanova-extrabld-webfont.ttf */,
+				887F96021D78D89100E39C90 /* proximanova-black-webfont.ttf */,
+				887F96061D78D93900E39C90 /* UIColor+ProximaNovaWebFont.h */,
+				887F96071D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m */,
+			);
+			name = "Proxima Nova Webfont";
+			sourceTree = "<group>";
+		};
 		88877A941C74BDFF00D00246 = {
 			isa = PBXGroup;
 			children = (
@@ -423,21 +511,10 @@
 		88BE77171C83189A002693C0 /* Custom Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				88BE77241C836C8A002693C0 /* LICENSE.txt */,
-				88BE77251C836C8A002693C0 /* Roboto-Black.ttf */,
-				88BE77261C836C8A002693C0 /* Roboto-BlackItalic.ttf */,
-				88BE77271C836C8A002693C0 /* Roboto-Bold.ttf */,
-				88BE77281C836C8A002693C0 /* Roboto-BoldItalic.ttf */,
-				88BE77291C836C8A002693C0 /* Roboto-Italic.ttf */,
-				88BE772A1C836C8A002693C0 /* Roboto-Light.ttf */,
-				88BE772B1C836C8A002693C0 /* Roboto-LightItalic.ttf */,
-				88BE772C1C836C8A002693C0 /* Roboto-Medium.ttf */,
-				88BE772D1C836C8A002693C0 /* Roboto-MediumItalic.ttf */,
-				88BE772E1C836C8A002693C0 /* Roboto-Regular.ttf */,
-				88BE772F1C836C8A002693C0 /* Roboto-Thin.ttf */,
-				88BE77301C836C8A002693C0 /* Roboto-ThinItalic.ttf */,
-				88BE77211C836C58002693C0 /* UIFont+MAXRobotoExtension.h */,
-				88BE77221C836C58002693C0 /* UIFont+MAXRobotoExtension.m */,
+				887F95EB1D78CE9F00E39C90 /* Proxima Nova */,
+				887F95EC1D78CEA800E39C90 /* Proxima Nova Webfont */,
+				887F95DE1D78C7CD00E39C90 /* Proxima Nova Condensed */,
+				887F95DD1D78C7C000E39C90 /* Roboto */,
 			);
 			name = "Custom Fonts";
 			sourceTree = "<group>";
@@ -654,20 +731,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88BE77341C836C8B002693C0 /* Roboto-Bold.ttf in Resources */,
-				88BE77381C836C8B002693C0 /* Roboto-LightItalic.ttf in Resources */,
-				88BE773A1C836C8B002693C0 /* Roboto-MediumItalic.ttf in Resources */,
-				88BE77361C836C8B002693C0 /* Roboto-Italic.ttf in Resources */,
-				88BE77371C836C8B002693C0 /* Roboto-Light.ttf in Resources */,
 				88BE77311C836C8A002693C0 /* LICENSE.txt in Resources */,
-				88BE77351C836C8B002693C0 /* Roboto-BoldItalic.ttf in Resources */,
-				88BE77331C836C8B002693C0 /* Roboto-BlackItalic.ttf in Resources */,
-				88BE773C1C836C8B002693C0 /* Roboto-Thin.ttf in Resources */,
-				88BE773B1C836C8B002693C0 /* Roboto-Regular.ttf in Resources */,
 				88877AB01C74BDFF00D00246 /* LaunchScreen.storyboard in Resources */,
-				88BE77391C836C8B002693C0 /* Roboto-Medium.ttf in Resources */,
-				88BE773D1C836C8B002693C0 /* Roboto-ThinItalic.ttf in Resources */,
-				88BE77321C836C8B002693C0 /* Roboto-Black.ttf in Resources */,
 				88877AAD1C74BDFF00D00246 /* Assets.xcassets in Resources */,
 				88877AAB1C74BDFF00D00246 /* Main.storyboard in Resources */,
 			);
@@ -705,6 +770,8 @@
 				88877AA81C74BDFF00D00246 /* ViewController.m in Sources */,
 				889383791D170D2400DFB5A5 /* MAXChartColumn.m in Sources */,
 				88DB6F6C1C8B3A4200DFEBAD /* MAXBlockView.m in Sources */,
+				887F96051D78D8F600E39C90 /* UIColor+ProximaNovaFont.m in Sources */,
+				887F96081D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m in Sources */,
 				88E2ED321C7F9CD700A57E0C /* UIView+MAXExtension.m in Sources */,
 				4E53970C1D64E0A600707E94 /* MAXLineChartView.m in Sources */,
 				4E5397131D64E1BF00707E94 /* LineChartViewController.m in Sources */,
@@ -721,6 +788,7 @@
 				4E5397071D63AE7C00707E94 /* ButtonsViewController.m in Sources */,
 				88BE771B1C8318EF002693C0 /* UIFont+MAXSystemFonts.m in Sources */,
 				88CF9A671CD7E1DB00AA8AE7 /* MAXBlockSwitch.m in Sources */,
+				887F960B1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m in Sources */,
 				88DDDDB41CC26765005FB623 /* MAXSelectedContentButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
