@@ -53,6 +53,25 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 @optional
 
 
+/////////////////////////////////////////////////
+////////// Chart Line Decoration Views //////////
+
+/**
+ @description The number of decoration views to add to the line.
+ */
+-(NSUInteger)MAXLineChart:(MAXLineChartView *)theChartView numLineDecorationViewsForLine:(NSUInteger)theLine;
+
+/**
+ @description The X position for the given line and decoration view, as well as chart view. This value is then used to position the decorationv iew on the Y axis of the line depending on the X value.
+ */
+-(double)MAXLineChart:(MAXLineChartView *)theChartView decorationViewAtPositionXForLine:(NSUInteger)theLine decorationViewNum:(NSUInteger)theDecorationViewNum;
+
+/**
+ @description 
+ */
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView decorationViewForLine:(NSUInteger)theLine decorationViewPosition:(CGPoint)theDecorationViewPosition;
+
+
 ////////////////////////////////////////////////////////
 ///////// Chart Border Axis Decoration Views ///////////
 
