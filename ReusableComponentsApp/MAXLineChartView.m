@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSMutableArray <CAShapeLayer *> *lineShapeLayers;
 
+@property (nonatomic, strong) NSArray <NSArray <UIView *> *> *lineDecorationViews;
+
 ////////// Border views
 
 @property (nonatomic, strong) UIView *leftBorderView;
@@ -75,7 +77,8 @@
     [self p_removeShapeLayers: _lineShapeLayers];
     [self p_drawLinesWithChartData: _chartData lineShapeLayers: _lineShapeLayers maxYValue: [self p_highestYValueForChart] maxXValue: [self p_highestXValueForChart]];
     [self p_drawChartLineBorders];
-    [self p_drawLineDecorationViews];
+    [self p_drawLineDecorationViewsWithChartData: _chartData];
+    [self p_drawLineBorderDecorationViews];
 }
 
 #pragma mark - Fetching Line Chart Data
@@ -126,10 +129,14 @@
             double yHeight = y * height;
             
             if (x == 0) {
-                [path moveToPoint:CGPointMake([self p_leftBorderWidth], yHeight + [self p_lowerBorderWidth])];
+                CGPoint point = CGPointMake([self p_leftBorderWidth], yHeight + [self p_upperBorderWidth]);
+                NSLog(@"point: %d is: %@", x, NSStringFromCGPoint(point));
+                [path moveToPoint: point];
             }
             else {
-                [path addLineToPoint: CGPointMake(x * horizontalStep + [self p_leftBorderWidth],  yHeight + [self p_lowerBorderWidth])];
+                CGPoint point = CGPointMake(x * horizontalStep + [self p_leftBorderWidth],  yHeight + [self p_upperBorderWidth]);
+                NSLog(@"point: %d is: %@", x, NSStringFromCGPoint(point));
+                [path addLineToPoint: point];
             }
             
         }
@@ -331,6 +338,71 @@
     
 }
 
+#pragma mark - Line Decoration Views
+
+-(void)p_drawLineDecorationViewsWithChartData:(NSArray <NSArray <NSNumber *> *> *)theChartData {
+    
+    if ([self.datasource respondsToSelector:@selector(MAXLineChart:numLineDecorationViewsForLine:)] == YES || [self.datasource respondsToSelector:@selector(MAXLineChart:decorationViewAtPositionXForLine:decorationViewNum:)] == YES || [self.datasource respondsToSelector:@selector(MAXLineChart:decorationViewForLine:decoartionViewNum:decorationViewPosition:)] == YES) {
+        
+        [self p_removeLineDecorationViews];
+        [self p_fetchAndDrawLineDecorationViewsWithChartData: theChartData];
+        
+    }
+    
+}
+
+-(NSArray <NSArray <UIView *> *> *)p_fetchAndDrawLineDecorationViewsWithChartData:(NSArray <NSArray <NSNumber *> *> *)theChartData {
+    
+    NSMutableArray *lineDecorationViews = [NSMutableArray array];
+    
+    for (int line = 0; line < theChartData.count; line++) {
+        
+        NSMutableArray *decorationViews = [NSMutableArray array];
+        
+        NSUInteger numDecorationViews = [self.datasource MAXLineChart: self numLineDecorationViewsForLine: line];
+        NSArray *lineData = [theChartData objectAtIndex: line];
+        
+        for (int decorationNum = 0; decorationNum < numDecorationViews; decorationNum++) {
+            
+            double posX = [self.datasource MAXLineChart: self decorationViewAtPositionXForLine: line decorationViewNum: decorationNum];
+            
+            int lowPosX = floor(posX);
+            int highPosX = ceil(posX);
+            
+            double lowPosY = [[lineData objectAtIndex: lowPosX] doubleValue] / [self p_highestYValueForChart];
+            double highPosY = [[lineData objectAtIndex: highPosX] doubleValue] / [self p_highestYValueForChart];
+            
+            double slopeHeight = /* dstance x*/ (posX - lowPosX) * /* slope */ (highPosY - lowPosY) * [self p_chartHeight];
+            double lowPosYViewCoord = (1 - lowPosY) * [self p_chartHeight];
+            
+            double horizontalStep = [self p_chartHeight] / ([self p_highestXValueForChart] - 1);
+
+            CGPoint centerPointForDecorationView = CGPointMake([self p_leftBorderWidth] + horizontalStep * posX,  [self p_upperBorderWidth] + [self p_chartHeight] - lowPosYViewCoord + slopeHeight);
+
+            UIView *lineDecorationView = [self.datasource MAXLineChart: self decorationViewForLine: line decoartionViewNum: decorationNum decorationViewPosition: centerPointForDecorationView];
+            [self addSubview: lineDecorationView];
+            
+            [decorationViews addObject: lineDecorationView];
+        }
+        
+        [lineDecorationViews addObject: decorationViews];
+    }
+    
+    return lineDecorationViews;
+}
+
+-(void)p_removeLineDecorationViews {
+    
+    for (NSArray *lineDecorations in _lineDecorationViews) {
+        
+        for (UIView *decorationView in lineDecorations) {
+            [decorationView removeFromSuperview];
+        }
+        
+    }
+    
+}
+
 #pragma mark - Line Border Drawing
 
 -(void)p_drawChartLineBorders {
@@ -383,7 +455,7 @@
 
 #pragma mark - Border Line Decoration Views
 
--(void)p_drawLineDecorationViews {
+-(void)p_drawLineBorderDecorationViews {
     
     [self p_removeLineDecorationViews];
     _leftBorderDecorationViews = [self p_fetchLeftBorderDecorationViews];
@@ -394,7 +466,7 @@
     
 }
 
--(void)p_removeLineDecorationViews {
+-(void)p_removeLineBorderDecorationViews {
     
     [self p_removeLineDecorationViewsWithDecorationViews: _leftBorderDecorationViews];
     [self p_removeLineDecorationViewsWithDecorationViews: _rightBorderDecorationViews];

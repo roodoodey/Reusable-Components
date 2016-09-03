@@ -110,4 +110,43 @@
     return view;
 }
 
+#pragma mark - Line Decoration Views
+
+-(NSUInteger)MAXLineChart:(MAXLineChartView *)theChartView numLineDecorationViewsForLine:(NSUInteger)theLine {
+    
+    return 5;
+}
+
+-(double)MAXLineChart:(MAXLineChartView *)theChartView decorationViewAtPositionXForLine:(NSUInteger)theLine decorationViewNum:(NSUInteger)theDecorationViewNum {
+    
+    if (theDecorationViewNum == 0) {
+        
+        return  1.53;
+    }
+    else if(theDecorationViewNum == 1) {
+        
+        return 3.21;
+    }
+    else if(theDecorationViewNum == 2) {
+        
+        return 9.93;
+    }
+    else if(theDecorationViewNum == 3) {
+        
+        return 11.23;
+    }
+    
+    return 14.76;
+}
+
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView decorationViewForLine:(NSUInteger)theLine decoartionViewNum:(NSUInteger)theDecorationViewNum decorationViewPosition:(CGPoint)theDecorationViewPosition{
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 6, 6)];
+    view.center = theDecorationViewPosition;
+    
+    view.backgroundColor = [UIColor greenColor];
+    
+    return view;
+}
+
 @end

@@ -69,7 +69,7 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 /**
  @description 
  */
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView decorationViewForLine:(NSUInteger)theLine decorationViewPosition:(CGPoint)theDecorationViewPosition;
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView decorationViewForLine:(NSUInteger)theLine decoartionViewNum:(NSUInteger)theDecorationViewNum decorationViewPosition:(CGPoint)theDecorationViewPosition;
 
 
 ////////////////////////////////////////////////////////
