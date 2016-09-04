@@ -13,10 +13,64 @@
 		4E5397131D64E1BF00707E94 /* LineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5397121D64E1BF00707E94 /* LineChartViewController.m */; };
 		886391461CBD984A00B6331A /* MAXFadeBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 886391451CBD984A00B6331A /* MAXFadeBlockButton.m */; };
 		887639271CD4DA6500C8196D /* MAXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 887639261CD4DA6500C8196D /* MAXPageControl.m */; };
-		887F96051D78D8F600E39C90 /* UIColor+ProximaNovaFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96041D78D8F600E39C90 /* UIColor+ProximaNovaFont.m */; };
-		887F96081D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96071D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m */; };
-		887F960B1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F960A1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m */; };
-		887F96361D7B088000E39C90 /* UIColor+Exo2Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96351D7B088000E39C90 /* UIColor+Exo2Font.m */; };
+		887F96381D7B187700E39C90 /* MAXProximaNoveFontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96371D7B187700E39C90 /* MAXProximaNoveFontTests.m */; };
+		887F963B1D7B18F500E39C90 /* UIFont+ProximaNovaFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F963A1D7B18F500E39C90 /* UIFont+ProximaNovaFont.m */; };
+		887F963E1D7B193B00E39C90 /* UIFont+ProximaNovaCondensedFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F963D1D7B193B00E39C90 /* UIFont+ProximaNovaCondensedFont.m */; };
+		887F963F1D7B1E6A00E39C90 /* Exo2-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96221D7B082000E39C90 /* Exo2-Black.ttf */; };
+		887F96401D7B1E6A00E39C90 /* Exo2-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96231D7B082000E39C90 /* Exo2-BlackItalic.ttf */; };
+		887F96411D7B1E6A00E39C90 /* Exo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96241D7B082000E39C90 /* Exo2-Bold.ttf */; };
+		887F96421D7B1E6A00E39C90 /* Exo2-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96251D7B082000E39C90 /* Exo2-BoldItalic.ttf */; };
+		887F96431D7B1E6A00E39C90 /* Exo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96261D7B082000E39C90 /* Exo2-ExtraBold.ttf */; };
+		887F96441D7B1E6A00E39C90 /* Exo2-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96271D7B082000E39C90 /* Exo2-ExtraBoldItalic.ttf */; };
+		887F96451D7B1E6A00E39C90 /* Exo2-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96281D7B082000E39C90 /* Exo2-ExtraLight.ttf */; };
+		887F96461D7B1E6A00E39C90 /* Exo2-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96291D7B082000E39C90 /* Exo2-ExtraLightItalic.ttf */; };
+		887F96471D7B1E6A00E39C90 /* Exo2-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F962A1D7B082000E39C90 /* Exo2-Italic.ttf */; };
+		887F96481D7B1E6A00E39C90 /* Exo2-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F962B1D7B082000E39C90 /* Exo2-Light.ttf */; };
+		887F96491D7B1E6A00E39C90 /* Exo2-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F962C1D7B082000E39C90 /* Exo2-LightItalic.ttf */; };
+		887F964A1D7B1E6A00E39C90 /* Exo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F962D1D7B082000E39C90 /* Exo2-Medium.ttf */; };
+		887F964B1D7B1E6A00E39C90 /* Exo2-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F962E1D7B082000E39C90 /* Exo2-MediumItalic.ttf */; };
+		887F964C1D7B1E6A00E39C90 /* Exo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F962F1D7B082000E39C90 /* Exo2-Regular.ttf */; };
+		887F964D1D7B1E6A00E39C90 /* Exo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96301D7B082000E39C90 /* Exo2-SemiBold.ttf */; };
+		887F964E1D7B1E6A00E39C90 /* Exo2-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96311D7B082000E39C90 /* Exo2-SemiBoldItalic.ttf */; };
+		887F964F1D7B1E6A00E39C90 /* Exo2-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96321D7B082000E39C90 /* Exo2-Thin.ttf */; };
+		887F96501D7B1E6A00E39C90 /* Exo2-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96331D7B082000E39C90 /* Exo2-ThinItalic.ttf */; };
+		887F96511D7B1E9300E39C90 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96181D7B081700E39C90 /* ProximaNova-Black.otf */; };
+		887F96521D7B1E9300E39C90 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96191D7B081700E39C90 /* ProximaNova-Bold.otf */; };
+		887F96531D7B1E9300E39C90 /* ProximaNova-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F961A1D7B081700E39C90 /* ProximaNova-BoldIt.otf */; };
+		887F96541D7B1E9300E39C90 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F961B1D7B081700E39C90 /* ProximaNova-Extrabold.otf */; };
+		887F96551D7B1E9300E39C90 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F961C1D7B081700E39C90 /* ProximaNova-Light.otf */; };
+		887F96561D7B1E9300E39C90 /* ProximaNova-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F961D1D7B081700E39C90 /* ProximaNova-LightItalic.otf */; };
+		887F96571D7B1E9300E39C90 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F961E1D7B081700E39C90 /* ProximaNova-Regular.otf */; };
+		887F96581D7B1E9300E39C90 /* ProximaNova-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F961F1D7B081700E39C90 /* ProximaNova-RegularItalic.otf */; };
+		887F96591D7B1E9300E39C90 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96201D7B081700E39C90 /* ProximaNova-Semibold.otf */; };
+		887F965A1D7B1E9300E39C90 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96211D7B081700E39C90 /* ProximaNova-SemiboldItalic.otf */; };
+		887F965B1D7B1E9D00E39C90 /* proximanova-black-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F960D1D7B080200E39C90 /* proximanova-black-webfont.ttf */; };
+		887F965C1D7B1E9D00E39C90 /* proximanova-extrabld-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F960E1D7B080200E39C90 /* proximanova-extrabld-webfont.ttf */; };
+		887F965D1D7B1E9D00E39C90 /* proximanova-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F960F1D7B080200E39C90 /* proximanova-light-webfont.ttf */; };
+		887F965E1D7B1E9D00E39C90 /* proximanova-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96101D7B080200E39C90 /* proximanova-regular-webfont.ttf */; };
+		887F965F1D7B1E9D00E39C90 /* proximanova-semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96111D7B080200E39C90 /* proximanova-semibold-webfont.ttf */; };
+		887F96601D7B1EAE00E39C90 /* ProximaNovaCond-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96121D7B080E00E39C90 /* ProximaNovaCond-Light.otf */; };
+		887F96611D7B1EAE00E39C90 /* ProximaNovaCond-LightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96131D7B080E00E39C90 /* ProximaNovaCond-LightIt.otf */; };
+		887F96621D7B1EAE00E39C90 /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96141D7B080E00E39C90 /* ProximaNovaCond-Regular.otf */; };
+		887F96631D7B1EAE00E39C90 /* ProximaNovaCond-RegularIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96151D7B080E00E39C90 /* ProximaNovaCond-RegularIt.otf */; };
+		887F96641D7B1EAE00E39C90 /* ProximaNovaCond-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96161D7B080E00E39C90 /* ProximaNovaCond-Semibold.otf */; };
+		887F96651D7B1EAE00E39C90 /* ProximaNovaCond-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 887F96171D7B080E00E39C90 /* ProximaNovaCond-SemiboldIt.otf */; };
+		887F96661D7B1EBC00E39C90 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95DF1D78CD8400E39C90 /* Roboto-Black.ttf */; };
+		887F96671D7B1EBC00E39C90 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E01D78CD8400E39C90 /* Roboto-BlackItalic.ttf */; };
+		887F96681D7B1EBC00E39C90 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E11D78CD8400E39C90 /* Roboto-Bold.ttf */; };
+		887F96691D7B1EBC00E39C90 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E21D78CD8400E39C90 /* Roboto-BoldItalic.ttf */; };
+		887F966A1D7B1EBC00E39C90 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E31D78CD8400E39C90 /* Roboto-Italic.ttf */; };
+		887F966B1D7B1EBC00E39C90 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E41D78CD8400E39C90 /* Roboto-Light.ttf */; };
+		887F966C1D7B1EBC00E39C90 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E51D78CD8400E39C90 /* Roboto-LightItalic.ttf */; };
+		887F966D1D7B1EBC00E39C90 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E61D78CD8400E39C90 /* Roboto-Medium.ttf */; };
+		887F966E1D7B1EBC00E39C90 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E71D78CD8400E39C90 /* Roboto-MediumItalic.ttf */; };
+		887F966F1D7B1EBC00E39C90 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E81D78CD8400E39C90 /* Roboto-Regular.ttf */; };
+		887F96701D7B1EBC00E39C90 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95E91D78CD8400E39C90 /* Roboto-Thin.ttf */; };
+		887F96711D7B1EBC00E39C90 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 887F95EA1D78CD8400E39C90 /* Roboto-ThinItalic.ttf */; };
+		887F96771D7B417300E39C90 /* UIFont+ProximaNovaWebFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96761D7B417300E39C90 /* UIFont+ProximaNovaWebFont.m */; };
+		887F967A1D7B418800E39C90 /* UIFont+Exo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96791D7B418800E39C90 /* UIFont+Exo2.m */; };
+		887F967C1D7B430A00E39C90 /* MAXProximaNovaCondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F967B1D7B430A00E39C90 /* MAXProximaNovaCondTests.m */; };
+		887F967E1D7B9BB500E39C90 /* MAXExo2FontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F967D1D7B9BB500E39C90 /* MAXExo2FontTests.m */; };
 		88877AA21C74BDFF00D00246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA11C74BDFF00D00246 /* main.m */; };
 		88877AA51C74BDFF00D00246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA41C74BDFF00D00246 /* AppDelegate.m */; };
 		88877AA81C74BDFF00D00246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA71C74BDFF00D00246 /* ViewController.m */; };
@@ -92,12 +146,6 @@
 		887F95E81D78CD8400E39C90 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Fonts/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		887F95E91D78CD8400E39C90 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "Fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		887F95EA1D78CD8400E39C90 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-ThinItalic.ttf"; path = "Fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
-		887F96031D78D8F600E39C90 /* UIColor+ProximaNovaFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ProximaNovaFont.h"; sourceTree = "<group>"; };
-		887F96041D78D8F600E39C90 /* UIColor+ProximaNovaFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ProximaNovaFont.m"; sourceTree = "<group>"; };
-		887F96061D78D93900E39C90 /* UIColor+ProximaNovaWebFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ProximaNovaWebFont.h"; sourceTree = "<group>"; };
-		887F96071D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ProximaNovaWebFont.m"; sourceTree = "<group>"; };
-		887F96091D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ProximaNovaCondensedFont.h"; sourceTree = "<group>"; };
-		887F960A1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ProximaNovaCondensedFont.m"; sourceTree = "<group>"; };
 		887F960D1D7B080200E39C90 /* proximanova-black-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-black-webfont.ttf"; path = "Fonts/Proxima Nova Web Font/proximanova-black-webfont.ttf"; sourceTree = "<group>"; };
 		887F960E1D7B080200E39C90 /* proximanova-extrabld-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-extrabld-webfont.ttf"; path = "Fonts/Proxima Nova Web Font/proximanova-extrabld-webfont.ttf"; sourceTree = "<group>"; };
 		887F960F1D7B080200E39C90 /* proximanova-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-light-webfont.ttf"; path = "Fonts/Proxima Nova Web Font/proximanova-light-webfont.ttf"; sourceTree = "<group>"; };
@@ -137,8 +185,17 @@
 		887F96311D7B082000E39C90 /* Exo2-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-SemiBoldItalic.ttf"; path = "Fonts/Exo2/Exo2-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		887F96321D7B082000E39C90 /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Thin.ttf"; path = "Fonts/Exo2/Exo2-Thin.ttf"; sourceTree = "<group>"; };
 		887F96331D7B082000E39C90 /* Exo2-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ThinItalic.ttf"; path = "Fonts/Exo2/Exo2-ThinItalic.ttf"; sourceTree = "<group>"; };
-		887F96341D7B088000E39C90 /* UIColor+Exo2Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Exo2Font.h"; sourceTree = "<group>"; };
-		887F96351D7B088000E39C90 /* UIColor+Exo2Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Exo2Font.m"; sourceTree = "<group>"; };
+		887F96371D7B187700E39C90 /* MAXProximaNoveFontTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXProximaNoveFontTests.m; sourceTree = "<group>"; };
+		887F96391D7B18F500E39C90 /* UIFont+ProximaNovaFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ProximaNovaFont.h"; sourceTree = "<group>"; };
+		887F963A1D7B18F500E39C90 /* UIFont+ProximaNovaFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ProximaNovaFont.m"; sourceTree = "<group>"; };
+		887F963C1D7B193B00E39C90 /* UIFont+ProximaNovaCondensedFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ProximaNovaCondensedFont.h"; sourceTree = "<group>"; };
+		887F963D1D7B193B00E39C90 /* UIFont+ProximaNovaCondensedFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ProximaNovaCondensedFont.m"; sourceTree = "<group>"; };
+		887F96751D7B417300E39C90 /* UIFont+ProximaNovaWebFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ProximaNovaWebFont.h"; sourceTree = "<group>"; };
+		887F96761D7B417300E39C90 /* UIFont+ProximaNovaWebFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ProximaNovaWebFont.m"; sourceTree = "<group>"; };
+		887F96781D7B418800E39C90 /* UIFont+Exo2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Exo2.h"; sourceTree = "<group>"; };
+		887F96791D7B418800E39C90 /* UIFont+Exo2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Exo2.m"; sourceTree = "<group>"; };
+		887F967B1D7B430A00E39C90 /* MAXProximaNovaCondTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXProximaNovaCondTests.m; sourceTree = "<group>"; };
+		887F967D1D7B9BB500E39C90 /* MAXExo2FontTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXExo2FontTests.m; sourceTree = "<group>"; };
 		88877A9D1C74BDFF00D00246 /* ReusableComponentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableComponentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88877AA11C74BDFF00D00246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88877AA31C74BDFF00D00246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -355,8 +412,8 @@
 				887F96151D7B080E00E39C90 /* ProximaNovaCond-RegularIt.otf */,
 				887F96161D7B080E00E39C90 /* ProximaNovaCond-Semibold.otf */,
 				887F96171D7B080E00E39C90 /* ProximaNovaCond-SemiboldIt.otf */,
-				887F96091D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.h */,
-				887F960A1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m */,
+				887F963C1D7B193B00E39C90 /* UIFont+ProximaNovaCondensedFont.h */,
+				887F963D1D7B193B00E39C90 /* UIFont+ProximaNovaCondensedFont.m */,
 			);
 			name = "Proxima Nova Condensed";
 			sourceTree = "<group>";
@@ -374,13 +431,13 @@
 				887F961F1D7B081700E39C90 /* ProximaNova-RegularItalic.otf */,
 				887F96201D7B081700E39C90 /* ProximaNova-Semibold.otf */,
 				887F96211D7B081700E39C90 /* ProximaNova-SemiboldItalic.otf */,
-				887F96031D78D8F600E39C90 /* UIColor+ProximaNovaFont.h */,
-				887F96041D78D8F600E39C90 /* UIColor+ProximaNovaFont.m */,
+				887F96391D7B18F500E39C90 /* UIFont+ProximaNovaFont.h */,
+				887F963A1D7B18F500E39C90 /* UIFont+ProximaNovaFont.m */,
 			);
 			name = "Proxima Nova";
 			sourceTree = "<group>";
 		};
-		887F95EC1D78CEA800E39C90 /* Proxima Nova Webfont */ = {
+		887F95EC1D78CEA800E39C90 /* Proxima Nova Web Font */ = {
 			isa = PBXGroup;
 			children = (
 				887F960D1D7B080200E39C90 /* proximanova-black-webfont.ttf */,
@@ -388,10 +445,10 @@
 				887F960F1D7B080200E39C90 /* proximanova-light-webfont.ttf */,
 				887F96101D7B080200E39C90 /* proximanova-regular-webfont.ttf */,
 				887F96111D7B080200E39C90 /* proximanova-semibold-webfont.ttf */,
-				887F96061D78D93900E39C90 /* UIColor+ProximaNovaWebFont.h */,
-				887F96071D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m */,
+				887F96751D7B417300E39C90 /* UIFont+ProximaNovaWebFont.h */,
+				887F96761D7B417300E39C90 /* UIFont+ProximaNovaWebFont.m */,
 			);
-			name = "Proxima Nova Webfont";
+			name = "Proxima Nova Web Font";
 			sourceTree = "<group>";
 		};
 		887F960C1D7B07B800E39C90 /* Exo2 */ = {
@@ -415,8 +472,8 @@
 				887F96311D7B082000E39C90 /* Exo2-SemiBoldItalic.ttf */,
 				887F96321D7B082000E39C90 /* Exo2-Thin.ttf */,
 				887F96331D7B082000E39C90 /* Exo2-ThinItalic.ttf */,
-				887F96341D7B088000E39C90 /* UIColor+Exo2Font.h */,
-				887F96351D7B088000E39C90 /* UIColor+Exo2Font.m */,
+				887F96781D7B418800E39C90 /* UIFont+Exo2.h */,
+				887F96791D7B418800E39C90 /* UIFont+Exo2.m */,
 			);
 			name = Exo2;
 			sourceTree = "<group>";
@@ -476,6 +533,9 @@
 				88877ABA1C74BDFF00D00246 /* ReusableComponentsAppTests.m */,
 				88BE771C1C831A5F002693C0 /* MAXSystemFontsCategoryTests.m */,
 				88BEFA251C83722D00ADE78C /* MAXRobotoFontTests.m */,
+				887F96371D7B187700E39C90 /* MAXProximaNoveFontTests.m */,
+				887F967B1D7B430A00E39C90 /* MAXProximaNovaCondTests.m */,
+				887F967D1D7B9BB500E39C90 /* MAXExo2FontTests.m */,
 				88877ABC1C74BDFF00D00246 /* Info.plist */,
 			);
 			path = ReusableComponentsAppTests;
@@ -561,7 +621,7 @@
 			children = (
 				887F960C1D7B07B800E39C90 /* Exo2 */,
 				887F95EB1D78CE9F00E39C90 /* Proxima Nova */,
-				887F95EC1D78CEA800E39C90 /* Proxima Nova Webfont */,
+				887F95EC1D78CEA800E39C90 /* Proxima Nova Web Font */,
 				887F95DE1D78C7CD00E39C90 /* Proxima Nova Condensed */,
 				887F95DD1D78C7C000E39C90 /* Roboto */,
 			);
@@ -780,6 +840,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887F96661D7B1EBC00E39C90 /* Roboto-Black.ttf in Resources */,
+				887F96671D7B1EBC00E39C90 /* Roboto-BlackItalic.ttf in Resources */,
+				887F96681D7B1EBC00E39C90 /* Roboto-Bold.ttf in Resources */,
+				887F96691D7B1EBC00E39C90 /* Roboto-BoldItalic.ttf in Resources */,
+				887F966A1D7B1EBC00E39C90 /* Roboto-Italic.ttf in Resources */,
+				887F966B1D7B1EBC00E39C90 /* Roboto-Light.ttf in Resources */,
+				887F966C1D7B1EBC00E39C90 /* Roboto-LightItalic.ttf in Resources */,
+				887F966D1D7B1EBC00E39C90 /* Roboto-Medium.ttf in Resources */,
+				887F966E1D7B1EBC00E39C90 /* Roboto-MediumItalic.ttf in Resources */,
+				887F966F1D7B1EBC00E39C90 /* Roboto-Regular.ttf in Resources */,
+				887F96701D7B1EBC00E39C90 /* Roboto-Thin.ttf in Resources */,
+				887F96711D7B1EBC00E39C90 /* Roboto-ThinItalic.ttf in Resources */,
+				887F96601D7B1EAE00E39C90 /* ProximaNovaCond-Light.otf in Resources */,
+				887F96611D7B1EAE00E39C90 /* ProximaNovaCond-LightIt.otf in Resources */,
+				887F96621D7B1EAE00E39C90 /* ProximaNovaCond-Regular.otf in Resources */,
+				887F96631D7B1EAE00E39C90 /* ProximaNovaCond-RegularIt.otf in Resources */,
+				887F96641D7B1EAE00E39C90 /* ProximaNovaCond-Semibold.otf in Resources */,
+				887F96651D7B1EAE00E39C90 /* ProximaNovaCond-SemiboldIt.otf in Resources */,
+				887F965B1D7B1E9D00E39C90 /* proximanova-black-webfont.ttf in Resources */,
+				887F965C1D7B1E9D00E39C90 /* proximanova-extrabld-webfont.ttf in Resources */,
+				887F965D1D7B1E9D00E39C90 /* proximanova-light-webfont.ttf in Resources */,
+				887F965E1D7B1E9D00E39C90 /* proximanova-regular-webfont.ttf in Resources */,
+				887F965F1D7B1E9D00E39C90 /* proximanova-semibold-webfont.ttf in Resources */,
+				887F96511D7B1E9300E39C90 /* ProximaNova-Black.otf in Resources */,
+				887F96521D7B1E9300E39C90 /* ProximaNova-Bold.otf in Resources */,
+				887F96531D7B1E9300E39C90 /* ProximaNova-BoldIt.otf in Resources */,
+				887F96541D7B1E9300E39C90 /* ProximaNova-Extrabold.otf in Resources */,
+				887F96551D7B1E9300E39C90 /* ProximaNova-Light.otf in Resources */,
+				887F96561D7B1E9300E39C90 /* ProximaNova-LightItalic.otf in Resources */,
+				887F96571D7B1E9300E39C90 /* ProximaNova-Regular.otf in Resources */,
+				887F96581D7B1E9300E39C90 /* ProximaNova-RegularItalic.otf in Resources */,
+				887F96591D7B1E9300E39C90 /* ProximaNova-Semibold.otf in Resources */,
+				887F965A1D7B1E9300E39C90 /* ProximaNova-SemiboldItalic.otf in Resources */,
+				887F963F1D7B1E6A00E39C90 /* Exo2-Black.ttf in Resources */,
+				887F96401D7B1E6A00E39C90 /* Exo2-BlackItalic.ttf in Resources */,
+				887F96411D7B1E6A00E39C90 /* Exo2-Bold.ttf in Resources */,
+				887F96421D7B1E6A00E39C90 /* Exo2-BoldItalic.ttf in Resources */,
+				887F96431D7B1E6A00E39C90 /* Exo2-ExtraBold.ttf in Resources */,
+				887F96441D7B1E6A00E39C90 /* Exo2-ExtraBoldItalic.ttf in Resources */,
+				887F96451D7B1E6A00E39C90 /* Exo2-ExtraLight.ttf in Resources */,
+				887F96461D7B1E6A00E39C90 /* Exo2-ExtraLightItalic.ttf in Resources */,
+				887F96471D7B1E6A00E39C90 /* Exo2-Italic.ttf in Resources */,
+				887F96481D7B1E6A00E39C90 /* Exo2-Light.ttf in Resources */,
+				887F96491D7B1E6A00E39C90 /* Exo2-LightItalic.ttf in Resources */,
+				887F964A1D7B1E6A00E39C90 /* Exo2-Medium.ttf in Resources */,
+				887F964B1D7B1E6A00E39C90 /* Exo2-MediumItalic.ttf in Resources */,
+				887F964C1D7B1E6A00E39C90 /* Exo2-Regular.ttf in Resources */,
+				887F964D1D7B1E6A00E39C90 /* Exo2-SemiBold.ttf in Resources */,
+				887F964E1D7B1E6A00E39C90 /* Exo2-SemiBoldItalic.ttf in Resources */,
+				887F964F1D7B1E6A00E39C90 /* Exo2-Thin.ttf in Resources */,
+				887F96501D7B1E6A00E39C90 /* Exo2-ThinItalic.ttf in Resources */,
 				88BE77311C836C8A002693C0 /* LICENSE.txt in Resources */,
 				88877AB01C74BDFF00D00246 /* LaunchScreen.storyboard in Resources */,
 				88877AAD1C74BDFF00D00246 /* Assets.xcassets in Resources */,
@@ -814,14 +925,13 @@
 				88E2ED391C7FB94200A57E0C /* GLOOPSTextField.m in Sources */,
 				88E2ED2C1C7F151000A57E0C /* MAXPagingScrollView.m in Sources */,
 				889383711D16FD5100DFB5A5 /* MAXChartView.m in Sources */,
+				887F967A1D7B418800E39C90 /* UIFont+Exo2.m in Sources */,
 				88FFCCF91CB98B2F004E4EBE /* UIColor+Extension.m in Sources */,
 				88877AD71C74BFBA00D00246 /* MAXViewController.m in Sources */,
 				88877AA81C74BDFF00D00246 /* ViewController.m in Sources */,
 				889383791D170D2400DFB5A5 /* MAXChartColumn.m in Sources */,
-				887F96361D7B088000E39C90 /* UIColor+Exo2Font.m in Sources */,
+				887F963B1D7B18F500E39C90 /* UIFont+ProximaNovaFont.m in Sources */,
 				88DB6F6C1C8B3A4200DFEBAD /* MAXBlockView.m in Sources */,
-				887F96051D78D8F600E39C90 /* UIColor+ProximaNovaFont.m in Sources */,
-				887F96081D78D93900E39C90 /* UIColor+ProximaNovaWebFont.m in Sources */,
 				88E2ED321C7F9CD700A57E0C /* UIView+MAXExtension.m in Sources */,
 				4E53970C1D64E0A600707E94 /* MAXLineChartView.m in Sources */,
 				4E5397131D64E1BF00707E94 /* LineChartViewController.m in Sources */,
@@ -835,11 +945,12 @@
 				4E24929F1CE250B60036C7C6 /* MAXBlockTextField.m in Sources */,
 				88877AA21C74BDFF00D00246 /* main.m in Sources */,
 				88A7333E1CB190140076E23E /* MAXDrawerView.m in Sources */,
+				887F963E1D7B193B00E39C90 /* UIFont+ProximaNovaCondensedFont.m in Sources */,
 				4E5397071D63AE7C00707E94 /* ButtonsViewController.m in Sources */,
 				88BE771B1C8318EF002693C0 /* UIFont+MAXSystemFonts.m in Sources */,
 				88CF9A671CD7E1DB00AA8AE7 /* MAXBlockSwitch.m in Sources */,
-				887F960B1D78D94E00E39C90 /* UIColor+ProximaNovaCondensedFont.m in Sources */,
 				88DDDDB41CC26765005FB623 /* MAXSelectedContentButton.m in Sources */,
+				887F96771D7B417300E39C90 /* UIFont+ProximaNovaWebFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,9 +959,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				88BEFA261C83722D00ADE78C /* MAXRobotoFontTests.m in Sources */,
+				887F967C1D7B430A00E39C90 /* MAXProximaNovaCondTests.m in Sources */,
 				88BE771D1C831A5F002693C0 /* MAXSystemFontsCategoryTests.m in Sources */,
 				88C835521C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */,
 				88877ABB1C74BDFF00D00246 /* ReusableComponentsAppTests.m in Sources */,
+				887F96381D7B187700E39C90 /* MAXProximaNoveFontTests.m in Sources */,
+				887F967E1D7B9BB500E39C90 /* MAXExo2FontTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

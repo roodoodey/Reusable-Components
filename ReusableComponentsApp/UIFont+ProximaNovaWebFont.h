@@ -1,13 +1,13 @@
 //
-//  UIColor+Exo2Font.m
+//  UIFont+ProximaNovaWebFont.h
 //  ReusableComponentsApp
 //
 //  Created by Mathieu Skulason on 03/09/16.
 //  Copyright © 2016 Konta ehf. All rights reserved.
 //
 
-#import "UIColor+Exo2Font.h"
+#import <UIKit/UIKit.h>
 
-@implementation UIColor (Exo2Font)
+@interface UIFont (ProximaNovaWebFont)
 
 @end

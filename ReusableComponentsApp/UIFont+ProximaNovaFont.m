@@ -1,14 +1,14 @@
 //
-//  UIColor+ProximaNovaFont.m
+//  UIFont+ProximaNovaFont.m
 //  ReusableComponentsApp
 //
-//  Created by Mathieu Skulason on 01/09/16.
+//  Created by Mathieu Skulason on 03/09/16.
 //  Copyright © 2016 Konta ehf. All rights reserved.
 //
 
-#import "UIColor+ProximaNovaFont.h"
+#import "UIFont+ProximaNovaFont.h"
 
-@implementation UIColor (ProximaNovaFont)
+@implementation UIFont (ProximaNovaFont)
 
 +(UIFont *)c_proximaNovaBlackWithSize:(float)theSize {
     
@@ -27,7 +27,7 @@
 
 +(UIFont *)c_proximaNovaExtraBoldWithSize:(float)theSize {
     
-    return [UIFont fontWithName:@"ProximaNova-Extrabold" size:theSize];
+    return [UIFont fontWithName:@"ProximaNova-Extrabld" size:theSize];
 }
 
 +(UIFont *)c_proximaNovaLightWithSize:(float)theSize {
@@ -37,7 +37,7 @@
 
 +(UIFont *)c_proximaNovaLightItalicWithSize:(float)theSize {
     
-    return [UIFont fontWithName:@"ProximaNova-LightItalic" size:theSize];
+    return [UIFont fontWithName:@"ProximaNova-LightIt" size:theSize];
 }
 
 +(UIFont *)c_proximaNovaRegularWithSize:(float)theSize {
@@ -47,7 +47,7 @@
 
 +(UIFont *)c_proximaNovaRegularItalicWithSize:(float)theSize {
     
-    return [UIFont fontWithName:@"ProximaNova-RegularItalic" size:theSize];
+    return [UIFont fontWithName:@"ProximaNova-RegularIt" size:theSize];
 }
 
 +(UIFont *)c_proximaNovaSemiboldWithSize:(float)theSize {
@@ -57,7 +57,7 @@
 
 +(UIFont *)c_proximaNovaSemiboldItalicWithSize:(float)theSize {
     
-    return [UIFont fontWithName:@"ProximaNova-SemiboldItalic" size:theSize];
+    return [UIFont fontWithName:@"ProximaNova-SemiboldIt" size:theSize];
 }
 
 @end
