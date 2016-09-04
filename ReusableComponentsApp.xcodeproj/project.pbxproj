@@ -71,6 +71,7 @@
 		887F967A1D7B418800E39C90 /* UIFont+Exo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96791D7B418800E39C90 /* UIFont+Exo2.m */; };
 		887F967C1D7B430A00E39C90 /* MAXProximaNovaCondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F967B1D7B430A00E39C90 /* MAXProximaNovaCondTests.m */; };
 		887F967E1D7B9BB500E39C90 /* MAXExo2FontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F967D1D7B9BB500E39C90 /* MAXExo2FontTests.m */; };
+		887F96831D7BA0AA00E39C90 /* MAXBlockTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96821D7BA0AA00E39C90 /* MAXBlockTapGestureRecognizer.m */; };
 		88877AA21C74BDFF00D00246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA11C74BDFF00D00246 /* main.m */; };
 		88877AA51C74BDFF00D00246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA41C74BDFF00D00246 /* AppDelegate.m */; };
 		88877AA81C74BDFF00D00246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88877AA71C74BDFF00D00246 /* ViewController.m */; };
@@ -196,6 +197,8 @@
 		887F96791D7B418800E39C90 /* UIFont+Exo2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Exo2.m"; sourceTree = "<group>"; };
 		887F967B1D7B430A00E39C90 /* MAXProximaNovaCondTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXProximaNovaCondTests.m; sourceTree = "<group>"; };
 		887F967D1D7B9BB500E39C90 /* MAXExo2FontTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXExo2FontTests.m; sourceTree = "<group>"; };
+		887F96811D7BA0AA00E39C90 /* MAXBlockTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXBlockTapGestureRecognizer.h; sourceTree = "<group>"; };
+		887F96821D7BA0AA00E39C90 /* MAXBlockTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXBlockTapGestureRecognizer.m; sourceTree = "<group>"; };
 		88877A9D1C74BDFF00D00246 /* ReusableComponentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableComponentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88877AA11C74BDFF00D00246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88877AA31C74BDFF00D00246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -478,6 +481,23 @@
 			name = Exo2;
 			sourceTree = "<group>";
 		};
+		887F967F1D7BA04B00E39C90 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				887F96801D7BA08C00E39C90 /* Gesture Recognizers */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		887F96801D7BA08C00E39C90 /* Gesture Recognizers */ = {
+			isa = PBXGroup;
+			children = (
+				887F96811D7BA0AA00E39C90 /* MAXBlockTapGestureRecognizer.h */,
+				887F96821D7BA0AA00E39C90 /* MAXBlockTapGestureRecognizer.m */,
+			);
+			name = "Gesture Recognizers";
+			sourceTree = "<group>";
+		};
 		88877A941C74BDFF00D00246 = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +528,7 @@
 				88877AD31C74BF7400D00246 /* View Controllers For UI Components */,
 				88C8354E1C8B9BB600E5D8C5 /* Object components */,
 				88E2ED2D1C7F9A6300A57E0C /* UI Components */,
+				887F967F1D7BA04B00E39C90 /* Objects */,
 				88E2ED281C7EF9CA00A57E0C /* Extensions */,
 				88E2ED291C7EF9D500A57E0C /* Categories */,
 				88877AA91C74BDFF00D00246 /* Main.storyboard */,
@@ -937,6 +958,7 @@
 				4E5397131D64E1BF00707E94 /* LineChartViewController.m in Sources */,
 				887639271CD4DA6500C8196D /* MAXPageControl.m in Sources */,
 				88C835511C8B9C6B00E5D8C5 /* MAXSingleton.m in Sources */,
+				887F96831D7BA0AA00E39C90 /* MAXBlockTapGestureRecognizer.m in Sources */,
 				88E2ED361C7FA71400A57E0C /* MAXPagingScrollViewController.m in Sources */,
 				88877ADA1C761AAB00D00246 /* MAXBlockButton.m in Sources */,
 				8893837D1D1776F400DFB5A5 /* MAXChartIndexPath.m in Sources */,
