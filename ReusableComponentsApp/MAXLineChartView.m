@@ -126,16 +126,14 @@
         for (int x = 0; x < line.count; x++) {
             
             double y = [[line objectAtIndex: x] doubleValue] / maxYValue;
-            double yHeight = y * height;
+            double yHeight = [self p_chartHeight] - y * height;
             
             if (x == 0) {
                 CGPoint point = CGPointMake([self p_leftBorderWidth], yHeight + [self p_upperBorderWidth]);
-                NSLog(@"point: %d is: %@", x, NSStringFromCGPoint(point));
                 [path moveToPoint: point];
             }
             else {
                 CGPoint point = CGPointMake(x * horizontalStep + [self p_leftBorderWidth],  yHeight + [self p_upperBorderWidth]);
-                NSLog(@"point: %d is: %@", x, NSStringFromCGPoint(point));
                 [path addLineToPoint: point];
             }
             
@@ -640,7 +638,7 @@
 
 -(CGFloat)p_chartHeight {
     
-    double height = CGRectGetWidth(self.frame);
+    double height = CGRectGetHeight(self.frame);
     
     return height - [self p_upperBorderWidth] - [self p_lowerBorderWidth];
 }

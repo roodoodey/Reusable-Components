@@ -63,6 +63,10 @@
 -(double)MAXLineChart:(MAXLineChartView *)theChartView YValueAtX:(NSUInteger)theX line:(NSUInteger)theLine {
     
     
+    if (theX < 5) {
+        return 0;
+    }
+    
     return arc4random_uniform(100);
 }
 
