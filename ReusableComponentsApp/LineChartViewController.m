@@ -129,11 +129,11 @@
     }
     else if(theDecorationViewNum == 1) {
         
-        return 3.21;
+        return 3;
     }
     else if(theDecorationViewNum == 2) {
         
-        return 9.93;
+        return 9;
     }
     else if(theDecorationViewNum == 3) {
         
@@ -151,6 +151,26 @@
     view.backgroundColor = [UIColor greenColor];
     
     return view;
+}
+
+-(CGFloat)MAXLineChartLeftMarginWidth:(MAXLineChartView *)theLineChart {
+    
+    return 40.0;
+}
+
+-(CGFloat)MAXLineChartRightMarginWidth:(MAXLineChartView *)theLineChart {
+    
+    return 40.0;
+}
+
+-(CGFloat)MAXLineChartUpperMarginHeight:(MAXLineChartView *)theLineChart {
+    
+    return 20.0;
+}
+
+-(CGFloat)MAXLineChartLowerMarginHeight:(MAXLineChartView *)theLineChart {
+    
+    return 20.0;
 }
 
 @end

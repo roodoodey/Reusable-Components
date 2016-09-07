@@ -353,7 +353,7 @@
     if ([self.datasource respondsToSelector:@selector(MAXLineChart:numLineDecorationViewsForLine:)] == YES || [self.datasource respondsToSelector:@selector(MAXLineChart:decorationViewAtPositionXForLine:decorationViewNum:)] == YES || [self.datasource respondsToSelector:@selector(MAXLineChart:decorationViewForLine:decoartionViewNum:decorationViewPosition:)] == YES) {
         
         [self p_removeLineDecorationViews];
-        [self p_fetchAndDrawLineDecorationViewsWithChartData: theChartData];
+        _lineDecorationViews = [self p_fetchAndDrawLineDecorationViewsWithChartData: theChartData];
         
     }
     
@@ -383,9 +383,9 @@
             double slopeHeight = /* dstance x*/ (posX - lowPosX) * /* slope */ (highPosY - lowPosY) * [self p_chartHeight];
             double lowPosYViewCoord = (1 - lowPosY) * [self p_chartHeight];
             
-            double horizontalStep = [self p_chartHeight] / ([self p_highestXValueForChart] - 1);
+            double horizontalStep = [self p_chartWidth] / ([self p_highestXValueForChart] - 1);
 
-            CGPoint centerPointForDecorationView = CGPointMake([self p_totalLeftMarginAndBorderWidth] + horizontalStep * posX,  [self p_totalUpperMarginAndBorderHeight] + [self p_chartHeight] - lowPosYViewCoord + slopeHeight);
+            CGPoint centerPointForDecorationView = CGPointMake([self p_totalLeftMarginAndBorderWidth] + horizontalStep * posX,  [self p_totalUpperMarginAndBorderHeight] + lowPosYViewCoord - slopeHeight);
 
             UIView *lineDecorationView = [self.datasource MAXLineChart: self decorationViewForLine: line decoartionViewNum: decorationNum decorationViewPosition: centerPointForDecorationView];
             [self addSubview: lineDecorationView];
@@ -418,11 +418,14 @@
     CGFloat width = CGRectGetWidth(self.frame);
     CGFloat height = CGRectGetHeight(self.frame);
     
-    _leftBorderView.frame = CGRectMake(0, 0, [self p_leftBorderWidth], height);
-    _rightBorderView.frame = CGRectMake(width - [self p_rightBorderWidth], 0, [self p_rightBorderWidth], height);
+    CGFloat heightWithBorders = [self p_upperBorderHeight] + [self p_chartHeight] + [self p_lowerBorderHeight];
+    CGFloat widthWithBorders = [self p_leftBorderWidth] + [self p_chartWidth] + [self p_rightBorderWidth];
     
-    _upperBorderView.frame = CGRectMake(0, 0, width, [self p_upperBorderHeight]);
-    _lowerBorderView.frame = CGRectMake(0, height - [self p_lowerBorderHeight], width, [self p_lowerBorderHeight]);
+    _leftBorderView.frame = CGRectMake([self p_leftMarginWidth], [self p_upperMarginHeight], [self p_leftBorderWidth], heightWithBorders);
+    _rightBorderView.frame = CGRectMake(width - [self p_totalRightMarginAndBorderWidth], [self p_upperMarginHeight], [self p_rightBorderWidth], heightWithBorders);
+    
+    _upperBorderView.frame = CGRectMake([self p_leftMarginWidth], [self p_upperMarginHeight], widthWithBorders, [self p_upperBorderHeight]);
+    _lowerBorderView.frame = CGRectMake([self p_leftMarginWidth], height - [self p_lowerBorderHeight] - [self p_lowerMarginHeight], widthWithBorders, [self p_lowerBorderHeight]);
     
     [self p_reloadBorderColor];
     
@@ -470,7 +473,7 @@
     NSArray <NSValue *> *upperBorderPositions = [self p_fetchUpperBorderDecoartionPositions];
     NSArray <NSValue *> *lowerBorderPositions = [self p_fetchLowerBorderDecorationPositions];
     
-    [self p_removeLineDecorationViews];
+    [self p_removeLineBorderDecorationViews];
     _leftBorderDecorationViews = [self p_fetchLeftBorderDecorationViewsWithPositions: leftBorderPositions];
     _rightBorderDecorationViews = [self p_fetchRightBorderDecorationViewsWithPositions: rightBorderPositions];
     _upperBorderDecorationViews = [self p_fetchUpperBorderDecorationViewsWithPositions: upperBorderPositions];
