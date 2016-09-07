@@ -152,6 +152,10 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 
 -(UIView *)MAXLineChart:(MAXLineChartView *)theChartView lowerBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition decorationViewNumber:(NSUInteger)theDecorationViewNumber;
 
+
+
+
+
 @end
 
 @protocol MAXLineChartDelegate < NSObject >
@@ -223,6 +227,30 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  */
 -(UIColor*)MAXLineChartColorsForBordersForChart:(MAXLineChartView *)theLineChart;
 
+//////////////////////////////////////////////
+//////////// Chart Margin Size ///////////////
+
+/**
+ @description The purpose of the margin is dual, if you want to have a margin on some specific side of the chart we give you the option to do so, but it also determines the size of the axis decoration views, that is if you have added any border decoration views and register MAXLineChart:leftAxisDecorationViews:atIndex: delegate we will automatically create decoration views correctly positioned and size to add values under the border decoration views. This is so that you can provide values for the chart with ease.
+ */
+-(CGFloat)MAXLineChartLeftMarginWidth:(MAXLineChartView *)theLineChart;
+
+-(CGFloat)MAXLineChartRightMarginWidth:(MAXLineChartView *)theLineChart;
+
+-(CGFloat)MAXLineChartUpperMarginHeight:(MAXLineChartView *)theLineChart;
+
+-(CGFloat)MAXLineChartLowerMarginHeight:(MAXLineChartView *)theLineChart;
+
+////////////////////////////////////////////////////////
+///////////// Chart Axis Decoration Views //////////////
+
+-(void)MAXLineChart:(MAXLineChartView *)theLineChart leftAxisDecorationView:(UIView *)theDecorationView atIndex:(NSUInteger)theIndex;
+
+-(void)MAXLineChart:(MAXLineChartView *)theLineChart rightAxisDecorationView:(UIView *)theDecorationView atIndex:(NSUInteger)theIndex;
+
+-(void)MAXLineChart:(MAXLineChartView *)theLineChart upperAxisDecorationView:(UIView *)theDecoartionView atIndex:(NSUInteger)theIndex;
+
+-(void)MAXLineChart:(MAXLineChartView *)theLineChart lowerAxisDecorationView:(UIView *)theDecoartionView atIndex:(NSUInteger)theIndex;
 
 @end
 
