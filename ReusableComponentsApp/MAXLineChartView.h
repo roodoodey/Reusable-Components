@@ -50,6 +50,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  */
 -(double)MAXLineChart:(MAXLineChartView *)theChartView YValueAtX:(NSUInteger)theX line:(NSUInteger)theLine;
 
+
+
+
 @optional
 
 
