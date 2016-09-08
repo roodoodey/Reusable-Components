@@ -62,17 +62,17 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 /**
  @description The number of decoration views to add to the line.
  */
--(NSUInteger)MAXLineChart:(MAXLineChartView *)theChartView numLineDecorationViewsForLine:(NSUInteger)theLine;
+-(NSUInteger)MAXLineChart:(MAXLineChartView *)theChartView numDecorationViewsForLine:(NSUInteger)theLine;
 
 /**
  @description The X position for the given line and decoration view, as well as chart view. This value is then used to position the decorationv iew on the Y axis of the line depending on the X value.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView decorationViewAtPositionXForLine:(NSUInteger)theLine decorationViewNum:(NSUInteger)theDecorationViewNum;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView decorationViewAtPositionXForLine:(NSUInteger)theLine atIndex:(NSUInteger)theIndex;
 
 /**
  @description 
  */
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView decorationViewForLine:(NSUInteger)theLine decoartionViewNum:(NSUInteger)theDecorationViewNum decorationViewPosition:(CGPoint)theDecorationViewPosition;
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView decorationViewForLine:(NSUInteger)theLine atIndex:(NSUInteger)theIndex decorationViewPosition:(CGPoint)theDecorationViewPosition;
 
 
 ////////////////////////////////////////////////////////
@@ -94,9 +94,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLeftBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLeftBorderDecorationViewAtIndex:(NSUInteger)theIndex;
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView leftBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPoint decorationViewNumber:(NSUInteger)theDecorationViewNumber;
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView leftBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
 
 ///////// Right Border View
 
@@ -113,9 +113,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView valueForRightBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView valueForRightBorderAtIndex:(NSUInteger)theIndex;
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView rightBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPoint decorationViewNumber:(NSUInteger)theDecorationViewNumber;
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView rightBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
 
 /////// Upper Border View
 
@@ -132,9 +132,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView valueForUpperBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView valueForUpperBorderDecorationViewAtIndex:(NSUInteger)theIndex;
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView upperBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition decoartionViewNumber:(NSUInteger)theDecorationViewNumber;
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView upperBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition atIndex:(NSUInteger)theIndex;
 
 ///////// Lower Border View
 
@@ -151,9 +151,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLowerBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLowerBorderDecorationViewAtIndex:(NSUInteger)theIndex;
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView lowerBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition decorationViewNumber:(NSUInteger)theDecorationViewNumber;
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView lowerBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition atIndex:(NSUInteger)theIndex;
 
 
 
