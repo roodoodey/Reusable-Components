@@ -94,9 +94,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLeftBorderDecorationViewAtIndex:(NSUInteger)theIndex;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView xValueForLeftBorderDecorationViewAtIndex:(NSUInteger)theIndex;
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView leftBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView leftBorderDecorationViewAxisCenterPoint:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
 
 ///////// Right Border View
 
@@ -113,9 +113,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView valueForRightBorderAtIndex:(NSUInteger)theIndex;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView xValueForRightBorderAtIndex:(NSUInteger)theIndex;
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView rightBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView rightBorderDecorationViewAxisCenterPoint:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
 
 /////// Upper Border View
 
@@ -132,9 +132,12 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView valueForUpperBorderDecorationViewAtIndex:(NSUInteger)theIndex;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView xValueForUpperBorderDecorationViewAtIndex:(NSUInteger)theIndex;
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView upperBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition atIndex:(NSUInteger)theIndex;
+/**
+ @description Provide a UIView to decorate the axis and the area below it. We provide you with a useful point on the border axis position based on the value you passed for x value in the MAXLineChart:xValueForUpperBorderDecorationViewAtIndex:. The point is positioned at the x position calculated based on the xValue provided and at the middle of the height of the upper border. Use this point to add a view to the axis border and below it.
+ */
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView upperBorderDecorationViewAxisCenterPoint:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
 
 ///////// Lower Border View
 
@@ -151,9 +154,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLowerBorderDecorationViewAtIndex:(NSUInteger)theIndex;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView xValueForLowerBorderDecorationViewAtIndex:(NSUInteger)theIndex;
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView lowerBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition atIndex:(NSUInteger)theIndex;
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView lowerBorderDecorationViewAxisCenterPoint:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
 
 
 
@@ -221,9 +224,9 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 
 -(CGFloat)MAXLineChartRightBorderWidthForChart:(MAXLineChartView *)theLineChart;
 
--(CGFloat)MAXLineChartUpperBorderWidthForChart:(MAXLineChartView *)theLineChart;
+-(CGFloat)MAXLineChartUpperBorderHeightForChart:(MAXLineChartView *)theLineChart;
 
--(CGFloat)MAXLineChartLowerBorderWidthForChart:(MAXLineChartView *)theLineChart;
+-(CGFloat)MAXLineChartLowerBorderHeightForChart:(MAXLineChartView *)theLineChart;
 
 /**
  @description The color for the chart border, defaults to black if not specified.
