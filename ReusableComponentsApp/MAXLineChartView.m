@@ -71,7 +71,6 @@
         [self addSubview: _lowerBorderView];
     
         self.layer.masksToBounds = YES;
-        
     }
     
     return self;
@@ -88,6 +87,7 @@
     [self p_drawLinesWithChartData: _chartData lineShapeLayers: _lineShapeLayers maxYValue: [self p_highestYValueForChart] maxXValue: [self p_highestXValueForChart]];
     [self p_drawChartLineBorders];
     [self p_drawLineDecorationViewsWithChartData: _chartData];
+    [self p_bringBordersToFront];
     [self p_createBorderAndAxisDecorationViews];
 }
 
@@ -479,12 +479,6 @@
     _upperBorderDecorationViews = [self p_fetchUpperBorderDecorationViewsWithPositions: upperBorderPositions];
     _lowerBorderDecorationViews = [self p_fetchLowerBorderDecorationViewsWithPositions: lowerBorderPositions];
     
-    [self p_removeAllMarginDecorationsViews];
-    _leftMarginDecorationViews = [self p_fetchLeftMarginDecorationViewsWithPositions: leftBorderPositions];
-    _rightMarginDecorationViews = [self p_fetchRightBorderDecorationViewsWithPositions: rightBorderPositions];
-    _upperBorderDecorationViews = [self p_fetchUpperMarginDecorationViewsWithPositions: upperBorderPositions];
-    _lowerMarginDecorationViews = [self p_fetchLowerMarginDecorationViewsWithPositions: lowerBorderPositions];
-    
 }
 
 -(NSArray <NSValue *> *)p_fetchLeftBorderDecorationPositions {
@@ -551,7 +545,7 @@
             
             double upperBorderValue = [self.datasource MAXLineChart: self xValueForUpperBorderDecorationViewAtIndex: decorationIndex];
             
-            CGPoint centerPoint = CGPointMake([self p_leftMarginWidth] + upperBorderValue / [self p_highestXValueForChart] * self.frame.size.width, [self p_upperMarginHeight] + [self p_upperBorderHeight] / 2.0);
+            CGPoint centerPoint = CGPointMake([self p_totalLeftMarginAndBorderWidth] + upperBorderValue / [self p_highestXValueForChart] * [self p_chartWidth], [self p_upperMarginHeight] + [self p_upperBorderHeight] / 2.0);
             
             [upperBorderDecorationPositions addObject: [NSValue valueWithCGPoint: centerPoint]];
         }
@@ -575,7 +569,7 @@
             
             double lowerBorderValue = [self.datasource MAXLineChart: self xValueForLowerBorderDecorationViewAtIndex: decorationIndex];
             
-            CGPoint centerPoint = CGPointMake([self p_leftMarginWidth] + lowerBorderValue / [self p_highestXValueForChart] * self.frame.size.width, [self p_totalUpperMarginAndBorderHeight] + [self p_chartHeight] + [self p_lowerBorderHeight] / 2.0);
+            CGPoint centerPoint = CGPointMake([self p_totalLeftMarginAndBorderWidth] + lowerBorderValue / [self p_highestXValueForChart] * [self p_chartWidth], [self p_totalUpperMarginAndBorderHeight] + [self p_chartHeight] + [self p_lowerBorderHeight] / 2.0);
             
             [lowerBorderDecorationPositions addObject: [NSValue valueWithCGPoint: centerPoint]];
         }
@@ -609,13 +603,25 @@
     
 }
 
--(NSArray <UIView *> *)p_fetchLeftBorderDecorationViewsWithPositions:(NSArray <NSValue *> *)thePositions {
+-(NSArray <UIView *> *)p_fetchLeftBorderDecorationViewsWithPositions:(NSArray <NSValue *> *)thePoints {
     
     // these methods have to be defined in order to create the left decoration views
-    if (thePositions.count != 0) {
+    if (thePoints.count != 0) {
         
         NSMutableArray *leftBorderDecorationViews = [NSMutableArray array];
         
+        int index = 0;
+        for (NSValue *centerPointValue in thePoints) {
+            
+            CGPoint centerPoint = [centerPointValue CGPointValue];
+            UIView *axisDecorationView = [self.datasource MAXLineChart: self leftBorderDecorationViewAxisCenterPoint: centerPoint atIndex: index];
+            [self addSubview: axisDecorationView];
+            
+            [leftBorderDecorationViews addObject: axisDecorationView];
+            
+            index ++;
+            
+        }
         
         
         return leftBorderDecorationViews;
@@ -624,13 +630,25 @@
     return nil;
 }
 
--(NSArray <UIView *> *)p_fetchRightBorderDecorationViewsWithPositions:(NSArray <NSValue *> *)thePositions {
+-(NSArray <UIView *> *)p_fetchRightBorderDecorationViewsWithPositions:(NSArray <NSValue *> *)thePoints {
     
     // these methods have to be defined in order to create the right decoration views
-    if (thePositions.count != 0) {
+    if (thePoints.count != 0) {
         
         NSMutableArray *rightBorderDecorationViews = [NSMutableArray array];
         
+        int index = 0;
+        for (NSValue *centerPointValue in thePoints) {
+            
+            CGPoint centerPoint = [centerPointValue CGPointValue];
+            UIView *axisDecorationView = [self.datasource MAXLineChart: self rightBorderDecorationViewAxisCenterPoint: centerPoint atIndex: index];
+            [self addSubview: axisDecorationView];
+            
+            [rightBorderDecorationViews addObject: axisDecorationView];
+            
+            index ++;
+            
+        }
         
         
         return rightBorderDecorationViews;
@@ -639,14 +657,24 @@
     return nil;
 }
 
--(NSArray <UIView *> *)p_fetchUpperBorderDecorationViewsWithPositions:(NSArray <NSValue *> *)thePositions {
+-(NSArray <UIView *> *)p_fetchUpperBorderDecorationViewsWithPositions:(NSArray <NSValue *> *)thePoints {
     
     // these methods have to be defined in order to create the upper decoration view
-    if (thePositions.count != 0) {
+    if (thePoints.count != 0) {
         
         NSMutableArray *upperBorderDecorationViews = [NSMutableArray array];
         
-        
+        int index = 0;
+        for (NSValue *centerPointValue in thePoints) {
+            
+            CGPoint centerPoint = [centerPointValue CGPointValue];
+            UIView *axisDecorationView = [self.datasource MAXLineChart: self upperBorderDecorationViewAxisCenterPoint: centerPoint atIndex: index];
+            [self addSubview: axisDecorationView];
+            
+            [upperBorderDecorationViews addObject: axisDecorationView];
+            
+            index ++;
+        }
         
         return upperBorderDecorationViews;
     }
@@ -654,15 +682,15 @@
     return nil;
 }
 
--(NSArray <UIView *> *)p_fetchLowerBorderDecorationViewsWithPositions:(NSArray <NSValue *> *)thePositions {
+-(NSArray <UIView *> *)p_fetchLowerBorderDecorationViewsWithPositions:(NSArray <NSValue *> *)thePoints {
     
     
-    if (thePositions.count != 0) {
+    if (thePoints.count != 0) {
         
         NSMutableArray *lowerBorderDecorationViews = [NSMutableArray array];
         
         int index = 0;
-        for (NSValue *centerPointValue in thePositions) {
+        for (NSValue *centerPointValue in thePoints) {
             
             CGPoint centerPoint = [centerPointValue CGPointValue];
             
@@ -679,78 +707,6 @@
     }
     
     return nil;
-    
-}
-
-#pragma mark - Border Axis Decoration Views
-
-
--(NSArray <UIView *> *)p_fetchLeftMarginDecorationViewsWithPositions:(NSArray <NSValue *> *)thePositions {
-    
-    CGFloat leftMargin = [self p_leftMarginWidth];
-    
-    // with this criteria we know that it does answer to the delegates and datasources necessary
-    if ([self.delegate respondsToSelector: @selector(MAXLineChart:leftAxisDecorationView:atIndex:)] == YES && thePositions.count != 0 && leftMargin != 0) {
-        
-    }
-    
-    return nil;
-}
-
--(NSArray <UIView *> *)p_fetchRightMarginDecorationViewsWithPosition:(NSArray <NSValue *> *)thePositions {
-    
-    CGFloat rightMargin = [self p_rightMarginWidth];
-    
-    if ([self.delegate respondsToSelector: @selector(MAXLineChart:rightAxisDecorationView:atIndex:)] == YES && thePositions.count != 0 && rightMargin != 0) {
-        
-        
-        
-    }
-    
-    return nil;
-}
-
--(NSArray <UIView *> *)p_fetchUpperMarginDecorationViewsWithPositions:(NSArray <NSValue *> *)thePositions {
- 
-    CGFloat upperMargin = [self p_upperMarginHeight];
-    
-    if ([self.delegate respondsToSelector: @selector(MAXLineChart:upperAxisDecorationView:atIndex:)] == YES && thePositions != 0 && upperMargin != 0) {
-        
-        
-        
-    }
-    
-    return nil;
-}
-
--(NSArray <UIView *> *)p_fetchLowerMarginDecorationViewsWithPositions:(NSArray <NSValue *> *)thePositions {
-    
-    CGFloat lowerMargin = [self p_lowerMarginHeight];
-    
-    if ([self.delegate respondsToSelector: @selector(MAXLineChart:lowerAxisDecorationView:atIndex:)] == YES && thePositions.count != 0 && lowerMargin != 0) {
-        
-        
-        
-    }
-    
-    return nil;
-}
-
-
--(void)p_removeAllMarginDecorationsViews {
-    
-    [self p_removeMarginDecorationViews: _leftMarginDecorationViews];
-    [self p_removeMarginDecorationViews: _rightMarginDecorationViews];
-    [self p_removeMarginDecorationViews: _upperMarginDecorationViews];
-    [self p_removeMarginDecorationViews: _lowerMarginDecorationViews];
-    
-}
-
--(void)p_removeMarginDecorationViews:(NSArray <UIView *> *)theAxisDecorationViews {
-    
-    for (UIView *view in theAxisDecorationViews) {
-        [view removeFromSuperview];
-    }
     
 }
 

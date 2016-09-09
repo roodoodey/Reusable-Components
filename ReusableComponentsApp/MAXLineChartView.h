@@ -247,16 +247,6 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 
 -(CGFloat)MAXLineChartLowerMarginHeight:(MAXLineChartView *)theLineChart;
 
-////////////////////////////////////////////////////////
-///////////// Chart Axis Decoration Views //////////////
-
--(void)MAXLineChart:(MAXLineChartView *)theLineChart leftAxisDecorationView:(UIView *)theDecorationView atIndex:(NSUInteger)theIndex;
-
--(void)MAXLineChart:(MAXLineChartView *)theLineChart rightAxisDecorationView:(UIView *)theDecorationView atIndex:(NSUInteger)theIndex;
-
--(void)MAXLineChart:(MAXLineChartView *)theLineChart upperAxisDecorationView:(UIView *)theDecoartionView atIndex:(NSUInteger)theIndex;
-
--(void)MAXLineChart:(MAXLineChartView *)theLineChart lowerAxisDecorationView:(UIView *)theDecoartionView atIndex:(NSUInteger)theIndex;
 
 @end
 
