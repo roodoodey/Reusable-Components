@@ -85,12 +85,12 @@
     return 5;
 }
 
--(CGFloat)MAXLineChartLowerBorderWidthForChart:(MAXLineChartView *)theLineChart {
+-(CGFloat)MAXLineChartLowerBorderHeightForChart:(MAXLineChartView *)theLineChart {
     
     return 5;
 }
 
-#pragma mark - Decoration Delegate
+#pragma mark - Border Decoration Delegate
 
 -(NSUInteger)MAXLineChartNumberOfDecorationViewsForLowerBorder:(MAXLineChartView *)theLineChart {
     
@@ -98,16 +98,16 @@
     return 6;
 }
 
--(double)MAXLineChart:(MAXLineChartView *)theChartView valueForLowerBorderDecorationViewNumber:(NSUInteger)theDecorationViewNumber {
+-(double)MAXLineChart:(MAXLineChartView *)theChartView xValueForLowerBorderDecorationViewAtIndex:(NSUInteger)theIndex {
     
-    return 4 * theDecorationViewNumber;
+    return 4 * theIndex;
 }
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView lowerBorderDecorationViewWithCenterPosition:(CGPoint)theCenterPosition decorationViewNumber:(NSUInteger)theDecorationViewNumber {
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView lowerBorderDecorationViewAxisCenterPoint:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex {
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 4, 4)];
     view.layer.cornerRadius = 2;
-    view.center = theCenterPosition;
+    view.center = theCenterPoint;
     
     view.backgroundColor = [UIColor redColor];
     
@@ -116,26 +116,26 @@
 
 #pragma mark - Line Decoration Views
 
--(NSUInteger)MAXLineChart:(MAXLineChartView *)theChartView numLineDecorationViewsForLine:(NSUInteger)theLine {
+-(NSUInteger)MAXLineChart:(MAXLineChartView *)theChartView numDecorationViewsForLine:(NSUInteger)theLine {
     
     return 5;
 }
 
--(double)MAXLineChart:(MAXLineChartView *)theChartView decorationViewAtPositionXForLine:(NSUInteger)theLine decorationViewNum:(NSUInteger)theDecorationViewNum {
+-(double)MAXLineChart:(MAXLineChartView *)theChartView xValueForDecorationViewForLine:(NSUInteger)theLine atIndex:(NSUInteger)theIndex {
     
-    if (theDecorationViewNum == 0) {
+    if (theIndex == 0) {
         
         return  1.53;
     }
-    else if(theDecorationViewNum == 1) {
+    else if(theIndex == 1) {
         
         return 3;
     }
-    else if(theDecorationViewNum == 2) {
+    else if(theIndex == 2) {
         
         return 9;
     }
-    else if(theDecorationViewNum == 3) {
+    else if(theIndex == 3) {
         
         return 11.23;
     }
@@ -143,7 +143,7 @@
     return 14.76;
 }
 
--(UIView *)MAXLineChart:(MAXLineChartView *)theChartView decorationViewForLine:(NSUInteger)theLine decoartionViewNum:(NSUInteger)theDecorationViewNum decorationViewPosition:(CGPoint)theDecorationViewPosition{
+-(UIView *)MAXLineChart:(MAXLineChartView *)theChartView decorationViewForLine:(NSUInteger)theLine atIndex:(NSUInteger)theIndex decorationViewPosition:(CGPoint)theDecorationViewPosition {
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 6, 6)];
     view.center = theDecorationViewPosition;
