@@ -67,7 +67,7 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 /**
  @description The X position for the given line and decoration view, as well as chart view. This value is then used to position the decorationv iew on the Y axis of the line depending on the X value.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView decorationViewAtPositionXForLine:(NSUInteger)theLine atIndex:(NSUInteger)theIndex;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView xValueForDecorationViewForLine:(NSUInteger)theLine atIndex:(NSUInteger)theIndex;
 
 /**
  @description 
@@ -94,7 +94,7 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView xValueForLeftBorderDecorationViewAtIndex:(NSUInteger)theIndex;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView yValueForLeftBorderDecorationViewAtIndex:(NSUInteger)theIndex;
 
 -(UIView *)MAXLineChart:(MAXLineChartView *)theChartView leftBorderDecorationViewAxisCenterPoint:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
 
@@ -113,7 +113,7 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
  
  @return The value of the current decoration view to determine its position.
  */
--(double)MAXLineChart:(MAXLineChartView *)theChartView xValueForRightBorderAtIndex:(NSUInteger)theIndex;
+-(double)MAXLineChart:(MAXLineChartView *)theChartView yValueForRightBorderDecorationViewAtIndex:(NSUInteger)theIndex;
 
 -(UIView *)MAXLineChart:(MAXLineChartView *)theChartView rightBorderDecorationViewAxisCenterPoint:(CGPoint)theCenterPoint atIndex:(NSUInteger)theIndex;
 
