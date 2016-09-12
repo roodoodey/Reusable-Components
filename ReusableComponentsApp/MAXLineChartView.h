@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
     kMAXLineCapStyleSquare,
 };
 
-@protocol MAXLineChartViewDataSource < NSObject >
+@protocol MAXLineChartDataSource < NSObject >
 
 @required
 
@@ -252,7 +252,7 @@ typedef NS_ENUM(NSInteger, MAXLineCapStyle) {
 
 @interface MAXLineChartView : UIView
 
-@property (nonatomic, weak) id <MAXLineChartViewDataSource> datasource;
+@property (nonatomic, weak) id <MAXLineChartDataSource> datasource;
 
 @property (nonatomic, weak) id <MAXLineChartDelegate> delegate;
 

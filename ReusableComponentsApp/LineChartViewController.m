@@ -11,7 +11,7 @@
 #import "MAXFadeBlockButton.h"
 #import "UIFont+MAXSystemFonts.h"
 
-@interface LineChartViewController () <MAXLineChartViewDataSource, MAXLineChartDelegate>
+@interface LineChartViewController () <MAXLineChartDataSource, MAXLineChartDelegate>
 
 @end
 
