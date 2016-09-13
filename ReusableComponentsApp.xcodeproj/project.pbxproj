@@ -576,9 +576,9 @@
 			children = (
 				4E5397041D63AE6800707E94 /* Components View Controller */,
 				889383721D17043F00DFB5A5 /* Chart view controller */,
-				88A733381CB18F800076E23E /* Drawer View Controller */,
 				88E2ED331C7FA6F500A57E0C /* Paging Scroll View View Controller */,
 				4E53970D1D64E11300707E94 /* Line Chart View Controller */,
+				88A733381CB18F800076E23E /* Drawer View Controller */,
 			);
 			name = "View Controllers For UI Components";
 			sourceTree = "<group>";

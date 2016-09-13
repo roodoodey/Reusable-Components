@@ -51,6 +51,14 @@
     return self;
 }
 
+-(void)setFrame:(CGRect)frame {
+    [super setFrame: frame];
+    
+    _scrollView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    _pageControl.frame = CGRectMake(0, CGRectGetHeight(frame) - 22, CGRectGetWidth(frame), 22);
+    
+}
+
 #pragma mark - Reload Methods
 
 -(void)reloadDataBlocks {
