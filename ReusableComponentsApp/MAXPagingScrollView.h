@@ -11,11 +11,13 @@
 @class MAXPagingScrollView;
 @class MAXPageControl;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol MAXScrollViewDelegateAndDataSource <NSObject>
 
 @optional
--(NSInteger)MAXScrollViewNumPages:(MAXPagingScrollView*)theScrollView;
--(void)MAXScrollView:(MAXPagingScrollView*)theScrollView view:(UIView*)theView atIndex:(NSInteger)theIndex;
+-(NSInteger)MAXScrollViewNumPages:(nonnull MAXPagingScrollView*)theScrollView;
+-(void)MAXScrollView:(nonnull MAXPagingScrollView*)theScrollView view:(UIView*)theView atIndex:(NSInteger)theIndex;
 
 @end
 
@@ -29,13 +31,16 @@ typedef void (^ViewInjectionBlockWithIndex)(UIView *theView, NSInteger thePage);
 @property (nonatomic, strong) id <MAXScrollViewDelegateAndDataSource> maxDelegate;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic) NSInteger numPages;
+@property (nonatomic) NSInteger currentPage;
 @property (nonatomic) MAXPageControl *pageControl;
+@property (nonatomic, nullable) void (^didScroll)(CGPoint contentOffset);
+@property (nonatomic) BOOL disableDrag;
 
 /** @discussion This method is used to change the page of the scroll view. The page numbers are zero indexed and nothing happens if you try and move to a page that does not exist.
  
     @param thePage is zero indexed.
  */
--(void)setPage:(NSInteger)thePage animated:(BOOL)isAnimated withCompletion:(void (^)(void))block;
+-(void)setPage:(NSInteger)thePage animated:(BOOL)isAnimated withCompletion:(nullable void (^)(void))block;
 
 /** @discussion This method is used to fetch the number of pages in the scroll view. It only ever stores one instance of the block so it shouldn't be used multiple times.
         
@@ -48,7 +53,7 @@ typedef void (^ViewInjectionBlockWithIndex)(UIView *theView, NSInteger thePage);
     return 10;
  }];
  */
--(void)MAXScrollViewNumPagesWithBlock:(NumItemsBlock)block;
+-(void)MAXScrollViewNumPagesWithBlock:(nonnull NumItemsBlock)block;
 
 
 /** @discussion This method injects the view and its page to the user via a block. This way the user can add what he needs to the view without having to worry about positioning and creating a custom scroll view. By injecting it with the page we can add custom labels and data to it easily. Example below:
@@ -64,14 +69,14 @@ typedef void (^ViewInjectionBlockWithIndex)(UIView *theView, NSInteger thePage);
     }
  }];
  */
--(void)MAXScrollViewWithViewAtPageBlock:(ViewInjectionBlockWithIndex)block;
+-(void)MAXScrollViewWithViewAtPageBlock:(nonnull ViewInjectionBlockWithIndex)block;
 
 /** @discussion This method is fired when the scroll view did scroll delegate checks if we are more on a new page than the one we were on.
         
     @param block returns the page the user is currently on.
  
  */
--(void)MAXScrollViewDidChangePage:(void (^)(NSInteger newPage))block;
+-(void)MAXScrollViewDidChangePage:(nonnull void (^)(NSInteger newPage))block;
 
 /** @discsussion This method reloads the data using the block methods if they have been used. If blocks have not been registered nothing happens as we cannot determine the number of pages and we cannot inject the views to the user using the blocks. 
  */
@@ -85,3 +90,5 @@ typedef void (^ViewInjectionBlockWithIndex)(UIView *theView, NSInteger thePage);
 
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -11,10 +11,10 @@
 
 @interface MAXPagingScrollView () <UIScrollViewDelegate> {
     NSMutableArray *_pageViews;
-    NSInteger _currentPage;
     NumItemsBlock _numItemsBlock;
     ViewInjectionBlockWithIndex _viewInjectionBlock;
     void (^_newPageBlock)(NSInteger newPage);
+    UIPanGestureRecognizer *_consumePanGestureRecognizer;
 }
 
 @end
@@ -84,6 +84,22 @@
         [self p_reloadPageViewsWithNumPages:_numPages];
         [self p_injectViewsWithNumPages:_numPages];
         
+    }
+    
+}
+
+
+#pragma mark - Disabling Drag
+
+-(void)setDisableDrag:(BOOL)disableDrag {
+    _disableDrag = disableDrag;
+    
+    if (_disableDrag == YES) {
+        _consumePanGestureRecognizer = [[UIPanGestureRecognizer alloc] init];
+        [self.scrollView addGestureRecognizer: _consumePanGestureRecognizer];
+    }
+    else if(_consumePanGestureRecognizer != nil) {
+        [self.scrollView removeGestureRecognizer: _consumePanGestureRecognizer];
     }
     
 }
@@ -159,6 +175,10 @@
             _newPageBlock(page);
         }
         
+    }
+    
+    if (_didScroll != nil) {
+        _didScroll(scrollView.contentOffset);
     }
     
 }
