@@ -11,6 +11,8 @@
 		4E5397071D63AE7C00707E94 /* ButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5397061D63AE7C00707E94 /* ButtonsViewController.m */; };
 		4E53970C1D64E0A600707E94 /* MAXLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E53970B1D64E0A600707E94 /* MAXLineChartView.m */; };
 		4E5397131D64E1BF00707E94 /* LineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5397121D64E1BF00707E94 /* LineChartViewController.m */; };
+		4EB7AF561E6334BC0082F67C /* SideScrollPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7AF551E6334BC0082F67C /* SideScrollPickerViewController.m */; };
+		4EB7AF591E6334D80082F67C /* MAXSideScrollPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7AF581E6334D80082F67C /* MAXSideScrollPicker.m */; };
 		886391461CBD984A00B6331A /* MAXFadeBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 886391451CBD984A00B6331A /* MAXFadeBlockButton.m */; };
 		887639271CD4DA6500C8196D /* MAXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 887639261CD4DA6500C8196D /* MAXPageControl.m */; };
 		887F96381D7B187700E39C90 /* MAXProximaNoveFontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F96371D7B187700E39C90 /* MAXProximaNoveFontTests.m */; };
@@ -131,6 +133,10 @@
 		4E53970B1D64E0A600707E94 /* MAXLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXLineChartView.m; sourceTree = "<group>"; };
 		4E5397111D64E1BF00707E94 /* LineChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChartViewController.h; sourceTree = "<group>"; };
 		4E5397121D64E1BF00707E94 /* LineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartViewController.m; sourceTree = "<group>"; };
+		4EB7AF541E6334BC0082F67C /* SideScrollPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideScrollPickerViewController.h; sourceTree = "<group>"; };
+		4EB7AF551E6334BC0082F67C /* SideScrollPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideScrollPickerViewController.m; sourceTree = "<group>"; };
+		4EB7AF571E6334D80082F67C /* MAXSideScrollPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXSideScrollPicker.h; sourceTree = "<group>"; };
+		4EB7AF581E6334D80082F67C /* MAXSideScrollPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXSideScrollPicker.m; sourceTree = "<group>"; };
 		886391441CBD984A00B6331A /* MAXFadeBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXFadeBlockButton.h; sourceTree = "<group>"; };
 		886391451CBD984A00B6331A /* MAXFadeBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXFadeBlockButton.m; sourceTree = "<group>"; };
 		887639251CD4DA6500C8196D /* MAXPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAXPageControl.h; sourceTree = "<group>"; };
@@ -337,6 +343,24 @@
 				4E5397121D64E1BF00707E94 /* LineChartViewController.m */,
 			);
 			name = "Line Chart View Controller";
+			sourceTree = "<group>";
+		};
+		4EB7AF521E6334170082F67C /* Side Scroll Picker */ = {
+			isa = PBXGroup;
+			children = (
+				4EB7AF571E6334D80082F67C /* MAXSideScrollPicker.h */,
+				4EB7AF581E6334D80082F67C /* MAXSideScrollPicker.m */,
+			);
+			name = "Side Scroll Picker";
+			sourceTree = "<group>";
+		};
+		4EB7AF531E6334630082F67C /* Side Scroll Picker View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EB7AF541E6334BC0082F67C /* SideScrollPickerViewController.h */,
+				4EB7AF551E6334BC0082F67C /* SideScrollPickerViewController.m */,
+			);
+			name = "Side Scroll Picker View Controller";
 			sourceTree = "<group>";
 		};
 		886391421CBD981400B6331A /* Block Button */ = {
@@ -574,6 +598,7 @@
 		88877AD31C74BF7400D00246 /* View Controllers For UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				4EB7AF531E6334630082F67C /* Side Scroll Picker View Controller */,
 				4E5397041D63AE6800707E94 /* Components View Controller */,
 				889383721D17043F00DFB5A5 /* Chart view controller */,
 				88E2ED331C7FA6F500A57E0C /* Paging Scroll View View Controller */,
@@ -737,6 +762,7 @@
 		88E2ED2D1C7F9A6300A57E0C /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				4EB7AF521E6334170082F67C /* Side Scroll Picker */,
 				887D56551D16FC24006B1AF2 /* Charts View */,
 				88CF9A611CD7E19600AA8AE7 /* Switch */,
 				88A733371CB18CB70076E23E /* Drawer View */,
@@ -944,6 +970,8 @@
 				889383751D1704EC00DFB5A5 /* MAXChartViewController.m in Sources */,
 				88BE77231C836C58002693C0 /* UIFont+MAXRobotoExtension.m in Sources */,
 				88E2ED391C7FB94200A57E0C /* GLOOPSTextField.m in Sources */,
+				4EB7AF591E6334D80082F67C /* MAXSideScrollPicker.m in Sources */,
+				4EB7AF561E6334BC0082F67C /* SideScrollPickerViewController.m in Sources */,
 				88E2ED2C1C7F151000A57E0C /* MAXPagingScrollView.m in Sources */,
 				889383711D16FD5100DFB5A5 /* MAXChartView.m in Sources */,
 				887F967A1D7B418800E39C90 /* UIFont+Exo2.m in Sources */,

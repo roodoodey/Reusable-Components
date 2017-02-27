@@ -13,6 +13,7 @@
 #import "MAXChartViewController.h"
 #import "ButtonsViewController.h"
 #import "LineChartViewController.h"
+#import "SideScrollPickerViewController.h"
 
 /** This is a view controller that leads to you to see all other ui components through a basic table view */
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource> {
@@ -30,6 +31,7 @@
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 20)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    
     [self.view addSubview:_tableView];
     
 }
@@ -41,7 +43,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 7;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,7 +80,9 @@
     else if(indexPath.row == 5) {
         [self presentViewController: [[LineChartViewController alloc] init] animated: YES completion: nil];
     }
-    
+    else if(indexPath.row == 6) {
+        [self presentViewController: [[SideScrollPickerViewController alloc] init] animated: YES completion:nil];
+    }
     
 }
 
@@ -101,6 +105,9 @@
     }
     else if(theIndexPath.row == 5) {
         return @"Line Chart View Controller";
+    }
+    else if(theIndexPath.row == 6) {
+        return @"Side Scroll Picker";
     }
     
     return @"Not Recognized";

@@ -40,6 +40,14 @@
     return self;
 }
 
+-(id)initWithControlEvents:(UIControlEvents)events {
+    if (self = [super initWithControlEvents: events]) {
+        [self p_setupFadeButton];
+    }
+    
+    return self;
+}
+
 -(void)p_setupFadeButton {
     
     

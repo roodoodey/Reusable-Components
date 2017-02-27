@@ -10,6 +10,7 @@
 
 @interface MAXBlockButton : UIButton
 
+-(id)initWithControlEvents:(UIControlEvents)events;
 
 // completion blocks for touch events
 -(void)buttonTouchDownWithCompletion:(void (^)(void))block;

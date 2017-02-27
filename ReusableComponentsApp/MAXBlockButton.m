@@ -52,7 +52,75 @@ typedef void (^CompletionBlock)(void);
     return self;
 }
 
+-(id)initWithControlEvents:(UIControlEvents)events {
+    
+    if (self = [super init]) {
+        
+        [self p_setupWithControlEvents: events];
+        
+    }
+    
+    return self;
+}
+
+-(void)p_setupWithControlEvents:(UIControlEvents)events {
+    
+    [self p_setupAllArrays];
+    
+    if((events & UIControlEventAllEvents) != 0x0) {
+        [self p_setupAllControlerEvents];
+    }
+    else {
+        
+        if ((events & UIControlEventTouchDown) != 0x0) {
+            [self addTarget:self action:@selector(buttonTouchDownAction) forControlEvents:UIControlEventTouchDown];
+        }
+        
+        if((events & UIControlEventTouchDownRepeat) != 0x0) {
+            [self addTarget:self action:@selector(buttonTouchDownRepeatAction) forControlEvents:UIControlEventTouchDownRepeat];
+        }
+        
+        if((events & UIControlEventTouchDragInside) != 0x0) {
+            [self addTarget:self action:@selector(buttonTouchDragInsideAction) forControlEvents:UIControlEventTouchDragInside];
+        }
+        
+        if((events & UIControlEventTouchDragOutside) != 0x0) {
+            [self addTarget:self action:@selector(buttonTouchDragOutsideAction) forControlEvents:UIControlEventTouchDragOutside];
+        }
+        
+        if((events & UIControlEventTouchDragEnter) != 0x0) {
+            [self addTarget:self action:@selector(buttonTouchDragEnterAction) forControlEvents:UIControlEventTouchDragEnter];
+        }
+        
+        if((events & UIControlEventTouchDragExit) != 0x0) {
+            [self addTarget:self action:@selector(buttonTouchDragExitAction) forControlEvents: UIControlEventTouchDragExit];
+        }
+        
+        if((events & UIControlEventTouchUpInside) != 0x0) {
+            [self addTarget:self action:@selector(buttonTouchUpInsideAction) forControlEvents: UIControlEventTouchUpInside];
+        }
+        
+        if((events & UIControlEventTouchUpOutside) != 0x0) {
+            [self addTarget:self action:@selector(buttonTouchUpOutsideAction) forControlEvents:UIControlEventTouchUpOutside];
+        }
+        
+        if((events & UIControlEventTouchCancel) != 0x0) {
+            [self addTarget:self action:@selector(buttonTouchAllEventsAction) forControlEvents:UIControlEventAllTouchEvents];
+        }
+        
+    }
+    
+}
+
 -(void)p_setup {
+    
+    [self p_setupAllArrays];
+    [self p_setupAllControlerEvents];
+    
+}
+
+-(void)p_setupAllArrays {
+    
     _touchDownBlocks = [NSMutableArray array];
     _touchDownRepeatBlocks = [NSMutableArray array];
     _touchDragInsideBlocks = [NSMutableArray array];
@@ -64,6 +132,9 @@ typedef void (^CompletionBlock)(void);
     _touchCancelBlocks = [NSMutableArray array];
     _touchAllEventsBlocks = [NSMutableArray array];
     
+}
+
+-(void)p_setupAllControlerEvents {
     [self addTarget:self action:@selector(buttonTouchDownAction) forControlEvents:UIControlEventTouchDown];
     [self addTarget:self action:@selector(buttonTouchDownRepeatAction) forControlEvents:UIControlEventTouchDownRepeat];
     [self addTarget:self action:@selector(buttonTouchDragInsideAction) forControlEvents:UIControlEventTouchDragInside];
@@ -75,8 +146,6 @@ typedef void (^CompletionBlock)(void);
     [self addTarget:self action:@selector(buttonTouchCancelAction) forControlEvents:UIControlEventTouchCancel];
     [self addTarget:self action:@selector(buttonTouchAllEventsAction) forControlEvents:UIControlEventAllTouchEvents];
 }
-
-
 
 #pragma mark - Button Actions
 
